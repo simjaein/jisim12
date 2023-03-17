@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="심재인">
+<meta name="dcterms.date" content="2022-09-21">
 
-<title>jisim12 – untitled1</title>
+<title>jisim12 - Cough Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +22,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -108,7 +173,34 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Cough Analysis</h1>
+</div>
 
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>심재인 </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 21, 2022</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
 
 <section id="cough-analysis---cough-classification" class="level2">
 <h2 class="anchored" data-anchor-id="cough-analysis---cough-classification">Cough Analysis - Cough classification</h2>
@@ -146,6 +238,327 @@ MinMaxScaler, OneHotEncoder,LabelEncoder으로 데이터값을 0과 1사이의 �
 <li><p>예측을 원래 데이터 프레임으로 다시 병합<br>
 병합 후 XGBoost에서 잘못된 작업을 수행하는 항목을 선택하고 출력.</p></li>
 </ul>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>git add .</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>git commit <span class="op">-</span>m .</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>git push</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>quarto publish gh<span class="op">-</span>pages <span class="op">--</span>no<span class="op">-</span>prompt <span class="op">--</span>no<span class="op">-</span>browser</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[main d5e6fe8] .
+ 59 files changed, 549908 insertions(+), 29 deletions(-)
+ create mode 100644 "posts/.ipynb_checkpoints/2021-12-20-\353\215\260\354\235\264\355\204\260\354\213\234\352\260\201\355\231\224_\352\270\260\353\247\220\352\263\240\354\202\254\355\222\200\354\235\264-checkpoint.ipynb"
+ create mode 100644 "posts/.ipynb_checkpoints/2021-12-31-python\354\235\204 \354\235\264\354\232\251\355\225\234 \352\263\240\354\234\240\352\260\222\352\263\274 \352\263\240\354\234\240\353\262\241\355\204\260 \352\265\254\355\225\230\352\270\260-checkpoint.ipynb"
+ create mode 100644 "posts/.ipynb_checkpoints/2021-12-31-\354\204\240\355\230\225\353\214\200\354\210\230_\352\263\240\354\234\240\352\260\222_\352\263\240\354\234\240\353\262\241\355\204\260-checkpoint.ipynb"
+ create mode 100644 "posts/.ipynb_checkpoints/2022-01-12-\355\232\214\352\267\200\353\266\204\354\204\235_\353\213\250\354\210\234\354\204\240\355\230\225\355\232\214\352\267\200\353\266\204\354\204\235-checkpoint.ipynb"
+ create mode 100644 "posts/.ipynb_checkpoints/2022-01-13-\355\232\214\352\267\200\353\266\204\354\204\235_\354\244\221\355\232\214\352\267\200\353\252\250\355\230\225-checkpoint.ipynb"
+ create mode 100644 "posts/.ipynb_checkpoints/2022-01-14-\355\232\214\352\267\200\353\266\204\354\204\235-\352\267\200\354\247\204\353\213\250-checkpoint.ipynb"
+ create mode 100644 "posts/.ipynb_checkpoints/2022-01-14-\355\232\214\352\267\200\353\266\204\354\204\235-\353\263\200\354\210\230\354\204\240\355\203\235-checkpoint.ipynb"
+ create mode 100644 "posts/.ipynb_checkpoints/2022-03-07-1\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225-checkpoint.ipynb"
+ create mode 100644 "posts/.ipynb_checkpoints/2022-03-14-2\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225-checkpoint.ipynb"
+ create mode 100644 "posts/.ipynb_checkpoints/2022-03-21-3\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225-checkpoint.ipynb"
+ create mode 100644 "posts/.ipynb_checkpoints/2022-03-28-4\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225-checkpoint.ipynb"
+ create mode 100644 "posts/.ipynb_checkpoints/2022-04-04-5\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225-checkpoint.ipynb"
+ create mode 100644 "posts/.ipynb_checkpoints/2022-04-11-6\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225-checkpoint.ipynb"
+ create mode 100644 "posts/.ipynb_checkpoints/2022-04-18-7\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225-checkpoint.ipynb"
+ create mode 100644 "posts/.ipynb_checkpoints/2022-04-28-\354\244\221\352\260\204\352\263\240\354\202\254\354\230\210\354\203\201\353\254\270\354\240\234_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225-checkpoint.ipynb"
+ create mode 100644 "posts/.ipynb_checkpoints/2022-04-29-\354\213\254\354\236\254\354\235\270_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_\354\244\221\352\260\204\352\263\240\354\202\254-checkpoint.ipynb"
+ create mode 100644 "posts/.ipynb_checkpoints/2022-04-30-\354\244\221\352\260\204\352\263\240\354\202\254\355\225\264\354\204\244-checkpoint.ipynb"
+ create mode 100644 "posts/.ipynb_checkpoints/2022-05-02-9\354\243\274\354\260\250(1)_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225-checkpoint.ipynb"
+ create mode 100644 "posts/.ipynb_checkpoints/2022-05-03-9\354\243\274\354\260\250(2)_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225-checkpoint.ipynb"
+ create mode 100644 "posts/.ipynb_checkpoints/2022-05-09-10\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225-checkpoint.ipynb"
+ create mode 100644 "posts/.ipynb_checkpoints/2022-05-16-11\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225-checkpoint.ipynb"
+ create mode 100644 "posts/.ipynb_checkpoints/2022-05-23-12\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225-checkpoint.ipynb"
+ create mode 100644 "posts/.ipynb_checkpoints/2022-06-13-\352\270\260\353\247\220\352\263\240\354\202\254_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225-checkpoint.ipynb"
+ create mode 100644 "posts/.ipynb_checkpoints/2022-06-30-\352\270\260\353\247\220\352\263\240\354\202\254\354\230\210\354\203\201\353\254\270\354\240\234_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225-checkpoint.ipynb"
+ create mode 100644 "posts/.ipynb_checkpoints/2022.09.02_\353\260\234\355\221\234\354\236\220\353\243\214-checkpoint.ipynb"
+ create mode 100644 posts/.ipynb_checkpoints/Untitled-checkpoint.ipynb
+ create mode 100644 posts/.ipynb_checkpoints/Untitled1-checkpoint.ipynb
+ create mode 100644 "posts/2021-12-20-\353\215\260\354\235\264\355\204\260\354\213\234\352\260\201\355\231\224_\352\270\260\353\247\220\352\263\240\354\202\254\355\222\200\354\235\264.ipynb"
+ create mode 100644 "posts/2021-12-31-python\354\235\204 \354\235\264\354\232\251\355\225\234 \352\263\240\354\234\240\352\260\222\352\263\274 \352\263\240\354\234\240\353\262\241\355\204\260 \352\265\254\355\225\230\352\270\260.ipynb"
+ create mode 100644 "posts/2021-12-31-\354\204\240\355\230\225\353\214\200\354\210\230_\352\263\240\354\234\240\352\260\222_\352\263\240\354\234\240\353\262\241\355\204\260.ipynb"
+ create mode 100644 "posts/2022-01-12-\355\232\214\352\267\200\353\266\204\354\204\235_\353\213\250\354\210\234\354\204\240\355\230\225\355\232\214\352\267\200\353\266\204\354\204\235.ipynb"
+ create mode 100644 "posts/2022-01-13-\355\232\214\352\267\200\353\266\204\354\204\235_\354\244\221\355\232\214\352\267\200\353\252\250\355\230\225.ipynb"
+ create mode 100644 "posts/2022-01-14-\355\232\214\352\267\200\353\266\204\354\204\235-\352\267\200\354\247\204\353\213\250.ipynb"
+ create mode 100644 "posts/2022-01-14-\355\232\214\352\267\200\353\266\204\354\204\235-\353\263\200\354\210\230\354\204\240\355\203\235.ipynb"
+ create mode 100644 "posts/2022-03-07-1\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225.ipynb"
+ create mode 100644 "posts/2022-03-14-2\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225.ipynb"
+ create mode 100644 "posts/2022-03-21-3\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225.ipynb"
+ create mode 100644 "posts/2022-03-28-4\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225.ipynb"
+ create mode 100644 "posts/2022-04-04-5\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225.ipynb"
+ create mode 100644 "posts/2022-04-11-6\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225.ipynb"
+ create mode 100644 "posts/2022-04-18-7\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225.ipynb"
+ create mode 100644 "posts/2022-04-28-\354\244\221\352\260\204\352\263\240\354\202\254\354\230\210\354\203\201\353\254\270\354\240\234_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225.ipynb"
+ create mode 100644 "posts/2022-04-29-\354\213\254\354\236\254\354\235\270_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_\354\244\221\352\260\204\352\263\240\354\202\254.ipynb"
+ create mode 100644 "posts/2022-04-30-\354\244\221\352\260\204\352\263\240\354\202\254\355\225\264\354\204\244.ipynb"
+ create mode 100644 "posts/2022-05-02-9\354\243\274\354\260\250(1)_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225.ipynb"
+ create mode 100644 "posts/2022-05-03-9\354\243\274\354\260\250(2)_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225.ipynb"
+ create mode 100644 "posts/2022-05-09-10\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225.ipynb"
+ create mode 100644 "posts/2022-05-16-11\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225.ipynb"
+ create mode 100644 "posts/2022-05-23-12\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225.ipynb"
+ create mode 100644 "posts/2022-06-13-\352\270\260\353\247\220\352\263\240\354\202\254_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225.ipynb"
+ create mode 100644 "posts/2022-06-30-\352\270\260\353\247\220\352\263\240\354\202\254\354\230\210\354\203\201\353\254\270\354\240\234_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225.ipynb"
+ create mode 100644 "posts/2022.09.02_\353\260\234\355\221\234\354\236\220\353\243\214.ipynb"
+ create mode 100644 posts/Untitled.ipynb
+ create mode 100644 posts/Untitled1.ipynb
+ delete mode 100644 posts/_metadata.yml
+ delete mode 100644 posts/post-with-code/image.jpg
+ delete mode 100644 posts/post-with-code/index.qmd
+ delete mode 100644 posts/welcome/index.qmd
+ delete mode 100644 posts/welcome/thumbnail.jpg
+Enumerating objects: 33, done.
+Counting objects: 100% (33/33), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (31/31), done.
+Writing objects: 100% (31/31), 13.61 MiB | 2.40 MiB/s, done.
+Total 31 (delta 14), reused 0 (delta 0)
+remote: Resolving deltas: 100% (14/14), completed with 1 local object.
+To https://github.com/simjaein/jisim12.git
+   4a62e16..d5e6fe8  main -&gt; main
+From https://github.com/simjaein/jisim12
+ * branch            gh-pages   -&gt; FETCH_HEAD
+Rendering for publish:
+
+[ 1/29] about.qmd
+[ 2/29] posts/2022-03-28-4주차_빅데이터분석특강.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-input051a285a' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[ 3/29] posts/2022-04-04-5주차_빅데이터분석특강.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-input9de28635' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[ 4/29] posts/Untitled1.ipynb
+[ 5/29] posts/2022-03-14-2주차_빅데이터분석특강.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-input4c72b3b4' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[ 6/29] posts/2021-12-31-선형대수_고유값_고유벡터.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-inputf34e1eee' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[ 7/29] posts/2022-01-14-회귀분석-귀진단.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-input0ad48c59' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[ 8/29] posts/2022-05-03-9주차(2)_빅데이터분석특강.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-input7a11f1a1' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[ 9/29] posts/2022-01-12-회귀분석_단순선형회귀분석.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-input2005f1be' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[10/29] posts/2022.09.02_발표자료.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-inpute52e4848' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[11/29] posts/2022-03-21-3주차_빅데이터분석특강.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-input21673e78' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[12/29] posts/2022-01-14-회귀분석-변수선택.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-input3f8e1eb9' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[13/29] posts/2022-04-30-중간고사해설.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-inputb49c858a' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[14/29] posts/2021-12-20-데이터시각화_기말고사풀이.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-inpute16c2df1' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[15/29] posts/2022-06-30-기말고사예상문제_빅데이터분석특강.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-inputc12b2836' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[16/29] posts/2022-01-13-회귀분석_중회귀모형.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-input3cd0b6f5' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[17/29] posts/2022-04-11-6주차_빅데이터분석특강.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-inputbfeb3cab' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[18/29] posts/2022-05-09-10주차_빅데이터분석특강.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-inputb1d6ec0f' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[19/29] posts/2022-04-18-7주차_빅데이터분석특강.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-input9e37fe8f' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[20/29] posts/2022-04-28-중간고사예상문제_빅데이터분석특강.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-inputbf67bd41' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[21/29] posts/2022-04-29-심재인_빅데이터분석특강_중간고사.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-input1393595f' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[22/29] posts/2022-05-23-12주차_빅데이터분석특강.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-inputc222a989' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[23/29] posts/Untitled.ipynb
+[24/29] posts/2022-05-02-9주차(1)_빅데이터분석특강.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-inputc6ad2276' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[25/29] posts/2022-03-07-1주차_빅데이터분석특강.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-input8c6fd22a' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[26/29] posts/2022-05-16-11주차_빅데이터분석특강.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-input9400628b' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[27/29] posts/2022-06-13-기말고사_빅데이터분석특강.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-input43fb1a9b' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[28/29] posts/2021-12-31-python을 이용한 고유값과 고유벡터 구하기.ipynb
+[29/29] index.qmd
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-03-28-4주차_빅데이터분석특강.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-04-04-5주차_빅데이터분석특강.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/Untitled1.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-03-14-2주차_빅데이터분석특강.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2021-12-31-선형대수_고유값_고유벡터.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-01-14-회귀분석-귀진단.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-05-03-9주차(2)_빅데이터분석특강.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-01-12-회귀분석_단순선형회귀분석.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022.09.02_발표자료.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-03-21-3주차_빅데이터분석특강.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-01-14-회귀분석-변수선택.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-04-30-중간고사해설.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2021-12-20-데이터시각화_기말고사풀이.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-06-30-기말고사예상문제_빅데이터분석특강.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-01-13-회귀분석_중회귀모형.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-04-11-6주차_빅데이터분석특강.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-05-09-10주차_빅데이터분석특강.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-04-18-7주차_빅데이터분석특강.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-04-28-중간고사예상문제_빅데이터분석특강.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-04-29-심재인_빅데이터분석특강_중간고사.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-05-23-12주차_빅데이터분석특강.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/Untitled.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-05-02-9주차(1)_빅데이터분석특강.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-03-07-1주차_빅데이터분석특강.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-05-16-11주차_빅데이터분석특강.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-06-13-기말고사_빅데이터분석특강.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2021-12-31-python을 이용한 고유값과 고유벡터 구하기.ipynb in the listing 'listing' contains no metadata.
+
+Preparing worktree (resetting branch 'gh-pages'; was at 648a522)
+Branch 'gh-pages' set up to track remote branch 'gh-pages' from 'origin'.
+HEAD is now at 648a522 Built site for gh-pages
+[gh-pages a06b556] Built site for gh-pages
+ 104 files changed, 260781 insertions(+), 69 deletions(-)
+ create mode 100644 "posts/2021-12-20-\353\215\260\354\235\264\355\204\260\354\213\234\352\260\201\355\231\224_\352\270\260\353\247\220\352\263\240\354\202\254\355\222\200\354\235\264.html"
+ create mode 100644 "posts/2021-12-31-python\354\235\204 \354\235\264\354\232\251\355\225\234 \352\263\240\354\234\240\352\260\222\352\263\274 \352\263\240\354\234\240\353\262\241\355\204\260 \352\265\254\355\225\230\352\270\260.html"
+ create mode 100644 "posts/2021-12-31-\354\204\240\355\230\225\353\214\200\354\210\230_\352\263\240\354\234\240\352\260\222_\352\263\240\354\234\240\353\262\241\355\204\260.html"
+ create mode 100644 "posts/2022-01-12-\355\232\214\352\267\200\353\266\204\354\204\235_\353\213\250\354\210\234\354\204\240\355\230\225\355\232\214\352\267\200\353\266\204\354\204\235.html"
+ create mode 100644 "posts/2022-01-13-\355\232\214\352\267\200\353\266\204\354\204\235_\354\244\221\355\232\214\352\267\200\353\252\250\355\230\225.html"
+ create mode 100644 "posts/2022-01-14-\355\232\214\352\267\200\353\266\204\354\204\235-\352\267\200\354\247\204\353\213\250.html"
+ create mode 100644 "posts/2022-01-14-\355\232\214\352\267\200\353\266\204\354\204\235-\353\263\200\354\210\230\354\204\240\355\203\235.html"
+ create mode 100644 "posts/2022-03-07-1\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225.html"
+ create mode 100644 "posts/2022-03-07-1\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-19-output-1.png"
+ create mode 100644 "posts/2022-03-07-1\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-6-output-1.png"
+ create mode 100644 "posts/2022-03-14-2\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225.html"
+ create mode 100644 "posts/2022-03-21-3\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225.html"
+ create mode 100644 "posts/2022-03-28-4\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225.html"
+ create mode 100644 "posts/2022-03-28-4\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-32-output-1.png"
+ create mode 100644 "posts/2022-03-28-4\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-33-output-1.png"
+ create mode 100644 "posts/2022-03-28-4\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-60-output-1.png"
+ create mode 100644 "posts/2022-03-28-4\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-63-output-1.png"
+ create mode 100644 "posts/2022-03-28-4\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-72-output-1.png"
+ create mode 100644 "posts/2022-03-28-4\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-73-output-1.png"
+ create mode 100644 "posts/2022-03-28-4\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-84-output-1.png"
+ create mode 100644 "posts/2022-03-28-4\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-88-output-1.png"
+ create mode 100644 "posts/2022-04-04-5\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225.html"
+ create mode 100644 "posts/2022-04-04-5\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-23-output-1.png"
+ create mode 100644 "posts/2022-04-11-6\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225.html"
+ create mode 100644 "posts/2022-04-11-6\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-110-output-1.png"
+ create mode 100644 "posts/2022-04-11-6\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-75-output-1.png"
+ create mode 100644 "posts/2022-04-11-6\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-78-output-1.png"
+ create mode 100644 "posts/2022-04-11-6\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-80-output-1.png"
+ create mode 100644 "posts/2022-04-11-6\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-89-output-1.png"
+ create mode 100644 "posts/2022-04-11-6\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-98-output-1.png"
+ create mode 100644 "posts/2022-04-18-7\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225.html"
+ create mode 100644 "posts/2022-04-18-7\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-11-output-1.png"
+ create mode 100644 "posts/2022-04-18-7\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-15-output-1.png"
+ create mode 100644 "posts/2022-04-18-7\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-26-output-1.png"
+ create mode 100644 "posts/2022-04-18-7\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-30-output-1.png"
+ create mode 100644 "posts/2022-04-18-7\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-35-output-1.png"
+ create mode 100644 "posts/2022-04-18-7\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-36-output-1.png"
+ create mode 100644 "posts/2022-04-18-7\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-50-output-1.png"
+ create mode 100644 "posts/2022-04-18-7\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-51-output-1.png"
+ create mode 100644 "posts/2022-04-18-7\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-52-output-1.png"
+ create mode 100644 "posts/2022-04-18-7\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-53-output-1.png"
+ create mode 100644 "posts/2022-04-18-7\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-55-output-1.png"
+ create mode 100644 "posts/2022-04-18-7\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-57-output-1.png"
+ create mode 100644 "posts/2022-04-18-7\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-58-output-1.png"
+ create mode 100644 "posts/2022-04-18-7\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-6-output-1.png"
+ create mode 100644 "posts/2022-04-18-7\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-61-output-1.png"
+ create mode 100644 "posts/2022-04-18-7\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-68-output-1.png"
+ create mode 100644 "posts/2022-04-18-7\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-69-output-1.png"
+ create mode 100644 "posts/2022-04-18-7\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-71-output-1.png"
+ create mode 100644 "posts/2022-04-18-7\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-74-output-1.png"
+ create mode 100644 "posts/2022-04-18-7\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-79-output-1.png"
+ create mode 100644 "posts/2022-04-18-7\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-81-output-1.png"
+ create mode 100644 "posts/2022-04-18-7\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-83-output-2.png"
+ create mode 100644 "posts/2022-04-28-\354\244\221\352\260\204\352\263\240\354\202\254\354\230\210\354\203\201\353\254\270\354\240\234_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225.html"
+ create mode 100644 "posts/2022-04-28-\354\244\221\352\260\204\352\263\240\354\202\254\354\230\210\354\203\201\353\254\270\354\240\234_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-14-output-1.png"
+ create mode 100644 "posts/2022-04-28-\354\244\221\352\260\204\352\263\240\354\202\254\354\230\210\354\203\201\353\254\270\354\240\234_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-22-output-1.png"
+ create mode 100644 "posts/2022-04-28-\354\244\221\352\260\204\352\263\240\354\202\254\354\230\210\354\203\201\353\254\270\354\240\234_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-31-output-1.png"
+ create mode 100644 "posts/2022-04-28-\354\244\221\352\260\204\352\263\240\354\202\254\354\230\210\354\203\201\353\254\270\354\240\234_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-39-output-1.png"
+ create mode 100644 "posts/2022-04-28-\354\244\221\352\260\204\352\263\240\354\202\254\354\230\210\354\203\201\353\254\270\354\240\234_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-50-output-1.png"
+ create mode 100644 "posts/2022-04-28-\354\244\221\352\260\204\352\263\240\354\202\254\354\230\210\354\203\201\353\254\270\354\240\234_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-51-output-1.png"
+ create mode 100644 "posts/2022-04-28-\354\244\221\352\260\204\352\263\240\354\202\254\354\230\210\354\203\201\353\254\270\354\240\234_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-55-output-1.png"
+ create mode 100644 "posts/2022-04-28-\354\244\221\352\260\204\352\263\240\354\202\254\354\230\210\354\203\201\353\254\270\354\240\234_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-60-output-1.png"
+ create mode 100644 "posts/2022-04-29-\354\213\254\354\236\254\354\235\270_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_\354\244\221\352\260\204\352\263\240\354\202\254.html"
+ create mode 100644 "posts/2022-04-29-\354\213\254\354\236\254\354\235\270_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_\354\244\221\352\260\204\352\263\240\354\202\254_files/figure-html/cell-15-output-1.png"
+ create mode 100644 "posts/2022-04-29-\354\213\254\354\236\254\354\235\270_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_\354\244\221\352\260\204\352\263\240\354\202\254_files/figure-html/cell-25-output-1.png"
+ create mode 100644 "posts/2022-04-29-\354\213\254\354\236\254\354\235\270_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_\354\244\221\352\260\204\352\263\240\354\202\254_files/figure-html/cell-33-output-1.png"
+ create mode 100644 "posts/2022-04-29-\354\213\254\354\236\254\354\235\270_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_\354\244\221\352\260\204\352\263\240\354\202\254_files/figure-html/cell-42-output-1.png"
+ create mode 100644 "posts/2022-04-29-\354\213\254\354\236\254\354\235\270_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_\354\244\221\352\260\204\352\263\240\354\202\254_files/figure-html/cell-50-output-1.png"
+ create mode 100644 "posts/2022-04-29-\354\213\254\354\236\254tml/cell-33-output-1.png"
+ create mode 100644 "posts/2022-05-02-9\354\243\274\354\260\250(1)_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225.html"
+ create mode 100644 "posts/2022-05-03-9\354\243\274\354\260\250(2)_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225.html"
+ create mode 100644 "posts/2022-05-03-9\354\243\274\354\260\250(2)_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-10-output-2.png"
+ create mode 100644 "posts/2022-05-03-9\354\243\274\354\260\250(2)_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-14-output-2.png"
+ create mode 100644 "posts/2022-05-03-9\354\243\274\354\260\250(2)_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-5-output-1.png"
+ create mode 100644 "posts/2022-05-03-9\354\243\274\354\260\250(2)_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-6-output-1.png"
+ create mode 100644 "posts/2022-05-09-10\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225.html"
+ create mode 100644 "posts/2022-05-09-10\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-12-output-1.svg"
+ create mode 100644 "posts/2022-05-09-10\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-8-output-1.svg"
+ create mode 100644 "posts/2022-05-16-11\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225.html"
+ create mode 100644 "posts/2022-05-23-12\354\243\274\354\260\250_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225.html"
+ create mode 100644 "posts/2022-06-13-\352\270\260\353\247\220\352\263\240\354\202\254_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225.html"
+ create mode 100644 "posts/2022-06-13-\352\270\260\353\247\220\352\263\240\354\202\254_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-37-output-1.png"
+ create mode 100644 "posts/2022-06-13-\352\270\260\353\247\220\352\263\240\354\202\254_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-40-output-1.png"
+ create mode 100644 "posts/2022-06-13-\352\270\260\353\247\220\352\263\240\354\202\254_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-6-output-1.svg"
+ create mode 100644 "posts/2022-06-30-\352\270\260\353\247\220\352\263\240\354\202\254\354\230\210\354\203\201\353\254\270\354\240\234_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225.html"
+ create mode 100644 "posts/2022-06-30-\352\270\260\353\247\220\352\263\240\354\202\254\354\230\210\354\203\201\353\254\270\354\240\234_\353\271\205\353\215\260\354\235\264\355\204\260\353\266\204\354\204\235\355\212\271\352\260\225_files/figure-html/cell-7-output-1.svg"
+ create mode 100644 "posts/2022.09.02_\353\260\234\355\221\234\354\236\220\353\243\214.html"
+ create mode 100644 posts/Untitled.html
+ create mode 100644 posts/Untitled1.html
+ create mode 100644 robots.txt
+ rewrite search.json (66%)
+ create mode 100644 sitemap.xml
+origin  https://github.com/simjaein/jisim12.git (fetch)
+origin  https://github.com/simjaein/jisim12.git (push)
+To https://github.com/simjaein/jisim12.git
+   648a522..a06b556  HEAD -&gt; gh-pages
+
+NOTE: GitHub Pages sites use caching so you might need to click the refresh
+button within your web browser to see changes after deployment.
+
+[✓] Published to https://simjaein.github.io/jisim12/
+
+NOTE: GitHub Pages deployments normally take a few minutes (your site updates
+will be visible once the deploy completes)
+</code></pre>
+</div>
+</div>
 
 
 </section>

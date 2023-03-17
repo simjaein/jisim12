@@ -4,7 +4,6 @@
     "items": [
       "/posts/2022-03-28-4주차_빅데이터분석특강.html",
       "/posts/2022-04-04-5주차_빅데이터분석특강.html",
-      "/posts/Untitled1.html",
       "/posts/2022-03-14-2주차_빅데이터분석특강.html",
       "/posts/2021-12-31-선형대수_고유값_고유벡터.html",
       "/posts/2022-01-14-회귀분석-귀진단.html",
@@ -28,7 +27,9 @@
       "/posts/2022-03-07-1주차_빅데이터분석특강.html",
       "/posts/2022-05-16-11주차_빅데이터분석특강.html",
       "/posts/2022-06-13-기말고사_빅데이터분석특강.html",
-      "/posts/2021-12-31-python을 이용한 고유값과 고유벡터 구하기.html"
+      "/posts/2021-12-31-python을 이용한 고유값과 고유벡터 구하기.html",
+      "/posts/Untitled1.html",
+      "/posts/Untitled2.html"
     ]
   }
 ]
