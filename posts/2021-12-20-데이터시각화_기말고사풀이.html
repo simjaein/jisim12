@@ -1,0 +1,4425 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>jisim12 – quarto-inpute16c2df1</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">jisim12</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com"><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="기말고사-12번풀이-심재인" class="level1">
+<h1>기말고사 1~2번풀이 (심재인)</h1>
+<blockquote class="blockquote">
+
+</blockquote>
+<ul>
+<li>toc:false</li>
+<li>branch: master</li>
+<li>badges: true</li>
+<li>comments: true</li>
+<li>author: 심재인</li>
+</ul>
+<div class="cell" data-execution_count="46">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#hide</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> HTML</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="covid19-시도별-접종률-시각화-30점" class="level2">
+<h2 class="anchored" data-anchor-id="covid19-시도별-접종률-시각화-30점"><code>#1</code>. COVID19 시도별 접종률 시각화 (30점)</h2>
+<p>아래의 그림은 COVID19 예방접종의 시도별 현황을 캡쳐한 것이다.</p>
+<p><img src="https://github.com/guebin/2021DV/blob/master/_notebooks/final_FIG1.png?raw=true" class="img-fluid"></p>
+<p>이 정보는 특정 주기로 업데이트 되며 아래의 웹페이지 2번째 테이블에서 확인할 수 있다.</p>
+<pre><code>https://ncv.kdca.go.kr/mainStatus.es?mid=a11702000000</code></pre>
+<p>판다스의 <code>pd.read_html()</code> 함수를 이용해 위의 페이지에서 그림1의 테이블을 읽어오라. 그리고 folium의 choroplethmap을 활용하여 시도별 2차접종의 접종률을 시각화 하라. 시각화 예시는 아래와 같다.</p>
+<p><img src="https://github.com/guebin/2021DV/blob/master/_notebooks/final_FIG2.png?raw=true" class="img-fluid"></p>
+<p>(풀이)</p>
+<p><code>-</code> 데이터프레임 읽어오기</p>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df<span class="op">=</span>pd.read_html(<span class="st">'https://ncv.kdca.go.kr/mainStatus.es?mid=a11702000000'</span>,encoding<span class="op">=</span><span class="st">'utf-8'</span>)[<span class="dv">1</span>]</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="6">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>구분</th>
+      <th colspan="2" halign="left">1차접종</th>
+      <th colspan="2" halign="left">2차접종</th>
+      <th colspan="2" halign="left">3차접종</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>구분</th>
+      <th>당일 실적</th>
+      <th>당일 누계</th>
+      <th>당일 실적</th>
+      <th>당일 누계</th>
+      <th>당일 실적</th>
+      <th>당일 누계</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>합계</td>
+      <td>5851</td>
+      <td>43493325</td>
+      <td>1743</td>
+      <td>42070660</td>
+      <td>29240</td>
+      <td>11565083</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>서울</td>
+      <td>1092</td>
+      <td>8081511</td>
+      <td>327</td>
+      <td>7848156</td>
+      <td>6576</td>
+      <td>2173116</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>부산</td>
+      <td>323</td>
+      <td>2785658</td>
+      <td>96</td>
+      <td>2686254</td>
+      <td>1691</td>
+      <td>766316</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>대구</td>
+      <td>173</td>
+      <td>1938156</td>
+      <td>37</td>
+      <td>1867302</td>
+      <td>596</td>
+      <td>443843</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>인천</td>
+      <td>525</td>
+      <td>2480025</td>
+      <td>168</td>
+      <td>2400474</td>
+      <td>2436</td>
+      <td>632558</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>광주</td>
+      <td>72</td>
+      <td>1216505</td>
+      <td>14</td>
+      <td>1173233</td>
+      <td>267</td>
+      <td>316210</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>대전</td>
+      <td>197</td>
+      <td>1199583</td>
+      <td>42</td>
+      <td>1157132</td>
+      <td>582</td>
+      <td>293704</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>울산</td>
+      <td>80</td>
+      <td>928762</td>
+      <td>19</td>
+      <td>896509</td>
+      <td>388</td>
+      <td>207834</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>세종</td>
+      <td>54</td>
+      <td>279728</td>
+      <td>15</td>
+      <td>268580</td>
+      <td>166</td>
+      <td>64957</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>경기</td>
+      <td>2272</td>
+      <td>11384986</td>
+      <td>705</td>
+      <td>11016264</td>
+      <td>11819</td>
+      <td>2817113</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>강원</td>
+      <td>77</td>
+      <td>1303677</td>
+      <td>21</td>
+      <td>1263853</td>
+      <td>269</td>
+      <td>385809</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>충북</td>
+      <td>113</td>
+      <td>1376943</td>
+      <td>34</td>
+      <td>1334316</td>
+      <td>805</td>
+      <td>382193</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>충남</td>
+      <td>245</td>
+      <td>1825333</td>
+      <td>77</td>
+      <td>1765603</td>
+      <td>1057</td>
+      <td>521523</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>전북</td>
+      <td>111</td>
+      <td>1545850</td>
+      <td>29</td>
+      <td>1497144</td>
+      <td>584</td>
+      <td>508956</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>전남</td>
+      <td>101</td>
+      <td>1603261</td>
+      <td>28</td>
+      <td>1554519</td>
+      <td>481</td>
+      <td>544769</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>경북</td>
+      <td>106</td>
+      <td>2201519</td>
+      <td>41</td>
+      <td>2126360</td>
+      <td>338</td>
+      <td>618715</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>경남</td>
+      <td>218</td>
+      <td>2778313</td>
+      <td>62</td>
+      <td>2673402</td>
+      <td>833</td>
+      <td>750044</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>제주</td>
+      <td>92</td>
+      <td>563515</td>
+      <td>28</td>
+      <td>541559</td>
+      <td>352</td>
+      <td>137423</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<p><code>-</code> json 파일</p>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>global_distriction_jsonurl<span class="op">=</span><span class="st">'https://raw.githubusercontent.com/southkorea/southkorea-maps/master/kostat/2018/json/skorea-provinces-2018-geo.json'</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>global_dict <span class="op">=</span> json.loads(requests.get(global_distriction_jsonurl).text)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>prov<span class="op">=</span>[global_dict[<span class="st">'features'</span>][i][<span class="st">'properties'</span>][<span class="st">'name'</span>] <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">17</span>)]</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>prov </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="11">
+<pre><code>['서울특별시',
+ '부산광역시',
+ '대구광역시',
+ '인천광역시',
+ '광주광역시',
+ '대전광역시',
+ '울산광역시',
+ '세종특별자치시',
+ '경기도',
+ '강원도',
+ '충청북도',
+ '충청남도',
+ '전라북도',
+ '전라남도',
+ '경상북도',
+ '경상남도',
+ '제주특별자치도']</code></pre>
+</div>
+</div>
+<p><code>-</code> 변형</p>
+<div class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>df.iloc[<span class="dv">1</span>:,<span class="dv">1</span>:].assign(prov<span class="op">=</span>prov)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="18">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th colspan="2" halign="left">1차접종</th>
+      <th colspan="2" halign="left">2차접종</th>
+      <th colspan="2" halign="left">3차접종</th>
+      <th>prov</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>당일 실적</th>
+      <th>당일 누계</th>
+      <th>당일 실적</th>
+      <th>당일 누계</th>
+      <th>당일 실적</th>
+      <th>당일 누계</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>1092</td>
+      <td>8081511</td>
+      <td>327</td>
+      <td>7848156</td>
+      <td>6576</td>
+      <td>2173116</td>
+      <td>서울특별시</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>323</td>
+      <td>2785658</td>
+      <td>96</td>
+      <td>2686254</td>
+      <td>1691</td>
+      <td>766316</td>
+      <td>부산광역시</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>173</td>
+      <td>1938156</td>
+      <td>37</td>
+      <td>1867302</td>
+      <td>596</td>
+      <td>443843</td>
+      <td>대구광역시</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>525</td>
+      <td>2480025</td>
+      <td>168</td>
+      <td>2400474</td>
+      <td>2436</td>
+      <td>632558</td>
+      <td>인천광역시</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>72</td>
+      <td>1216505</td>
+      <td>14</td>
+      <td>1173233</td>
+      <td>267</td>
+      <td>316210</td>
+      <td>광주광역시</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>197</td>
+      <td>1199583</td>
+      <td>42</td>
+      <td>1157132</td>
+      <td>582</td>
+      <td>293704</td>
+      <td>대전광역시</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>80</td>
+      <td>928762</td>
+      <td>19</td>
+      <td>896509</td>
+      <td>388</td>
+      <td>207834</td>
+      <td>울산광역시</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>54</td>
+      <td>279728</td>
+      <td>15</td>
+      <td>268580</td>
+      <td>166</td>
+      <td>64957</td>
+      <td>세종특별자치시</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>2272</td>
+      <td>11384986</td>
+      <td>705</td>
+      <td>11016264</td>
+      <td>11819</td>
+      <td>2817113</td>
+      <td>경기도</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>77</td>
+      <td>1303677</td>
+      <td>21</td>
+      <td>1263853</td>
+      <td>269</td>
+      <td>385809</td>
+      <td>강원도</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>113</td>
+      <td>1376943</td>
+      <td>34</td>
+      <td>1334316</td>
+      <td>805</td>
+      <td>382193</td>
+      <td>충청북도</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>245</td>
+      <td>1825333</td>
+      <td>77</td>
+      <td>1765603</td>
+      <td>1057</td>
+      <td>521523</td>
+      <td>충청남도</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>111</td>
+      <td>1545850</td>
+      <td>29</td>
+      <td>1497144</td>
+      <td>584</td>
+      <td>508956</td>
+      <td>전라북도</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>101</td>
+      <td>1603261</td>
+      <td>28</td>
+      <td>1554519</td>
+      <td>481</td>
+      <td>544769</td>
+      <td>전라남도</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>106</td>
+      <td>2201519</td>
+      <td>41</td>
+      <td>2126360</td>
+      <td>338</td>
+      <td>618715</td>
+      <td>경상북도</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>218</td>
+      <td>2778313</td>
+      <td>62</td>
+      <td>2673402</td>
+      <td>833</td>
+      <td>750044</td>
+      <td>경상남도</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>92</td>
+      <td>563515</td>
+      <td>28</td>
+      <td>541559</td>
+      <td>352</td>
+      <td>137423</td>
+      <td>제주특별자치도</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="24">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>df.iloc[<span class="dv">1</span>:,<span class="dv">1</span>:].assign(prov<span class="op">=</span>prov).<span class="op">\</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>set_index(<span class="st">'prov'</span>).stack().stack().reset_index().rename(columns<span class="op">=</span>{<span class="dv">0</span>:<span class="st">'value'</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="24">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>prov</th>
+      <th>level_1</th>
+      <th>level_2</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>서울특별시</td>
+      <td>당일 누계</td>
+      <td>1차접종</td>
+      <td>8081511</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>서울특별시</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>7848156</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>서울특별시</td>
+      <td>당일 누계</td>
+      <td>3차접종</td>
+      <td>2173116</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>서울특별시</td>
+      <td>당일 실적</td>
+      <td>1차접종</td>
+      <td>1092</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>서울특별시</td>
+      <td>당일 실적</td>
+      <td>2차접종</td>
+      <td>327</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>97</th>
+      <td>제주특별자치도</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>541559</td>
+    </tr>
+    <tr>
+      <th>98</th>
+      <td>제주특별자치도</td>
+      <td>당일 누계</td>
+      <td>3차접종</td>
+      <td>137423</td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td>제주특별자치도</td>
+      <td>당일 실적</td>
+      <td>1차접종</td>
+      <td>92</td>
+    </tr>
+    <tr>
+      <th>100</th>
+      <td>제주특별자치도</td>
+      <td>당일 실적</td>
+      <td>2차접종</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <th>101</th>
+      <td>제주특별자치도</td>
+      <td>당일 실적</td>
+      <td>3차접종</td>
+      <td>352</td>
+    </tr>
+  </tbody>
+</table>
+<p>102 rows × 4 columns</p>
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="25">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>df.iloc[<span class="dv">1</span>:,<span class="dv">1</span>:].assign(prov<span class="op">=</span>prov).<span class="op">\</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>set_index(<span class="st">'prov'</span>).stack().stack().reset_index().rename(columns<span class="op">=</span>{<span class="dv">0</span>:<span class="st">'value'</span>}).<span class="op">\</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>query(<span class="st">'level_1 == "당일 누계" and level_2 == "2차접종" '</span> )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="25">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>prov</th>
+      <th>level_1</th>
+      <th>level_2</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>서울특별시</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>7848156</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>부산광역시</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>2686254</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>대구광역시</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>1867302</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>인천광역시</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>2400474</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>광주광역시</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>1173233</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>대전광역시</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>1157132</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>울산광역시</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>896509</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>세종특별자치시</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>268580</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>경기도</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>11016264</td>
+    </tr>
+    <tr>
+      <th>55</th>
+      <td>강원도</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>1263853</td>
+    </tr>
+    <tr>
+      <th>61</th>
+      <td>충청북도</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>1334316</td>
+    </tr>
+    <tr>
+      <th>67</th>
+      <td>충청남도</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>1765603</td>
+    </tr>
+    <tr>
+      <th>73</th>
+      <td>전라북도</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>1497144</td>
+    </tr>
+    <tr>
+      <th>79</th>
+      <td>전라남도</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>1554519</td>
+    </tr>
+    <tr>
+      <th>85</th>
+      <td>경상북도</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>2126360</td>
+    </tr>
+    <tr>
+      <th>91</th>
+      <td>경상남도</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>2673402</td>
+    </tr>
+    <tr>
+      <th>97</th>
+      <td>제주특별자치도</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>541559</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<p><code>-</code> 머지할 데이터프레임을 찾자</p>
+<div class="cell" data-execution_count="26">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>pd.read_csv(<span class="st">'https://raw.githubusercontent.com/guebin/2021DV/master/_notebooks/2021-11-22-prov.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="26">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>행정구역(시군구)별</th>
+      <th>총인구수 (명)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>서울특별시</td>
+      <td>9532428</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>부산광역시</td>
+      <td>3356311</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>대구광역시</td>
+      <td>2390721</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>인천광역시</td>
+      <td>2945009</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>광주광역시</td>
+      <td>1442454</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>대전광역시</td>
+      <td>1454228</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>울산광역시</td>
+      <td>1122566</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>세종특별자치시</td>
+      <td>368276</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>경기도</td>
+      <td>13549577</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>강원도</td>
+      <td>1537717</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>충청북도</td>
+      <td>1596948</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>충청남도</td>
+      <td>2118977</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>전라북도</td>
+      <td>1789770</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>전라남도</td>
+      <td>1834653</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>경상북도</td>
+      <td>2627925</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>경상남도</td>
+      <td>3318161</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>제주특별자치도</td>
+      <td>676569</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="28">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>pd.read_csv(<span class="st">'https://raw.githubusercontent.com/guebin/2021DV/master/_notebooks/2021-11-22-prov.csv'</span>).<span class="op">\</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>rename(columns<span class="op">=</span>{<span class="st">'행정구역(시군구)별'</span>:<span class="st">'prov'</span>,<span class="st">'총인구수 (명)'</span>:<span class="st">'pop'</span>}) <span class="co">## 머지할 df &lt;-- 이름 줄 가치가 X </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="28">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>prov</th>
+      <th>pop</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>서울특별시</td>
+      <td>9532428</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>부산광역시</td>
+      <td>3356311</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>대구광역시</td>
+      <td>2390721</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>인천광역시</td>
+      <td>2945009</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>광주광역시</td>
+      <td>1442454</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>대전광역시</td>
+      <td>1454228</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>울산광역시</td>
+      <td>1122566</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>세종특별자치시</td>
+      <td>368276</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>경기도</td>
+      <td>13549577</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>강원도</td>
+      <td>1537717</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>충청북도</td>
+      <td>1596948</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>충청남도</td>
+      <td>2118977</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>전라북도</td>
+      <td>1789770</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>전라남도</td>
+      <td>1834653</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>경상북도</td>
+      <td>2627925</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>경상남도</td>
+      <td>3318161</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>제주특별자치도</td>
+      <td>676569</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<p><code>-</code> 머지</p>
+<div class="cell" data-execution_count="30">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>df.iloc[<span class="dv">1</span>:,<span class="dv">1</span>:].assign(prov<span class="op">=</span>prov).<span class="op">\</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>set_index(<span class="st">'prov'</span>).stack().stack().reset_index().rename(columns<span class="op">=</span>{<span class="dv">0</span>:<span class="st">'value'</span>}).<span class="op">\</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>query(<span class="st">'level_1 == "당일 누계" and level_2 == "2차접종" '</span> ).<span class="op">\</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>merge(pd.read_csv(<span class="st">'https://raw.githubusercontent.com/guebin/2021DV/master/_notebooks/2021-11-22-prov.csv'</span>).<span class="op">\</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>rename(columns<span class="op">=</span>{<span class="st">'행정구역(시군구)별'</span>:<span class="st">'prov'</span>,<span class="st">'총인구수 (명)'</span>:<span class="st">'pop'</span>}))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="30">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>prov</th>
+      <th>level_1</th>
+      <th>level_2</th>
+      <th>value</th>
+      <th>pop</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>서울특별시</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>7848156</td>
+      <td>9532428</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>부산광역시</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>2686254</td>
+      <td>3356311</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>대구광역시</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>1867302</td>
+      <td>2390721</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>인천광역시</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>2400474</td>
+      <td>2945009</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>광주광역시</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>1173233</td>
+      <td>1442454</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>대전광역시</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>1157132</td>
+      <td>1454228</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>울산광역시</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>896509</td>
+      <td>1122566</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>세종특별자치시</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>268580</td>
+      <td>368276</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>경기도</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>11016264</td>
+      <td>13549577</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>강원도</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>1263853</td>
+      <td>1537717</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>충청북도</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>1334316</td>
+      <td>1596948</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>충청남도</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>1765603</td>
+      <td>2118977</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>전라북도</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>1497144</td>
+      <td>1789770</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>전라남도</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>1554519</td>
+      <td>1834653</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>경상북도</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>2126360</td>
+      <td>2627925</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>경상남도</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>2673402</td>
+      <td>3318161</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>제주특별자치도</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>541559</td>
+      <td>676569</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="39">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>df.iloc[<span class="dv">1</span>:,<span class="dv">1</span>:].assign(prov<span class="op">=</span>prov).<span class="op">\</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>set_index(<span class="st">'prov'</span>).stack().stack().reset_index().rename(columns<span class="op">=</span>{<span class="dv">0</span>:<span class="st">'value'</span>}).<span class="op">\</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>query(<span class="st">'level_1 == "당일 누계" and level_2 == "2차접종" '</span> ).<span class="op">\</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>merge(pd.read_csv(<span class="st">'https://raw.githubusercontent.com/guebin/2021DV/master/_notebooks/2021-11-22-prov.csv'</span>).<span class="op">\</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>rename(columns<span class="op">=</span>{<span class="st">'행정구역(시군구)별'</span>:<span class="st">'prov'</span>,<span class="st">'총인구수 (명)'</span>:<span class="st">'pop'</span>})).<span class="op">\</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="bu">eval</span>(<span class="st">'prop= value / pop'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="39">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>prov</th>
+      <th>level_1</th>
+      <th>level_2</th>
+      <th>value</th>
+      <th>pop</th>
+      <th>prop</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>서울특별시</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>7848156</td>
+      <td>9532428</td>
+      <td>0.823311</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>부산광역시</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>2686254</td>
+      <td>3356311</td>
+      <td>0.800359</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>대구광역시</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>1867302</td>
+      <td>2390721</td>
+      <td>0.781062</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>인천광역시</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>2400474</td>
+      <td>2945009</td>
+      <td>0.815099</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>광주광역시</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>1173233</td>
+      <td>1442454</td>
+      <td>0.813359</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>대전광역시</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>1157132</td>
+      <td>1454228</td>
+      <td>0.795702</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>울산광역시</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>896509</td>
+      <td>1122566</td>
+      <td>0.798625</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>세종특별자치시</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>268580</td>
+      <td>368276</td>
+      <td>0.729290</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>경기도</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>11016264</td>
+      <td>13549577</td>
+      <td>0.813034</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>강원도</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>1263853</td>
+      <td>1537717</td>
+      <td>0.821902</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>충청북도</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>1334316</td>
+      <td>1596948</td>
+      <td>0.835541</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>충청남도</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>1765603</td>
+      <td>2118977</td>
+      <td>0.833234</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>전라북도</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>1497144</td>
+      <td>1789770</td>
+      <td>0.836501</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>전라남도</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>1554519</td>
+      <td>1834653</td>
+      <td>0.847310</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>경상북도</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>2126360</td>
+      <td>2627925</td>
+      <td>0.809140</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>경상남도</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>2673402</td>
+      <td>3318161</td>
+      <td>0.805688</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>제주특별자치도</td>
+      <td>당일 누계</td>
+      <td>2차접종</td>
+      <td>541559</td>
+      <td>676569</td>
+      <td>0.800449</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="41">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>_df<span class="op">=</span>df.iloc[<span class="dv">1</span>:,<span class="dv">1</span>:].assign(prov<span class="op">=</span>prov).<span class="op">\</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>set_index(<span class="st">'prov'</span>).stack().stack().reset_index().rename(columns<span class="op">=</span>{<span class="dv">0</span>:<span class="st">'value'</span>}).<span class="op">\</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>query(<span class="st">'level_1 == "당일 누계" and level_2 == "2차접종" '</span> ).<span class="op">\</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>merge(pd.read_csv(<span class="st">'https://raw.githubusercontent.com/guebin/2021DV/master/_notebooks/2021-11-22-prov.csv'</span>).<span class="op">\</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>rename(columns<span class="op">=</span>{<span class="st">'행정구역(시군구)별'</span>:<span class="st">'prov'</span>,<span class="st">'총인구수 (명)'</span>:<span class="st">'pop'</span>})).<span class="op">\</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="bu">eval</span>(<span class="st">'prop= value / pop'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><code>-</code> 저장</p>
+<div class="cell" data-execution_count="33">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> folium</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="44">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> folium.Map([<span class="dv">36</span>,<span class="dv">128</span>],zoom_start<span class="op">=</span><span class="dv">7</span>,scrollWheelZoom<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>choro <span class="op">=</span> folium.Choropleth(</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    data <span class="op">=</span> _df, </span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    geo_data<span class="op">=</span> global_dict, </span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    columns<span class="op">=</span>[<span class="st">'prov'</span>,<span class="st">'prop'</span>],</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    key_on <span class="op">=</span> <span class="st">'feature.properties.name'</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>choro.add_to(m)   </span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a><span class="co">#m</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="44">
+<pre><code>&lt;folium.features.Choropleth at 0x7fecc0a489a0&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="covid19-시도별월별-확산과정-시각화-40점" class="level2">
+<h2 class="anchored" data-anchor-id="covid19-시도별월별-확산과정-시각화-40점"><code>#2</code>. COVID19 시도별/월별 확산과정 시각화 (40점)</h2>
+<p>아래는 COVID19 확진자수를 지역별로 매일 기록한 자료이다.</p>
+<pre><code>https://raw.githubusercontent.com/guebin/2021DV/master/_notebooks/covid19_20211202.csv</code></pre>
+<p>자료를 판다스로 불러온 결과는 아래와 같다.</p>
+<div class="cell" data-execution_count="47">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co">#hide_input</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>HTML(<span class="st">'&lt;table border="1" class="dataframe"&gt;</span><span class="ch">\n</span><span class="st">  &lt;thead&gt;</span><span class="ch">\n</span><span class="st">    &lt;tr style="text-align: right;"&gt;</span><span class="ch">\n</span><span class="st">      &lt;th&gt;&lt;/th&gt;</span><span class="ch">\n</span><span class="st">      &lt;th&gt;일자&lt;/th&gt;</span><span class="ch">\n</span><span class="st">      &lt;th&gt;계(명)&lt;/th&gt;</span><span class="ch">\n</span><span class="st">      &lt;th&gt;서울&lt;/th&gt;</span><span class="ch">\n</span><span class="st">      &lt;th&gt;부산&lt;/th&gt;</span><span class="ch">\n</span><span class="st">      &lt;th&gt;대구&lt;/th&gt;</span><span class="ch">\n</span><span class="st">      &lt;th&gt;인천&lt;/th&gt;</span><span class="ch">\n</span><span class="st">      &lt;th&gt;광주&lt;/th&gt;</span><span class="ch">\n</span><span class="st">      &lt;th&gt;대전&lt;/th&gt;</span><span class="ch">\n</span><span class="st">      &lt;th&gt;울산&lt;/th&gt;</span><span class="ch">\n</span><span class="st">      &lt;th&gt;세종&lt;/th&gt;</span><span class="ch">\n</span><span class="st">      &lt;th&gt;경기&lt;/th&gt;</span><span class="ch">\n</span><span class="st">      &lt;th&gt;강원&lt;/th&gt;</span><span class="ch">\n</span><span class="st">      &lt;th&gt;충북&lt;/th&gt;</span><span class="ch">\n</span><span class="st">      &lt;th&gt;충남&lt;/th&gt;</span><span class="ch">\n</span><span class="st">      &lt;th&gt;전북&lt;/th&gt;</span><span class="ch">\n</span><span class="st">      &lt;th&gt;전남&lt;/th&gt;</span><span class="ch">\n</span><span class="st">      &lt;th&gt;경북&lt;/th&gt;</span><span class="ch">\n</span><span class="st">      &lt;th&gt;경남&lt;/th&gt;</span><span class="ch">\n</span><span class="st">      &lt;th&gt;제주&lt;/th&gt;</span><span class="ch">\n</span><span class="st">      &lt;th&gt;검역&lt;/th&gt;</span><span class="ch">\n</span><span class="st">    &lt;/tr&gt;</span><span class="ch">\n</span><span class="st">  &lt;/thead&gt;</span><span class="ch">\n</span><span class="st">  &lt;tbody&gt;</span><span class="ch">\n</span><span class="st">    &lt;tr&gt;</span><span class="ch">\n</span><span class="st">      &lt;th&gt;0&lt;/th&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;누적(명)&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;457,612&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;158,774&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;16,555&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;19,114&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;25,299&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;6,353&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;8,809&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;5,675&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;1,588&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;136,546&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;8,889&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;8,942&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;13,174&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;6,453&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;4,498&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;11,471&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;15,236&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;3,762&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;6,474&lt;/td&gt;</span><span class="ch">\n</span><span class="st">    &lt;/tr&gt;</span><span class="ch">\n</span><span class="st">    &lt;tr&gt;</span><span class="ch">\n</span><span class="st">      &lt;th&gt;1&lt;/th&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;2020-01-20&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;1&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;1&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">    &lt;/tr&gt;</span><span class="ch">\n</span><span class="st">    &lt;tr&gt;</span><span class="ch">\n</span><span class="st">      &lt;th&gt;2&lt;/th&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;2020-01-21&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;0&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">    &lt;/tr&gt;</span><span class="ch">\n</span><span class="st">    &lt;tr&gt;</span><span class="ch">\n</span><span class="st">      &lt;th&gt;3&lt;/th&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;2020-01-22&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;0&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">    &lt;/tr&gt;</span><span class="ch">\n</span><span class="st">    &lt;tr&gt;</span><span class="ch">\n</span><span class="st">      &lt;th&gt;4&lt;/th&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;2020-01-23&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;0&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;-&lt;/td&gt;</span><span class="ch">\n</span><span class="st">    &lt;/tr&gt;</span><span class="ch">\n</span><span class="st">    &lt;tr&gt;</span><span class="ch">\n</span><span class="st">      &lt;th&gt;...&lt;/th&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;...&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;...&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;...&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;...&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;...&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;...&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;...&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;...&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;...&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;...&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;...&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;...&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;...&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;...&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;...&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;...&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;...&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;...&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;...&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;...&lt;/td&gt;</span><span class="ch">\n</span><span class="st">    &lt;/tr&gt;</span><span class="ch">\n</span><span class="st">    &lt;tr&gt;</span><span class="ch">\n</span><span class="st">      &lt;th&gt;679&lt;/th&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;2021-11-28&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;3,925&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;1,673&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;148&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;106&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;278&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;52&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;53&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;4&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;5&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;1,090&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;63&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;25&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;121&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;45&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;25&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;103&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;89&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;35&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;10&lt;/td&gt;</span><span class="ch">\n</span><span class="st">    &lt;/tr&gt;</span><span class="ch">\n</span><span class="st">    &lt;tr&gt;</span><span class="ch">\n</span><span class="st">      &lt;th&gt;680&lt;/th&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;2021-11-29&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;3,308&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;1,393&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;144&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;88&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;233&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;61&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;43&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;2&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;15&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;910&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;56&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;33&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;52&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;49&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;28&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;68&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;86&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;44&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;3&lt;/td&gt;</span><span class="ch">\n</span><span class="st">    &lt;/tr&gt;</span><span class="ch">\n</span><span class="st">    &lt;tr&gt;</span><span class="ch">\n</span><span class="st">      &lt;th&gt;681&lt;/th&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;2021-11-30&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;3,032&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;1,186&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;79&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;78&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;192&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;52&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;43&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;3&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;22&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;909&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;84&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;59&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;81&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;50&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;36&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;68&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;60&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;22&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;8&lt;/td&gt;</span><span class="ch">\n</span><span class="st">    &lt;/tr&gt;</span><span class="ch">\n</span><span class="st">    &lt;tr&gt;</span><span class="ch">\n</span><span class="st">      &lt;th&gt;682&lt;/th&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;2021-12-01&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;5,123&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;2,222&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;143&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;86&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;326&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;29&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;88&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;17&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;20&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;1,582&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;105&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;48&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;96&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;50&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;40&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;97&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;127&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;27&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;20&lt;/td&gt;</span><span class="ch">\n</span><span class="st">    &lt;/tr&gt;</span><span class="ch">\n</span><span class="st">    &lt;tr&gt;</span><span class="ch">\n</span><span class="st">      &lt;th&gt;683&lt;/th&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;2021-12-02&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;5,266&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;2,268&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;158&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;70&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;355&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;39&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;166&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;18&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;8&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;1,495&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;145&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;49&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;149&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;71&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;39&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;106&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;94&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;31&lt;/td&gt;</span><span class="ch">\n</span><span class="st">      &lt;td&gt;5&lt;/td&gt;</span><span class="ch">\n</span><span class="st">    &lt;/tr&gt;</span><span class="ch">\n</span><span class="st">  &lt;/tbody&gt;</span><span class="ch">\n</span><span class="st">&lt;/table&gt;'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="47">
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>일자</th>
+      <th>계(명)</th>
+      <th>서울</th>
+      <th>부산</th>
+      <th>대구</th>
+      <th>인천</th>
+      <th>광주</th>
+      <th>대전</th>
+      <th>울산</th>
+      <th>세종</th>
+      <th>경기</th>
+      <th>강원</th>
+      <th>충북</th>
+      <th>충남</th>
+      <th>전북</th>
+      <th>전남</th>
+      <th>경북</th>
+      <th>경남</th>
+      <th>제주</th>
+      <th>검역</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>누적(명)</td>
+      <td>457,612</td>
+      <td>158,774</td>
+      <td>16,555</td>
+      <td>19,114</td>
+      <td>25,299</td>
+      <td>6,353</td>
+      <td>8,809</td>
+      <td>5,675</td>
+      <td>1,588</td>
+      <td>136,546</td>
+      <td>8,889</td>
+      <td>8,942</td>
+      <td>13,174</td>
+      <td>6,453</td>
+      <td>4,498</td>
+      <td>11,471</td>
+      <td>15,236</td>
+      <td>3,762</td>
+      <td>6,474</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2020-01-20</td>
+      <td>1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2020-01-21</td>
+      <td>0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2020-01-22</td>
+      <td>0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2020-01-23</td>
+      <td>0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>679</th>
+      <td>2021-11-28</td>
+      <td>3,925</td>
+      <td>1,673</td>
+      <td>148</td>
+      <td>106</td>
+      <td>278</td>
+      <td>52</td>
+      <td>53</td>
+      <td>4</td>
+      <td>5</td>
+      <td>1,090</td>
+      <td>63</td>
+      <td>25</td>
+      <td>121</td>
+      <td>45</td>
+      <td>25</td>
+      <td>103</td>
+      <td>89</td>
+      <td>35</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>680</th>
+      <td>2021-11-29</td>
+      <td>3,308</td>
+      <td>1,393</td>
+      <td>144</td>
+      <td>88</td>
+      <td>233</td>
+      <td>61</td>
+      <td>43</td>
+      <td>2</td>
+      <td>15</td>
+      <td>910</td>
+      <td>56</td>
+      <td>33</td>
+      <td>52</td>
+      <td>49</td>
+      <td>28</td>
+      <td>68</td>
+      <td>86</td>
+      <td>44</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>681</th>
+      <td>2021-11-30</td>
+      <td>3,032</td>
+      <td>1,186</td>
+      <td>79</td>
+      <td>78</td>
+      <td>192</td>
+      <td>52</td>
+      <td>43</td>
+      <td>3</td>
+      <td>22</td>
+      <td>909</td>
+      <td>84</td>
+      <td>59</td>
+      <td>81</td>
+      <td>50</td>
+      <td>36</td>
+      <td>68</td>
+      <td>60</td>
+      <td>22</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>682</th>
+      <td>2021-12-01</td>
+      <td>5,123</td>
+      <td>2,222</td>
+      <td>143</td>
+      <td>86</td>
+      <td>326</td>
+      <td>29</td>
+      <td>88</td>
+      <td>17</td>
+      <td>20</td>
+      <td>1,582</td>
+      <td>105</td>
+      <td>48</td>
+      <td>96</td>
+      <td>50</td>
+      <td>40</td>
+      <td>97</td>
+      <td>127</td>
+      <td>27</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>683</th>
+      <td>2021-12-02</td>
+      <td>5,266</td>
+      <td>2,268</td>
+      <td>158</td>
+      <td>70</td>
+      <td>355</td>
+      <td>39</td>
+      <td>166</td>
+      <td>18</td>
+      <td>8</td>
+      <td>1,495</td>
+      <td>145</td>
+      <td>49</td>
+      <td>149</td>
+      <td>71</td>
+      <td>39</td>
+      <td>106</td>
+      <td>94</td>
+      <td>31</td>
+      <td>5</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+<p>일별로 기록된 COVID19 확진자수를 월별로 통합한 뒤 <code>2021-01 ~ 2021-10</code> 기간의 발생률을 계산하여 시각화하라. 시각화는 <code>plotly</code>의 <code>choropleth_mapbox</code>를 이용하며 시간의 추이를 표현하기 위해 <code>animation_frame</code> 옵션을 사용한다. 시각화 예시는 생략함.</p>
+<p>(풀이)</p>
+<div class="cell" data-execution_count="57">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'https://raw.githubusercontent.com/guebin/2021DV/master/_notebooks/covid19_20211202.csv'</span>)</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="57">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>일자</th>
+      <th>계(명)</th>
+      <th>서울</th>
+      <th>부산</th>
+      <th>대구</th>
+      <th>인천</th>
+      <th>광주</th>
+      <th>대전</th>
+      <th>울산</th>
+      <th>세종</th>
+      <th>경기</th>
+      <th>강원</th>
+      <th>충북</th>
+      <th>충남</th>
+      <th>전북</th>
+      <th>전남</th>
+      <th>경북</th>
+      <th>경남</th>
+      <th>제주</th>
+      <th>검역</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>누적(명)</td>
+      <td>457,612</td>
+      <td>158,774</td>
+      <td>16,555</td>
+      <td>19,114</td>
+      <td>25,299</td>
+      <td>6,353</td>
+      <td>8,809</td>
+      <td>5,675</td>
+      <td>1,588</td>
+      <td>136,546</td>
+      <td>8,889</td>
+      <td>8,942</td>
+      <td>13,174</td>
+      <td>6,453</td>
+      <td>4,498</td>
+      <td>11,471</td>
+      <td>15,236</td>
+      <td>3,762</td>
+      <td>6,474</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2020-01-20</td>
+      <td>1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2020-01-21</td>
+      <td>0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2020-01-22</td>
+      <td>0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2020-01-23</td>
+      <td>0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>679</th>
+      <td>2021-11-28</td>
+      <td>3,925</td>
+      <td>1,673</td>
+      <td>148</td>
+      <td>106</td>
+      <td>278</td>
+      <td>52</td>
+      <td>53</td>
+      <td>4</td>
+      <td>5</td>
+      <td>1,090</td>
+      <td>63</td>
+      <td>25</td>
+      <td>121</td>
+      <td>45</td>
+      <td>25</td>
+      <td>103</td>
+      <td>89</td>
+      <td>35</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>680</th>
+      <td>2021-11-29</td>
+      <td>3,308</td>
+      <td>1,393</td>
+      <td>144</td>
+      <td>88</td>
+      <td>233</td>
+      <td>61</td>
+      <td>43</td>
+      <td>2</td>
+      <td>15</td>
+      <td>910</td>
+      <td>56</td>
+      <td>33</td>
+      <td>52</td>
+      <td>49</td>
+      <td>28</td>
+      <td>68</td>
+      <td>86</td>
+      <td>44</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>681</th>
+      <td>2021-11-30</td>
+      <td>3,032</td>
+      <td>1,186</td>
+      <td>79</td>
+      <td>78</td>
+      <td>192</td>
+      <td>52</td>
+      <td>43</td>
+      <td>3</td>
+      <td>22</td>
+      <td>909</td>
+      <td>84</td>
+      <td>59</td>
+      <td>81</td>
+      <td>50</td>
+      <td>36</td>
+      <td>68</td>
+      <td>60</td>
+      <td>22</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>682</th>
+      <td>2021-12-01</td>
+      <td>5,123</td>
+      <td>2,222</td>
+      <td>143</td>
+      <td>86</td>
+      <td>326</td>
+      <td>29</td>
+      <td>88</td>
+      <td>17</td>
+      <td>20</td>
+      <td>1,582</td>
+      <td>105</td>
+      <td>48</td>
+      <td>96</td>
+      <td>50</td>
+      <td>40</td>
+      <td>97</td>
+      <td>127</td>
+      <td>27</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>683</th>
+      <td>2021-12-02</td>
+      <td>5,266</td>
+      <td>2,268</td>
+      <td>158</td>
+      <td>70</td>
+      <td>355</td>
+      <td>39</td>
+      <td>166</td>
+      <td>18</td>
+      <td>8</td>
+      <td>1,495</td>
+      <td>145</td>
+      <td>49</td>
+      <td>149</td>
+      <td>71</td>
+      <td>39</td>
+      <td>106</td>
+      <td>94</td>
+      <td>31</td>
+      <td>5</td>
+    </tr>
+  </tbody>
+</table>
+<p>684 rows × 20 columns</p>
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="74">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>df.iloc[<span class="dv">1</span>:].set_index(<span class="st">'일자'</span>).iloc[:,<span class="dv">1</span>:<span class="op">-</span><span class="dv">1</span>].applymap(<span class="kw">lambda</span> x: <span class="bu">int</span>(x.replace(<span class="st">','</span>,<span class="st">''</span>) <span class="cf">if</span> x<span class="op">!=</span><span class="st">'-'</span> <span class="cf">else</span> <span class="dv">0</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="74">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>서울</th>
+      <th>부산</th>
+      <th>대구</th>
+      <th>인천</th>
+      <th>광주</th>
+      <th>대전</th>
+      <th>울산</th>
+      <th>세종</th>
+      <th>경기</th>
+      <th>강원</th>
+      <th>충북</th>
+      <th>충남</th>
+      <th>전북</th>
+      <th>전남</th>
+      <th>경북</th>
+      <th>경남</th>
+      <th>제주</th>
+    </tr>
+    <tr>
+      <th>일자</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2020-01-20</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2020-01-21</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2020-01-22</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2020-01-23</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2020-01-24</th>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2021-11-28</th>
+      <td>1673</td>
+      <td>148</td>
+      <td>106</td>
+      <td>278</td>
+      <td>52</td>
+      <td>53</td>
+      <td>4</td>
+      <td>5</td>
+      <td>1090</td>
+      <td>63</td>
+      <td>25</td>
+      <td>121</td>
+      <td>45</td>
+      <td>25</td>
+      <td>103</td>
+      <td>89</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <th>2021-11-29</th>
+      <td>1393</td>
+      <td>144</td>
+      <td>88</td>
+      <td>233</td>
+      <td>61</td>
+      <td>43</td>
+      <td>2</td>
+      <td>15</td>
+      <td>910</td>
+      <td>56</td>
+      <td>33</td>
+      <td>52</td>
+      <td>49</td>
+      <td>28</td>
+      <td>68</td>
+      <td>86</td>
+      <td>44</td>
+    </tr>
+    <tr>
+      <th>2021-11-30</th>
+      <td>1186</td>
+      <td>79</td>
+      <td>78</td>
+      <td>192</td>
+      <td>52</td>
+      <td>43</td>
+      <td>3</td>
+      <td>22</td>
+      <td>909</td>
+      <td>84</td>
+      <td>59</td>
+      <td>81</td>
+      <td>50</td>
+      <td>36</td>
+      <td>68</td>
+      <td>60</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th>2021-12-01</th>
+      <td>2222</td>
+      <td>143</td>
+      <td>86</td>
+      <td>326</td>
+      <td>29</td>
+      <td>88</td>
+      <td>17</td>
+      <td>20</td>
+      <td>1582</td>
+      <td>105</td>
+      <td>48</td>
+      <td>96</td>
+      <td>50</td>
+      <td>40</td>
+      <td>97</td>
+      <td>127</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <th>2021-12-02</th>
+      <td>2268</td>
+      <td>158</td>
+      <td>70</td>
+      <td>355</td>
+      <td>39</td>
+      <td>166</td>
+      <td>18</td>
+      <td>8</td>
+      <td>1495</td>
+      <td>145</td>
+      <td>49</td>
+      <td>149</td>
+      <td>71</td>
+      <td>39</td>
+      <td>106</td>
+      <td>94</td>
+      <td>31</td>
+    </tr>
+  </tbody>
+</table>
+<p>683 rows × 17 columns</p>
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="87">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>df.iloc[<span class="dv">1</span>:].set_index(<span class="st">'일자'</span>).iloc[:,<span class="dv">1</span>:<span class="op">-</span><span class="dv">1</span>].applymap(<span class="kw">lambda</span> x: <span class="bu">int</span>(x.replace(<span class="st">','</span>,<span class="st">''</span>) <span class="cf">if</span> x<span class="op">!=</span><span class="st">'-'</span> <span class="cf">else</span> <span class="dv">0</span>)).<span class="op">\</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>T.reset_index().rename(columns<span class="op">=</span>{<span class="st">'index'</span>:<span class="st">'prov'</span>}).assign(prov<span class="op">=</span>prov).set_index(<span class="st">'prov'</span>).T.reset_index()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="87">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th>prov</th>
+      <th>일자</th>
+      <th>서울특별시</th>
+      <th>부산광역시</th>
+      <th>대구광역시</th>
+      <th>인천광역시</th>
+      <th>광주광역시</th>
+      <th>대전광역시</th>
+      <th>울산광역시</th>
+      <th>세종특별자치시</th>
+      <th>경기도</th>
+      <th>강원도</th>
+      <th>충청북도</th>
+      <th>충청남도</th>
+      <th>전라북도</th>
+      <th>전라남도</th>
+      <th>경상북도</th>
+      <th>경상남도</th>
+      <th>제주특별자치도</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2020-01-20</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2020-01-21</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2020-01-22</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2020-01-23</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2020-01-24</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>678</th>
+      <td>2021-11-28</td>
+      <td>1673</td>
+      <td>148</td>
+      <td>106</td>
+      <td>278</td>
+      <td>52</td>
+      <td>53</td>
+      <td>4</td>
+      <td>5</td>
+      <td>1090</td>
+      <td>63</td>
+      <td>25</td>
+      <td>121</td>
+      <td>45</td>
+      <td>25</td>
+      <td>103</td>
+      <td>89</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <th>679</th>
+      <td>2021-11-29</td>
+      <td>1393</td>
+      <td>144</td>
+      <td>88</td>
+      <td>233</td>
+      <td>61</td>
+      <td>43</td>
+      <td>2</td>
+      <td>15</td>
+      <td>910</td>
+      <td>56</td>
+      <td>33</td>
+      <td>52</td>
+      <td>49</td>
+      <td>28</td>
+      <td>68</td>
+      <td>86</td>
+      <td>44</td>
+    </tr>
+    <tr>
+      <th>680</th>
+      <td>2021-11-30</td>
+      <td>1186</td>
+      <td>79</td>
+      <td>78</td>
+      <td>192</td>
+      <td>52</td>
+      <td>43</td>
+      <td>3</td>
+      <td>22</td>
+      <td>909</td>
+      <td>84</td>
+      <td>59</td>
+      <td>81</td>
+      <td>50</td>
+      <td>36</td>
+      <td>68</td>
+      <td>60</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th>681</th>
+      <td>2021-12-01</td>
+      <td>2222</td>
+      <td>143</td>
+      <td>86</td>
+      <td>326</td>
+      <td>29</td>
+      <td>88</td>
+      <td>17</td>
+      <td>20</td>
+      <td>1582</td>
+      <td>105</td>
+      <td>48</td>
+      <td>96</td>
+      <td>50</td>
+      <td>40</td>
+      <td>97</td>
+      <td>127</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <th>682</th>
+      <td>2021-12-02</td>
+      <td>2268</td>
+      <td>158</td>
+      <td>70</td>
+      <td>355</td>
+      <td>39</td>
+      <td>166</td>
+      <td>18</td>
+      <td>8</td>
+      <td>1495</td>
+      <td>145</td>
+      <td>49</td>
+      <td>149</td>
+      <td>71</td>
+      <td>39</td>
+      <td>106</td>
+      <td>94</td>
+      <td>31</td>
+    </tr>
+  </tbody>
+</table>
+<p>683 rows × 18 columns</p>
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="88">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>df.iloc[<span class="dv">1</span>:].set_index(<span class="st">'일자'</span>).iloc[:,<span class="dv">1</span>:<span class="op">-</span><span class="dv">1</span>].applymap(<span class="kw">lambda</span> x: <span class="bu">int</span>(x.replace(<span class="st">','</span>,<span class="st">''</span>) <span class="cf">if</span> x<span class="op">!=</span><span class="st">'-'</span> <span class="cf">else</span> <span class="dv">0</span>)).<span class="op">\</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>T.reset_index().rename(columns<span class="op">=</span>{<span class="st">'index'</span>:<span class="st">'prov'</span>}).assign(prov<span class="op">=</span>prov).set_index(<span class="st">'prov'</span>).T.reset_index()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="88">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th>prov</th>
+      <th>일자</th>
+      <th>서울특별시</th>
+      <th>부산광역시</th>
+      <th>대구광역시</th>
+      <th>인천광역시</th>
+      <th>광주광역시</th>
+      <th>대전광역시</th>
+      <th>울산광역시</th>
+      <th>세종특별자치시</th>
+      <th>경기도</th>
+      <th>강원도</th>
+      <th>충청북도</th>
+      <th>충청남도</th>
+      <th>전라북도</th>
+      <th>전라남도</th>
+      <th>경상북도</th>
+      <th>경상남도</th>
+      <th>제주특별자치도</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2020-01-20</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2020-01-21</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2020-01-22</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2020-01-23</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2020-01-24</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>678</th>
+      <td>2021-11-28</td>
+      <td>1673</td>
+      <td>148</td>
+      <td>106</td>
+      <td>278</td>
+      <td>52</td>
+      <td>53</td>
+      <td>4</td>
+      <td>5</td>
+      <td>1090</td>
+      <td>63</td>
+      <td>25</td>
+      <td>121</td>
+      <td>45</td>
+      <td>25</td>
+      <td>103</td>
+      <td>89</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <th>679</th>
+      <td>2021-11-29</td>
+      <td>1393</td>
+      <td>144</td>
+      <td>88</td>
+      <td>233</td>
+      <td>61</td>
+      <td>43</td>
+      <td>2</td>
+      <td>15</td>
+      <td>910</td>
+      <td>56</td>
+      <td>33</td>
+      <td>52</td>
+      <td>49</td>
+      <td>28</td>
+      <td>68</td>
+      <td>86</td>
+      <td>44</td>
+    </tr>
+    <tr>
+      <th>680</th>
+      <td>2021-11-30</td>
+      <td>1186</td>
+      <td>79</td>
+      <td>78</td>
+      <td>192</td>
+      <td>52</td>
+      <td>43</td>
+      <td>3</td>
+      <td>22</td>
+      <td>909</td>
+      <td>84</td>
+      <td>59</td>
+      <td>81</td>
+      <td>50</td>
+      <td>36</td>
+      <td>68</td>
+      <td>60</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th>681</th>
+      <td>2021-12-01</td>
+      <td>2222</td>
+      <td>143</td>
+      <td>86</td>
+      <td>326</td>
+      <td>29</td>
+      <td>88</td>
+      <td>17</td>
+      <td>20</td>
+      <td>1582</td>
+      <td>105</td>
+      <td>48</td>
+      <td>96</td>
+      <td>50</td>
+      <td>40</td>
+      <td>97</td>
+      <td>127</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <th>682</th>
+      <td>2021-12-02</td>
+      <td>2268</td>
+      <td>158</td>
+      <td>70</td>
+      <td>355</td>
+      <td>39</td>
+      <td>166</td>
+      <td>18</td>
+      <td>8</td>
+      <td>1495</td>
+      <td>145</td>
+      <td>49</td>
+      <td>149</td>
+      <td>71</td>
+      <td>39</td>
+      <td>106</td>
+      <td>94</td>
+      <td>31</td>
+    </tr>
+  </tbody>
+</table>
+<p>683 rows × 18 columns</p>
+</div>
+</div>
+</div>
+<p><code>-</code> 여기가 어려움. 아래의 변환이 필요함</p>
+<div class="cell" data-execution_count="90">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co">'2020-01-20'</span>, <span class="st">'2020-01'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="90">
+<pre><code>('2020-01-20', '2020-01')</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="91">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co">'2020-01-20'</span>[:<span class="dv">7</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="91">
+<pre><code>'2020-01'</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="97">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co">'2020-01-20'</span>.split(<span class="st">'-'</span>)[<span class="dv">0</span>]<span class="op">+</span> <span class="st">'-'</span> <span class="op">+</span> <span class="st">'2020-01-20'</span>.split(<span class="st">'-'</span>)[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="97">
+<pre><code>'2020-01'</code></pre>
+</div>
+</div>
+<p><code>-</code> 방법1</p>
+<div class="cell" data-execution_count="103">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>_df<span class="op">=</span>df.iloc[<span class="dv">1</span>:].set_index(<span class="st">'일자'</span>).iloc[:,<span class="dv">1</span>:<span class="op">-</span><span class="dv">1</span>].applymap(<span class="kw">lambda</span> x: <span class="bu">int</span>(x.replace(<span class="st">','</span>,<span class="st">''</span>) <span class="cf">if</span> x<span class="op">!=</span><span class="st">'-'</span> <span class="cf">else</span> <span class="dv">0</span>)).<span class="op">\</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>T.reset_index().rename(columns<span class="op">=</span>{<span class="st">'index'</span>:<span class="st">'prov'</span>}).assign(prov<span class="op">=</span>prov).set_index(<span class="st">'prov'</span>).T.reset_index()</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>_df.assign(일자<span class="op">=</span><span class="bu">list</span>(<span class="bu">map</span>(<span class="kw">lambda</span> x: x[:<span class="dv">7</span>] , _df[<span class="st">'일자'</span>])))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="103">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th>prov</th>
+      <th>일자</th>
+      <th>서울특별시</th>
+      <th>부산광역시</th>
+      <th>대구광역시</th>
+      <th>인천광역시</th>
+      <th>광주광역시</th>
+      <th>대전광역시</th>
+      <th>울산광역시</th>
+      <th>세종특별자치시</th>
+      <th>경기도</th>
+      <th>강원도</th>
+      <th>충청북도</th>
+      <th>충청남도</th>
+      <th>전라북도</th>
+      <th>전라남도</th>
+      <th>경상북도</th>
+      <th>경상남도</th>
+      <th>제주특별자치도</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2020-01</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2020-01</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2020-01</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2020-01</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2020-01</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>678</th>
+      <td>2021-11</td>
+      <td>1673</td>
+      <td>148</td>
+      <td>106</td>
+      <td>278</td>
+      <td>52</td>
+      <td>53</td>
+      <td>4</td>
+      <td>5</td>
+      <td>1090</td>
+      <td>63</td>
+      <td>25</td>
+      <td>121</td>
+      <td>45</td>
+      <td>25</td>
+      <td>103</td>
+      <td>89</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <th>679</th>
+      <td>2021-11</td>
+      <td>1393</td>
+      <td>144</td>
+      <td>88</td>
+      <td>233</td>
+      <td>61</td>
+      <td>43</td>
+      <td>2</td>
+      <td>15</td>
+      <td>910</td>
+      <td>56</td>
+      <td>33</td>
+      <td>52</td>
+      <td>49</td>
+      <td>28</td>
+      <td>68</td>
+      <td>86</td>
+      <td>44</td>
+    </tr>
+    <tr>
+      <th>680</th>
+      <td>2021-11</td>
+      <td>1186</td>
+      <td>79</td>
+      <td>78</td>
+      <td>192</td>
+      <td>52</td>
+      <td>43</td>
+      <td>3</td>
+      <td>22</td>
+      <td>909</td>
+      <td>84</td>
+      <td>59</td>
+      <td>81</td>
+      <td>50</td>
+      <td>36</td>
+      <td>68</td>
+      <td>60</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th>681</th>
+      <td>2021-12</td>
+      <td>2222</td>
+      <td>143</td>
+      <td>86</td>
+      <td>326</td>
+      <td>29</td>
+      <td>88</td>
+      <td>17</td>
+      <td>20</td>
+      <td>1582</td>
+      <td>105</td>
+      <td>48</td>
+      <td>96</td>
+      <td>50</td>
+      <td>40</td>
+      <td>97</td>
+      <td>127</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <th>682</th>
+      <td>2021-12</td>
+      <td>2268</td>
+      <td>158</td>
+      <td>70</td>
+      <td>355</td>
+      <td>39</td>
+      <td>166</td>
+      <td>18</td>
+      <td>8</td>
+      <td>1495</td>
+      <td>145</td>
+      <td>49</td>
+      <td>149</td>
+      <td>71</td>
+      <td>39</td>
+      <td>106</td>
+      <td>94</td>
+      <td>31</td>
+    </tr>
+  </tbody>
+</table>
+<p>683 rows × 18 columns</p>
+</div>
+</div>
+</div>
+<p><code>-</code> 방법2</p>
+<div class="cell" data-execution_count="109">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>df.assign(일자<span class="op">=</span><span class="bu">list</span>(<span class="bu">map</span>(<span class="kw">lambda</span> x: x[:<span class="dv">7</span>], df.일자 )))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="109">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>일자</th>
+      <th>계(명)</th>
+      <th>서울</th>
+      <th>부산</th>
+      <th>대구</th>
+      <th>인천</th>
+      <th>광주</th>
+      <th>대전</th>
+      <th>울산</th>
+      <th>세종</th>
+      <th>경기</th>
+      <th>강원</th>
+      <th>충북</th>
+      <th>충남</th>
+      <th>전북</th>
+      <th>전남</th>
+      <th>경북</th>
+      <th>경남</th>
+      <th>제주</th>
+      <th>검역</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>누적(명)</td>
+      <td>457,612</td>
+      <td>158,774</td>
+      <td>16,555</td>
+      <td>19,114</td>
+      <td>25,299</td>
+      <td>6,353</td>
+      <td>8,809</td>
+      <td>5,675</td>
+      <td>1,588</td>
+      <td>136,546</td>
+      <td>8,889</td>
+      <td>8,942</td>
+      <td>13,174</td>
+      <td>6,453</td>
+      <td>4,498</td>
+      <td>11,471</td>
+      <td>15,236</td>
+      <td>3,762</td>
+      <td>6,474</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2020-01</td>
+      <td>1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2020-01</td>
+      <td>0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2020-01</td>
+      <td>0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2020-01</td>
+      <td>0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>679</th>
+      <td>2021-11</td>
+      <td>3,925</td>
+      <td>1,673</td>
+      <td>148</td>
+      <td>106</td>
+      <td>278</td>
+      <td>52</td>
+      <td>53</td>
+      <td>4</td>
+      <td>5</td>
+      <td>1,090</td>
+      <td>63</td>
+      <td>25</td>
+      <td>121</td>
+      <td>45</td>
+      <td>25</td>
+      <td>103</td>
+      <td>89</td>
+      <td>35</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>680</th>
+      <td>2021-11</td>
+      <td>3,308</td>
+      <td>1,393</td>
+      <td>144</td>
+      <td>88</td>
+      <td>233</td>
+      <td>61</td>
+      <td>43</td>
+      <td>2</td>
+      <td>15</td>
+      <td>910</td>
+      <td>56</td>
+      <td>33</td>
+      <td>52</td>
+      <td>49</td>
+      <td>28</td>
+      <td>68</td>
+      <td>86</td>
+      <td>44</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>681</th>
+      <td>2021-11</td>
+      <td>3,032</td>
+      <td>1,186</td>
+      <td>79</td>
+      <td>78</td>
+      <td>192</td>
+      <td>52</td>
+      <td>43</td>
+      <td>3</td>
+      <td>22</td>
+      <td>909</td>
+      <td>84</td>
+      <td>59</td>
+      <td>81</td>
+      <td>50</td>
+      <td>36</td>
+      <td>68</td>
+      <td>60</td>
+      <td>22</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>682</th>
+      <td>2021-12</td>
+      <td>5,123</td>
+      <td>2,222</td>
+      <td>143</td>
+      <td>86</td>
+      <td>326</td>
+      <td>29</td>
+      <td>88</td>
+      <td>17</td>
+      <td>20</td>
+      <td>1,582</td>
+      <td>105</td>
+      <td>48</td>
+      <td>96</td>
+      <td>50</td>
+      <td>40</td>
+      <td>97</td>
+      <td>127</td>
+      <td>27</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>683</th>
+      <td>2021-12</td>
+      <td>5,266</td>
+      <td>2,268</td>
+      <td>158</td>
+      <td>70</td>
+      <td>355</td>
+      <td>39</td>
+      <td>166</td>
+      <td>18</td>
+      <td>8</td>
+      <td>1,495</td>
+      <td>145</td>
+      <td>49</td>
+      <td>149</td>
+      <td>71</td>
+      <td>39</td>
+      <td>106</td>
+      <td>94</td>
+      <td>31</td>
+      <td>5</td>
+    </tr>
+  </tbody>
+</table>
+<p>684 rows × 20 columns</p>
+</div>
+</div>
+</div>
+<ul>
+<li>현실적으로 이정도까지 앞을 내다보는건 힘든것 같아요..</li>
+</ul>
+<p><code>-</code> 방법3</p>
+<div class="cell" data-execution_count="116">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>df.iloc[<span class="dv">1</span>:].set_index(<span class="st">'일자'</span>).iloc[:,<span class="dv">1</span>:<span class="op">-</span><span class="dv">1</span>].applymap(<span class="kw">lambda</span> x: <span class="bu">int</span>(x.replace(<span class="st">','</span>,<span class="st">''</span>) <span class="cf">if</span> x<span class="op">!=</span><span class="st">'-'</span> <span class="cf">else</span> <span class="dv">0</span>)).<span class="op">\</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>T.reset_index().rename(columns<span class="op">=</span>{<span class="st">'index'</span>:<span class="st">'prov'</span>}).assign(prov<span class="op">=</span>prov).set_index(<span class="st">'prov'</span>).T.reset_index().<span class="op">\</span></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>assign(일자<span class="op">=</span><span class="kw">lambda</span> df: <span class="bu">list</span>(<span class="bu">map</span>(<span class="kw">lambda</span> x: x[:<span class="dv">7</span>] , df[<span class="st">'일자'</span>])))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="116">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th>prov</th>
+      <th>일자</th>
+      <th>서울특별시</th>
+      <th>부산광역시</th>
+      <th>대구광역시</th>
+      <th>인천광역시</th>
+      <th>광주광역시</th>
+      <th>대전광역시</th>
+      <th>울산광역시</th>
+      <th>세종특별자치시</th>
+      <th>경기도</th>
+      <th>강원도</th>
+      <th>충청북도</th>
+      <th>충청남도</th>
+      <th>전라북도</th>
+      <th>전라남도</th>
+      <th>경상북도</th>
+      <th>경상남도</th>
+      <th>제주특별자치도</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2020-01</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2020-01</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2020-01</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2020-01</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2020-01</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>678</th>
+      <td>2021-11</td>
+      <td>1673</td>
+      <td>148</td>
+      <td>106</td>
+      <td>278</td>
+      <td>52</td>
+      <td>53</td>
+      <td>4</td>
+      <td>5</td>
+      <td>1090</td>
+      <td>63</td>
+      <td>25</td>
+      <td>121</td>
+      <td>45</td>
+      <td>25</td>
+      <td>103</td>
+      <td>89</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <th>679</th>
+      <td>2021-11</td>
+      <td>1393</td>
+      <td>144</td>
+      <td>88</td>
+      <td>233</td>
+      <td>61</td>
+      <td>43</td>
+      <td>2</td>
+      <td>15</td>
+      <td>910</td>
+      <td>56</td>
+      <td>33</td>
+      <td>52</td>
+      <td>49</td>
+      <td>28</td>
+      <td>68</td>
+      <td>86</td>
+      <td>44</td>
+    </tr>
+    <tr>
+      <th>680</th>
+      <td>2021-11</td>
+      <td>1186</td>
+      <td>79</td>
+      <td>78</td>
+      <td>192</td>
+      <td>52</td>
+      <td>43</td>
+      <td>3</td>
+      <td>22</td>
+      <td>909</td>
+      <td>84</td>
+      <td>59</td>
+      <td>81</td>
+      <td>50</td>
+      <td>36</td>
+      <td>68</td>
+      <td>60</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th>681</th>
+      <td>2021-12</td>
+      <td>2222</td>
+      <td>143</td>
+      <td>86</td>
+      <td>326</td>
+      <td>29</td>
+      <td>88</td>
+      <td>17</td>
+      <td>20</td>
+      <td>1582</td>
+      <td>105</td>
+      <td>48</td>
+      <td>96</td>
+      <td>50</td>
+      <td>40</td>
+      <td>97</td>
+      <td>127</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <th>682</th>
+      <td>2021-12</td>
+      <td>2268</td>
+      <td>158</td>
+      <td>70</td>
+      <td>355</td>
+      <td>39</td>
+      <td>166</td>
+      <td>18</td>
+      <td>8</td>
+      <td>1495</td>
+      <td>145</td>
+      <td>49</td>
+      <td>149</td>
+      <td>71</td>
+      <td>39</td>
+      <td>106</td>
+      <td>94</td>
+      <td>31</td>
+    </tr>
+  </tbody>
+</table>
+<p>683 rows × 18 columns</p>
+</div>
+</div>
+</div>
+<p><code>-</code> 방법3을 택하도록 하자. 위에서 일자를 ym으로 바꾸고 tidydata를 만들자.</p>
+<div class="cell" data-execution_count="147">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>df.iloc[<span class="dv">1</span>:].set_index(<span class="st">'일자'</span>).iloc[:,<span class="dv">1</span>:<span class="op">-</span><span class="dv">1</span>].applymap(<span class="kw">lambda</span> x: <span class="bu">int</span>(x.replace(<span class="st">','</span>,<span class="st">''</span>) <span class="cf">if</span> x<span class="op">!=</span><span class="st">'-'</span> <span class="cf">else</span> <span class="dv">0</span>)).<span class="op">\</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>T.reset_index().rename(columns<span class="op">=</span>{<span class="st">'index'</span>:<span class="st">'prov'</span>}).assign(prov<span class="op">=</span>prov).set_index(<span class="st">'prov'</span>).T.reset_index().<span class="op">\</span></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>assign(일자<span class="op">=</span><span class="kw">lambda</span> df: <span class="bu">list</span>(<span class="bu">map</span>(<span class="kw">lambda</span> x: x[:<span class="dv">7</span>] , df[<span class="st">'일자'</span>]))).<span class="op">\</span></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>rename(columns<span class="op">=</span>{<span class="st">'일자'</span>:<span class="st">'ym'</span>}).set_index(<span class="st">'ym'</span>).stack().reset_index().rename(columns<span class="op">=</span>{<span class="dv">0</span>:<span class="st">'value'</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="147">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>ym</th>
+      <th>prov</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2020-01</td>
+      <td>서울특별시</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2020-01</td>
+      <td>부산광역시</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2020-01</td>
+      <td>대구광역시</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2020-01</td>
+      <td>인천광역시</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2020-01</td>
+      <td>광주광역시</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>11606</th>
+      <td>2021-12</td>
+      <td>전라북도</td>
+      <td>71</td>
+    </tr>
+    <tr>
+      <th>11607</th>
+      <td>2021-12</td>
+      <td>전라남도</td>
+      <td>39</td>
+    </tr>
+    <tr>
+      <th>11608</th>
+      <td>2021-12</td>
+      <td>경상북도</td>
+      <td>106</td>
+    </tr>
+    <tr>
+      <th>11609</th>
+      <td>2021-12</td>
+      <td>경상남도</td>
+      <td>94</td>
+    </tr>
+    <tr>
+      <th>11610</th>
+      <td>2021-12</td>
+      <td>제주특별자치도</td>
+      <td>31</td>
+    </tr>
+  </tbody>
+</table>
+<p>11611 rows × 3 columns</p>
+</div>
+</div>
+</div>
+<p><code>-</code> groupby 적용</p>
+<div class="cell" data-execution_count="150">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>df.iloc[<span class="dv">1</span>:].set_index(<span class="st">'일자'</span>).iloc[:,<span class="dv">1</span>:<span class="op">-</span><span class="dv">1</span>].applymap(<span class="kw">lambda</span> x: <span class="bu">int</span>(x.replace(<span class="st">','</span>,<span class="st">''</span>) <span class="cf">if</span> x<span class="op">!=</span><span class="st">'-'</span> <span class="cf">else</span> <span class="dv">0</span>)).<span class="op">\</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>T.reset_index().rename(columns<span class="op">=</span>{<span class="st">'index'</span>:<span class="st">'prov'</span>}).assign(prov<span class="op">=</span>prov).set_index(<span class="st">'prov'</span>).T.reset_index().<span class="op">\</span></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>assign(일자<span class="op">=</span><span class="kw">lambda</span> df: <span class="bu">list</span>(<span class="bu">map</span>(<span class="kw">lambda</span> x: x[:<span class="dv">7</span>] , df[<span class="st">'일자'</span>]))).<span class="op">\</span></span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>rename(columns<span class="op">=</span>{<span class="st">'일자'</span>:<span class="st">'ym'</span>}).set_index(<span class="st">'ym'</span>).stack().reset_index().rename(columns<span class="op">=</span>{<span class="dv">0</span>:<span class="st">'value'</span>}).<span class="op">\</span></span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>groupby([<span class="st">'ym'</span>,<span class="st">'prov'</span>]).agg({<span class="st">'value'</span>:<span class="bu">sum</span>}).reset_index()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="150">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>ym</th>
+      <th>prov</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2020-01</td>
+      <td>강원도</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2020-01</td>
+      <td>경기도</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2020-01</td>
+      <td>경상남도</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2020-01</td>
+      <td>경상북도</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2020-01</td>
+      <td>광주광역시</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>403</th>
+      <td>2021-12</td>
+      <td>전라남도</td>
+      <td>79</td>
+    </tr>
+    <tr>
+      <th>404</th>
+      <td>2021-12</td>
+      <td>전라북도</td>
+      <td>121</td>
+    </tr>
+    <tr>
+      <th>405</th>
+      <td>2021-12</td>
+      <td>제주특별자치도</td>
+      <td>58</td>
+    </tr>
+    <tr>
+      <th>406</th>
+      <td>2021-12</td>
+      <td>충청남도</td>
+      <td>245</td>
+    </tr>
+    <tr>
+      <th>407</th>
+      <td>2021-12</td>
+      <td>충청북도</td>
+      <td>97</td>
+    </tr>
+  </tbody>
+</table>
+<p>408 rows × 3 columns</p>
+</div>
+</div>
+</div>
+<p><code>-</code> query</p>
+<div class="cell" data-execution_count="153">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>df.iloc[<span class="dv">1</span>:].set_index(<span class="st">'일자'</span>).iloc[:,<span class="dv">1</span>:<span class="op">-</span><span class="dv">1</span>].applymap(<span class="kw">lambda</span> x: <span class="bu">int</span>(x.replace(<span class="st">','</span>,<span class="st">''</span>) <span class="cf">if</span> x<span class="op">!=</span><span class="st">'-'</span> <span class="cf">else</span> <span class="dv">0</span>)).<span class="op">\</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>T.reset_index().rename(columns<span class="op">=</span>{<span class="st">'index'</span>:<span class="st">'prov'</span>}).assign(prov<span class="op">=</span>prov).set_index(<span class="st">'prov'</span>).T.reset_index().<span class="op">\</span></span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>assign(일자<span class="op">=</span><span class="kw">lambda</span> df: <span class="bu">list</span>(<span class="bu">map</span>(<span class="kw">lambda</span> x: x[:<span class="dv">7</span>] , df[<span class="st">'일자'</span>]))).<span class="op">\</span></span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>rename(columns<span class="op">=</span>{<span class="st">'일자'</span>:<span class="st">'ym'</span>}).set_index(<span class="st">'ym'</span>).stack().reset_index().rename(columns<span class="op">=</span>{<span class="dv">0</span>:<span class="st">'value'</span>}).<span class="op">\</span></span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>groupby([<span class="st">'ym'</span>,<span class="st">'prov'</span>]).agg({<span class="st">'value'</span>:<span class="bu">sum</span>}).reset_index().<span class="op">\</span></span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>query(<span class="st">'ym &gt;= "2021-01" and ym&lt;="2021-10"'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="153">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>ym</th>
+      <th>prov</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>204</th>
+      <td>2021-01</td>
+      <td>강원도</td>
+      <td>488</td>
+    </tr>
+    <tr>
+      <th>205</th>
+      <td>2021-01</td>
+      <td>경기도</td>
+      <td>5353</td>
+    </tr>
+    <tr>
+      <th>206</th>
+      <td>2021-01</td>
+      <td>경상남도</td>
+      <td>686</td>
+    </tr>
+    <tr>
+      <th>207</th>
+      <td>2021-01</td>
+      <td>경상북도</td>
+      <td>593</td>
+    </tr>
+    <tr>
+      <th>208</th>
+      <td>2021-01</td>
+      <td>광주광역시</td>
+      <td>702</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>369</th>
+      <td>2021-10</td>
+      <td>전라남도</td>
+      <td>459</td>
+    </tr>
+    <tr>
+      <th>370</th>
+      <td>2021-10</td>
+      <td>전라북도</td>
+      <td>672</td>
+    </tr>
+    <tr>
+      <th>371</th>
+      <td>2021-10</td>
+      <td>제주특별자치도</td>
+      <td>225</td>
+    </tr>
+    <tr>
+      <th>372</th>
+      <td>2021-10</td>
+      <td>충청남도</td>
+      <td>1467</td>
+    </tr>
+    <tr>
+      <th>373</th>
+      <td>2021-10</td>
+      <td>충청북도</td>
+      <td>1556</td>
+    </tr>
+  </tbody>
+</table>
+<p>170 rows × 3 columns</p>
+</div>
+</div>
+</div>
+<p><code>-</code> merge</p>
+<div class="cell" data-execution_count="155">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>df.iloc[<span class="dv">1</span>:].set_index(<span class="st">'일자'</span>).iloc[:,<span class="dv">1</span>:<span class="op">-</span><span class="dv">1</span>].applymap(<span class="kw">lambda</span> x: <span class="bu">int</span>(x.replace(<span class="st">','</span>,<span class="st">''</span>) <span class="cf">if</span> x<span class="op">!=</span><span class="st">'-'</span> <span class="cf">else</span> <span class="dv">0</span>)).<span class="op">\</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>T.reset_index().rename(columns<span class="op">=</span>{<span class="st">'index'</span>:<span class="st">'prov'</span>}).assign(prov<span class="op">=</span>prov).set_index(<span class="st">'prov'</span>).T.reset_index().<span class="op">\</span></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>assign(일자<span class="op">=</span><span class="kw">lambda</span> df: <span class="bu">list</span>(<span class="bu">map</span>(<span class="kw">lambda</span> x: x[:<span class="dv">7</span>] , df[<span class="st">'일자'</span>]))).<span class="op">\</span></span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>rename(columns<span class="op">=</span>{<span class="st">'일자'</span>:<span class="st">'ym'</span>}).set_index(<span class="st">'ym'</span>).stack().reset_index().rename(columns<span class="op">=</span>{<span class="dv">0</span>:<span class="st">'value'</span>}).<span class="op">\</span></span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>groupby([<span class="st">'ym'</span>,<span class="st">'prov'</span>]).agg({<span class="st">'value'</span>:<span class="bu">sum</span>}).reset_index().<span class="op">\</span></span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>query(<span class="st">'ym &gt;= "2021-01" and ym&lt;="2021-10"'</span>).<span class="op">\</span></span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>merge(pd.read_csv(<span class="st">'https://raw.githubusercontent.com/guebin/2021DV/master/_notebooks/2021-11-22-prov.csv'</span>).<span class="op">\</span></span>
+<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a>rename(columns<span class="op">=</span>{<span class="st">'행정구역(시군구)별'</span>:<span class="st">'prov'</span>,<span class="st">'총인구수 (명)'</span>:<span class="st">'pop'</span>})) <span class="co">## 머지할 df &lt;-- 이름 줄 가치가 X </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="155">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>ym</th>
+      <th>prov</th>
+      <th>value</th>
+      <th>pop</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2021-01</td>
+      <td>강원도</td>
+      <td>488</td>
+      <td>1537717</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2021-02</td>
+      <td>강원도</td>
+      <td>169</td>
+      <td>1537717</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2021-03</td>
+      <td>강원도</td>
+      <td>466</td>
+      <td>1537717</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2021-04</td>
+      <td>강원도</td>
+      <td>354</td>
+      <td>1537717</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2021-05</td>
+      <td>강원도</td>
+      <td>501</td>
+      <td>1537717</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>165</th>
+      <td>2021-06</td>
+      <td>충청북도</td>
+      <td>363</td>
+      <td>1596948</td>
+    </tr>
+    <tr>
+      <th>166</th>
+      <td>2021-07</td>
+      <td>충청북도</td>
+      <td>544</td>
+      <td>1596948</td>
+    </tr>
+    <tr>
+      <th>167</th>
+      <td>2021-08</td>
+      <td>충청북도</td>
+      <td>1302</td>
+      <td>1596948</td>
+    </tr>
+    <tr>
+      <th>168</th>
+      <td>2021-09</td>
+      <td>충청북도</td>
+      <td>1192</td>
+      <td>1596948</td>
+    </tr>
+    <tr>
+      <th>169</th>
+      <td>2021-10</td>
+      <td>충청북도</td>
+      <td>1556</td>
+      <td>1596948</td>
+    </tr>
+  </tbody>
+</table>
+<p>170 rows × 4 columns</p>
+</div>
+</div>
+</div>
+<p><code>-</code> prop = value / pop 을 계산하자</p>
+<div class="cell" data-execution_count="156">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>df.iloc[<span class="dv">1</span>:].set_index(<span class="st">'일자'</span>).iloc[:,<span class="dv">1</span>:<span class="op">-</span><span class="dv">1</span>].applymap(<span class="kw">lambda</span> x: <span class="bu">int</span>(x.replace(<span class="st">','</span>,<span class="st">''</span>) <span class="cf">if</span> x<span class="op">!=</span><span class="st">'-'</span> <span class="cf">else</span> <span class="dv">0</span>)).<span class="op">\</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>T.reset_index().rename(columns<span class="op">=</span>{<span class="st">'index'</span>:<span class="st">'prov'</span>}).assign(prov<span class="op">=</span>prov).set_index(<span class="st">'prov'</span>).T.reset_index().<span class="op">\</span></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>assign(일자<span class="op">=</span><span class="kw">lambda</span> df: <span class="bu">list</span>(<span class="bu">map</span>(<span class="kw">lambda</span> x: x[:<span class="dv">7</span>] , df[<span class="st">'일자'</span>]))).<span class="op">\</span></span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>rename(columns<span class="op">=</span>{<span class="st">'일자'</span>:<span class="st">'ym'</span>}).set_index(<span class="st">'ym'</span>).stack().reset_index().rename(columns<span class="op">=</span>{<span class="dv">0</span>:<span class="st">'value'</span>}).<span class="op">\</span></span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>groupby([<span class="st">'ym'</span>,<span class="st">'prov'</span>]).agg({<span class="st">'value'</span>:<span class="bu">sum</span>}).reset_index().<span class="op">\</span></span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a>query(<span class="st">'ym &gt;= "2021-01" and ym&lt;="2021-10"'</span>).<span class="op">\</span></span>
+<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a>merge(pd.read_csv(<span class="st">'https://raw.githubusercontent.com/guebin/2021DV/master/_notebooks/2021-11-22-prov.csv'</span>).<span class="op">\</span></span>
+<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a>rename(columns<span class="op">=</span>{<span class="st">'행정구역(시군구)별'</span>:<span class="st">'prov'</span>,<span class="st">'총인구수 (명)'</span>:<span class="st">'pop'</span>})).<span class="op">\</span></span>
+<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a><span class="bu">eval</span>(<span class="st">'prop = value/pop'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="156">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>ym</th>
+      <th>prov</th>
+      <th>value</th>
+      <th>pop</th>
+      <th>prop</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2021-01</td>
+      <td>강원도</td>
+      <td>488</td>
+      <td>1537717</td>
+      <td>0.000317</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2021-02</td>
+      <td>강원도</td>
+      <td>169</td>
+      <td>1537717</td>
+      <td>0.000110</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2021-03</td>
+      <td>강원도</td>
+      <td>466</td>
+      <td>1537717</td>
+      <td>0.000303</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2021-04</td>
+      <td>강원도</td>
+      <td>354</td>
+      <td>1537717</td>
+      <td>0.000230</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2021-05</td>
+      <td>강원도</td>
+      <td>501</td>
+      <td>1537717</td>
+      <td>0.000326</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>165</th>
+      <td>2021-06</td>
+      <td>충청북도</td>
+      <td>363</td>
+      <td>1596948</td>
+      <td>0.000227</td>
+    </tr>
+    <tr>
+      <th>166</th>
+      <td>2021-07</td>
+      <td>충청북도</td>
+      <td>544</td>
+      <td>1596948</td>
+      <td>0.000341</td>
+    </tr>
+    <tr>
+      <th>167</th>
+      <td>2021-08</td>
+      <td>충청북도</td>
+      <td>1302</td>
+      <td>1596948</td>
+      <td>0.000815</td>
+    </tr>
+    <tr>
+      <th>168</th>
+      <td>2021-09</td>
+      <td>충청북도</td>
+      <td>1192</td>
+      <td>1596948</td>
+      <td>0.000746</td>
+    </tr>
+    <tr>
+      <th>169</th>
+      <td>2021-10</td>
+      <td>충청북도</td>
+      <td>1556</td>
+      <td>1596948</td>
+      <td>0.000974</td>
+    </tr>
+  </tbody>
+</table>
+<p>170 rows × 5 columns</p>
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="157">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>df2<span class="op">=</span>df.iloc[<span class="dv">1</span>:].set_index(<span class="st">'일자'</span>).iloc[:,<span class="dv">1</span>:<span class="op">-</span><span class="dv">1</span>].applymap(<span class="kw">lambda</span> x: <span class="bu">int</span>(x.replace(<span class="st">','</span>,<span class="st">''</span>) <span class="cf">if</span> x<span class="op">!=</span><span class="st">'-'</span> <span class="cf">else</span> <span class="dv">0</span>)).<span class="op">\</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>T.reset_index().rename(columns<span class="op">=</span>{<span class="st">'index'</span>:<span class="st">'prov'</span>}).assign(prov<span class="op">=</span>prov).set_index(<span class="st">'prov'</span>).T.reset_index().<span class="op">\</span></span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>assign(일자<span class="op">=</span><span class="kw">lambda</span> df: <span class="bu">list</span>(<span class="bu">map</span>(<span class="kw">lambda</span> x: x[:<span class="dv">7</span>] , df[<span class="st">'일자'</span>]))).<span class="op">\</span></span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>rename(columns<span class="op">=</span>{<span class="st">'일자'</span>:<span class="st">'ym'</span>}).set_index(<span class="st">'ym'</span>).stack().reset_index().rename(columns<span class="op">=</span>{<span class="dv">0</span>:<span class="st">'value'</span>}).<span class="op">\</span></span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>groupby([<span class="st">'ym'</span>,<span class="st">'prov'</span>]).agg({<span class="st">'value'</span>:<span class="bu">sum</span>}).reset_index().<span class="op">\</span></span>
+<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a>query(<span class="st">'ym &gt;= "2021-01" and ym&lt;="2021-10"'</span>).<span class="op">\</span></span>
+<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a>merge(pd.read_csv(<span class="st">'https://raw.githubusercontent.com/guebin/2021DV/master/_notebooks/2021-11-22-prov.csv'</span>).<span class="op">\</span></span>
+<span id="cb40-8"><a href="#cb40-8" aria-hidden="true" tabindex="-1"></a>rename(columns<span class="op">=</span>{<span class="st">'행정구역(시군구)별'</span>:<span class="st">'prov'</span>,<span class="st">'총인구수 (명)'</span>:<span class="st">'pop'</span>})).<span class="op">\</span></span>
+<span id="cb40-9"><a href="#cb40-9" aria-hidden="true" tabindex="-1"></a><span class="bu">eval</span>(<span class="st">'prop = value/pop'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="162">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># import plotly.express as px</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="co"># from IPython.display import HTML</span></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="co"># fig=px.choropleth_mapbox(df2, </span></span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a><span class="co">#                      geojson=global_dict, </span></span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a><span class="co">#                      color='prop',</span></span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a><span class="co">#                      locations='prov', </span></span>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a><span class="co">#                      animation_frame='ym',</span></span>
+<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a><span class="co">#                      featureidkey='properties.name',</span></span>
+<span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a><span class="co">#                      center={"lat": 36, "lon": 128},</span></span>
+<span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a><span class="co">#                      mapbox_style="carto-positron", </span></span>
+<span id="cb41-11"><a href="#cb41-11" aria-hidden="true" tabindex="-1"></a><span class="co">#                      range_color=(0, df2.prop.max()),</span></span>
+<span id="cb41-12"><a href="#cb41-12" aria-hidden="true" tabindex="-1"></a><span class="co">#                      height=1200,</span></span>
+<span id="cb41-13"><a href="#cb41-13" aria-hidden="true" tabindex="-1"></a><span class="co">#                      zoom=6.5)</span></span>
+<span id="cb41-14"><a href="#cb41-14" aria-hidden="true" tabindex="-1"></a><span class="co"># fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})</span></span>
+<span id="cb41-15"><a href="#cb41-15" aria-hidden="true" tabindex="-1"></a><span class="co"># HTML(fig.to_html(include_mathjax=False, config=dict({'scrollZoom':False})))</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>jisim12 – quarto-inputc222a989</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">jisim12</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com"><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="주차-5월-23일" class="level1">
+<h1>12주차-5월 23일</h1>
+<blockquote class="blockquote">
+<p>빅데이터분석특강</p>
+</blockquote>
+<ul>
+<li>toc:false</li>
+<li>branch: master</li>
+<li>badges: true</li>
+<li>comments: true</li>
+<li>author: 심재인</li>
+</ul>
+<section id="imports" class="level2">
+<h2 class="anchored" data-anchor-id="imports">imports</h2>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> tensorflow <span class="im">as</span> tf</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> tensorflow.experimental.numpy <span class="im">as</span> tnp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>tnp.experimental_enable_numpy_behavior()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>load_ext tensorboard</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="cnn" class="level2">
+<h2 class="anchored" data-anchor-id="cnn">CNN</h2>
+<section id="conv의-역할" class="level3">
+<h3 class="anchored" data-anchor-id="conv의-역할">CONV의 역할</h3>
+<p><code>-</code> 데이터생성 (그냥 흑백대비 데이터)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>_X1 <span class="op">=</span> tnp.ones([<span class="dv">50</span>,<span class="dv">25</span>])<span class="op">*</span><span class="dv">10</span> </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>_X1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>_X2 <span class="op">=</span> tnp.zeros([<span class="dv">50</span>,<span class="dv">25</span>])<span class="op">*</span><span class="dv">10</span> </span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>_X2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>tf.concat([_X1,_X2],axis<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>_noise <span class="op">=</span> tnp.random.randn(<span class="dv">50</span><span class="op">*</span><span class="dv">50</span>).reshape(<span class="dv">50</span>,<span class="dv">50</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>_noise</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>XXX <span class="op">=</span> tf.concat([_X1,_X2],axis<span class="op">=</span><span class="dv">1</span>) <span class="op">+</span> _noise</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>XXX<span class="op">=</span>XXX.reshape(<span class="dv">1</span>,<span class="dv">50</span>,<span class="dv">50</span>,<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>plt.imshow(XXX.reshape(<span class="dv">50</span>,<span class="dv">50</span>),cmap<span class="op">=</span><span class="st">'gray'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><code>-</code> conv layer 생성</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>conv <span class="op">=</span> tf.keras.layers.Conv2D(<span class="dv">2</span>,(<span class="dv">2</span>,<span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>conv.weights <span class="co"># 처음에는 가중치가 없음</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>conv(XXX) <span class="co"># 가중치를 만들기 위해서 XXX를 conv에 한번 통과시킴</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>conv.weights <span class="co"># 이제 가중치가 생김</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><code>-</code> 가중치의 값을 확인해보자.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>conv.weights[<span class="dv">0</span>] <span class="co"># kernel에 해당하는것 </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>conv.weights[<span class="dv">1</span>] <span class="co"># bias에 해당하는것</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><code>-</code> 필터값을 원하는 것으로 변경해보자.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>w0 <span class="op">=</span> [[<span class="fl">0.25</span>,<span class="fl">0.25</span>],[<span class="fl">0.25</span>,<span class="fl">0.25</span>]] <span class="co"># 잡티를 제거하는 효과를 준다.</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>w1 <span class="op">=</span> [[<span class="op">-</span><span class="fl">1.0</span>,<span class="fl">1.0</span>],[<span class="op">-</span><span class="fl">1.0</span>,<span class="fl">1.0</span>]] <span class="co"># 경계를 찾기 좋아보이는 필터이다. (엣지검출)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>w<span class="op">=</span>np.concatenate([np.array(w0).reshape(<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">1</span>),np.array(w1).reshape(<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">1</span>)],axis<span class="op">=-</span><span class="dv">1</span>)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>w</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>b<span class="op">=</span> np.array([<span class="fl">0.0</span>,<span class="fl">0.0</span>])</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>b</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>conv.set_weights([w,b])</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>conv.get_weights()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>첫번째는 평균을 구하는 필터,</li>
+<li>두번째는 엣지를 검출하는 필터</li>
+</ul>
+<p><code>-</code> 필터를 넣은 결과를 확인</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>XXX0<span class="op">=</span>conv(XXX)[...,<span class="dv">0</span>] <span class="co"># 채널0</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>XXX0</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>XXX1<span class="op">=</span>conv(XXX)[...,<span class="dv">1</span>] <span class="co"># 채널1</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>XXX1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><code>-</code> 각 채널을 시각화</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>fig, ((ax1,ax2),(ax3,ax4)) <span class="op">=</span> plt.subplots(<span class="dv">2</span>,<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>ax1.imshow(XXX.reshape(<span class="dv">50</span>,<span class="dv">50</span>),cmap<span class="op">=</span><span class="st">'gray'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>ax3.imshow(XXX0.reshape(<span class="dv">49</span>,<span class="dv">49</span>),cmap<span class="op">=</span><span class="st">'gray'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>ax4.imshow(XXX1.reshape(<span class="dv">49</span>,<span class="dv">49</span>),cmap<span class="op">=</span><span class="st">'gray'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>fig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>2사분면: 원래이미지</li>
+<li>3사분면: 원래이미지 -&gt; 평균을 의미하는 conv적용</li>
+<li>4사분면: 원래이미지 -&gt; 엣지를 검출하는 conv적용</li>
+</ul>
+<p><code>-</code> conv(XXX)의 각 채널에 한번더 conv를 통과시켜보자</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>conv(XXX0.reshape(<span class="dv">1</span>,<span class="dv">49</span>,<span class="dv">49</span>,<span class="dv">1</span>))[...,<span class="dv">0</span>] <span class="co">### XXX0 -&gt; 평균필터 &lt;=&gt; XXX -&gt; 평균필터 -&gt; 평균필터</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>conv(XXX0.reshape(<span class="dv">1</span>,<span class="dv">49</span>,<span class="dv">49</span>,<span class="dv">1</span>))[...,<span class="dv">1</span>] <span class="co">### XXX0 -&gt; 엣지필터 &lt;=&gt; XXX -&gt; 평균필터 -&gt; 엣지필터</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>conv(XXX1.reshape(<span class="dv">1</span>,<span class="dv">49</span>,<span class="dv">49</span>,<span class="dv">1</span>))[...,<span class="dv">0</span>] <span class="co">### XXX1 -&gt; 평균필터 &lt;=&gt; XXX -&gt; 엣지필터 -&gt; 평균필터</span></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>conv(XXX1.reshape(<span class="dv">1</span>,<span class="dv">49</span>,<span class="dv">49</span>,<span class="dv">1</span>))[...,<span class="dv">1</span>] <span class="co">### XXX1 -&gt; 엣지필터 &lt;=&gt; XXX -&gt; 엣지필터 -&gt; 엣지필터</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>fig,ax <span class="op">=</span>plt.subplots(<span class="dv">3</span>,<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>][<span class="dv">0</span>].imshow(XXX.reshape(<span class="dv">50</span>,<span class="dv">50</span>),cmap<span class="op">=</span><span class="st">'gray'</span>) <span class="co"># 원래이미지</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">1</span>][<span class="dv">0</span>].imshow(XXX0.reshape(<span class="dv">49</span>,<span class="dv">49</span>),cmap<span class="op">=</span><span class="st">'gray'</span>) <span class="co"># 원래이미지 -&gt; 평균필터 </span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">1</span>][<span class="dv">2</span>].imshow(XXX1.reshape(<span class="dv">49</span>,<span class="dv">49</span>),cmap<span class="op">=</span><span class="st">'gray'</span>) <span class="co"># 원래이미지 -&gt; 엣지필터</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">2</span>][<span class="dv">0</span>].imshow(conv(XXX0.reshape(<span class="dv">1</span>,<span class="dv">49</span>,<span class="dv">49</span>,<span class="dv">1</span>))[...,<span class="dv">0</span>].reshape(<span class="dv">48</span>,<span class="dv">48</span>),cmap<span class="op">=</span><span class="st">'gray'</span>) <span class="co"># 원래이미지 -&gt; 평균필터 </span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">2</span>][<span class="dv">1</span>].imshow(conv(XXX0.reshape(<span class="dv">1</span>,<span class="dv">49</span>,<span class="dv">49</span>,<span class="dv">1</span>))[...,<span class="dv">1</span>].reshape(<span class="dv">48</span>,<span class="dv">48</span>),cmap<span class="op">=</span><span class="st">'gray'</span>) <span class="co"># 원래이미지 -&gt; 엣지필터</span></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">2</span>][<span class="dv">2</span>].imshow(conv(XXX1.reshape(<span class="dv">1</span>,<span class="dv">49</span>,<span class="dv">49</span>,<span class="dv">1</span>))[...,<span class="dv">0</span>].reshape(<span class="dv">48</span>,<span class="dv">48</span>),cmap<span class="op">=</span><span class="st">'gray'</span>) <span class="co"># 원래이미지 -&gt; 평균필터 </span></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">2</span>][<span class="dv">3</span>].imshow(conv(XXX1.reshape(<span class="dv">1</span>,<span class="dv">49</span>,<span class="dv">49</span>,<span class="dv">1</span>))[...,<span class="dv">1</span>].reshape(<span class="dv">48</span>,<span class="dv">48</span>),cmap<span class="op">=</span><span class="st">'gray'</span>) <span class="co"># 원래이미지 -&gt; 엣지필터</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>fig.set_figheight(<span class="dv">8</span>)</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>fig.set_figwidth(<span class="dv">16</span>)</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>fig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><code>-</code> 요약 - conv의 weight에 따라서 엣지를 검출하는 필터가 만들어지기도 하고 스무딩의 역할을 하는 필터가 만들어지기도 한다. 그리고 우리는 의미를 알 수 없지만 어떠한 역할을 하는 필터가 만들어질 것이다. - 이것들을 조합하다보면 우연히 이미지를 분류하기에 유리한 특징을 뽑아내는 weight가 맞춰질 수도 있겠다. - 채널수를 많이 만들고 다양한 웨이트조합을 실험하다보면 보다 복잡한 이미지의 특징을 추출할 수도 있을 것이다? - 컨볼루션 레이어의 역할 = 이미지의 특징을 추출하는 역할</p>
+<p><code>-</code> 참고: 스트라이드, 패딩 - 스트라이드: 윈도우가 1칸씩 이동하는 것이 아니라 2~3칸씩 이동함 - 패딩: 이미지의 가장자리에 정당한 값을 넣어서 (예를들어 0) 컨볼루션을 수행. 따라서 컨볼루션 연산 이후에도 이미지의 크기가 줄어들지 않도록 방지한다.</p>
+</section>
+<section id="maxpool" class="level3">
+<h3 class="anchored" data-anchor-id="maxpool">MAXPOOL</h3>
+<p><code>-</code> 기본적역할: 이미지의 크기를 줄이는 것 - 이미지의의 크기를 줄여야하는 이유? 어차피 최종적으로 10차원으로 줄어야하므로 - 이미지의 크기를 줄이면서도 동시에 아주 크리티컬한 특징은 손실없이 유지하고 싶다~</p>
+<p><code>-</code> 점점 작은 이미지가 되면서 중요한 특징들은 살아남지만 그렇지 않으면 죽는다. (캐리커쳐 느낌)</p>
+<p><code>-</code> 평균이 아니라 max를 쓴 이유는? 그냥 평균보다 나을것이라고 생각했음.. - 그런데 사실은 꼭 그렇지만은 않아서 최근에는 꼭 맥스풀링을 고집하진 않는 추세 (평균풀링도 많이씀)</p>
+</section>
+<section id="cnn-아키텍처의-표현방법" class="level3">
+<h3 class="anchored" data-anchor-id="cnn-아키텍처의-표현방법">CNN 아키텍처의 표현방법</h3>
+<p><code>-</code> 아래와 같이 아키텍처의 다이어그램형태로 표현하고 굳이 노드별로 이미지를 그리진 않음</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Comparison_image_neural_networks.svg/2560px-Comparison_image_neural_networks.svg.png" class="img-fluid"></p>
+<p><code>-</code> 물론 아래와 같이 그리는 경우도 있음</p>
+<p><img src="https://editor.analyticsvidhya.com/uploads/90650dnn2.jpeg" class="img-fluid"></p>
+</section>
+<section id="discusstion-about-cnn" class="level3">
+<h3 class="anchored" data-anchor-id="discusstion-about-cnn">Discusstion about CNN</h3>
+<p><code>-</code> 격자형태로 배열된 자료를 처리하는데 특화된 신경망이다. - 시계열 (1차원격자), 이미지 (2차원격자)</p>
+<p><code>-</code> 실제응용에서 엄청난 성공을 거두었다.</p>
+<p><code>-</code> 이름의 유래는 컨볼루션이라는 수학적 연산을 사용했기 때문 - 컨볼루션은 조금 특별한 선형변환이다.</p>
+<p><code>-</code> 신경과학의 원리가 심층학습에 영향을 미친 사례이다.</p>
+</section>
+<section id="cnn의-모티브" class="level3">
+<h3 class="anchored" data-anchor-id="cnn의-모티브">CNN의 모티브</h3>
+<p><code>-</code> 희소성 + 매개변수의 공유 - 다소 철학적인 모티브임 - 희소성: 이미지를 분석하여 특징을 뽑아낼때 부분부분의 특징만 뽑으면 된다는 의미 - 매개변수의 공유: 한 채널에는 하나의 역할을 하는 커널을 설계하면 된다는 의미 (스무딩이든 엣징이든). 즉 어떤지역은 스무딩, 어떤지역은 엣징을 할 필요가 없이 한채널에서는 엣징만, 다른채널에서는 스무딩만 수행한뒤 여러채널을 조합해서 이해하면 된다.</p>
+<p><code>-</code> 매개변수 공유효과로 인해서 파라메터가 확 줄어든다.</p>
+<p>(예시) (1,6,6,1) -&gt; (1,5,5,2) - MLP방식이면 (36,50) 의 차원을 가진 매트릭스가 필요함 =&gt; 1800개의 매개변수 필요 - CNN은 8개의 매개변수 필요</p>
+</section>
+<section id="cnn-신경망의-기본구조" class="level3">
+<h3 class="anchored" data-anchor-id="cnn-신경망의-기본구조">CNN 신경망의 기본구조</h3>
+<p><code>-</code> 기본유닛 - conv - activation - pooling - conv - conv - activation - pooling</p>
+</section>
+</section>
+<section id="모형의-성능을-올리기-위한-노력들" class="level2">
+<h2 class="anchored" data-anchor-id="모형의-성능을-올리기-위한-노력들">모형의 성능을 올리기 위한 노력들</h2>
+<section id="dropout" class="level3">
+<h3 class="anchored" data-anchor-id="dropout">dropout</h3>
+<p><code>-</code> 아래의 예제를 복습하자.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">43052</span>)</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">100</span>).reshape(<span class="dv">100</span>,<span class="dv">1</span>)</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">0</span>,scale<span class="op">=</span><span class="fl">0.01</span>,size<span class="op">=</span>(<span class="dv">100</span>,<span class="dv">1</span>))</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>plt.plot(x,y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>tf.random.set_seed(<span class="dv">43052</span>)</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>net <span class="op">=</span> tf.keras.Sequential()</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Dense(<span class="dv">2048</span>,activation<span class="op">=</span><span class="st">'relu'</span>))</span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Dense(<span class="dv">1</span>))</span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>net.<span class="bu">compile</span>(loss<span class="op">=</span><span class="st">'mse'</span>,optimizer<span class="op">=</span><span class="st">'adam'</span>)</span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>net.fit(x,y,epochs<span class="op">=</span><span class="dv">5000</span>,verbose<span class="op">=</span><span class="dv">0</span>,batch_size<span class="op">=</span><span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>plt.plot(x,y)</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>plt.plot(x,net(x),<span class="st">'--'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><code>-</code> train/test로 나누어서 생각해보자.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>tf.random.set_seed(<span class="dv">43052</span>)</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>net <span class="op">=</span> tf.keras.Sequential()</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Dense(<span class="dv">2048</span>,activation<span class="op">=</span><span class="st">'relu'</span>))</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Dense(<span class="dv">1</span>))</span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>net.<span class="bu">compile</span>(loss<span class="op">=</span><span class="st">'mse'</span>,optimizer<span class="op">=</span><span class="st">'adam'</span>)</span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>net.fit(x[:<span class="dv">80</span>],y[:<span class="dv">80</span>],epochs<span class="op">=</span><span class="dv">5000</span>,verbose<span class="op">=</span><span class="dv">0</span>,batch_size<span class="op">=</span><span class="dv">80</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>plt.plot(x,y)</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>plt.plot(x[:<span class="dv">80</span>],net(x[:<span class="dv">80</span>]),<span class="st">'--'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>plt.plot(x,y)</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>plt.plot(x[:<span class="dv">80</span>],net(x[:<span class="dv">80</span>]),<span class="st">'--'</span>)</span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>plt.plot(x[<span class="dv">80</span>:],net(x[<span class="dv">80</span>:]),<span class="st">'--'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>train에서 추세를 따라가는게 좋은게 아니다 <span class="math inline">\(\to\)</span> 그냥 직선으로 핏하는거 이외에는 다 오버핏이다.</li>
+</ul>
+<p><code>-</code> 매 에폭마다 적당히 80%의 노드들을 빼고 학습하자 <span class="math inline">\(\to\)</span> 너무 잘 학습되는 문제는 생기지 않을 것이다 (과적합이 방지될것이다?)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>tf.random.set_seed(<span class="dv">43052</span>)</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>net <span class="op">=</span> tf.keras.Sequential()</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Dense(<span class="dv">2048</span>,activation<span class="op">=</span><span class="st">'relu'</span>))</span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Dropout(<span class="fl">0.8</span>))</span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Dense(<span class="dv">1</span>))</span>
+<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a>net.<span class="bu">compile</span>(loss<span class="op">=</span><span class="st">'mse'</span>,optimizer<span class="op">=</span><span class="st">'adam'</span>)</span>
+<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a>net.fit(x[:<span class="dv">80</span>],y[:<span class="dv">80</span>],epochs<span class="op">=</span><span class="dv">5000</span>,verbose<span class="op">=</span><span class="dv">0</span>,batch_size<span class="op">=</span><span class="dv">80</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>plt.plot(x,y)</span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>plt.plot(x[:<span class="dv">80</span>],net(x[:<span class="dv">80</span>]),<span class="st">'--'</span>)</span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>plt.plot(x[<span class="dv">80</span>:],net(x[<span class="dv">80</span>:]),<span class="st">'--'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><code>-</code> 드랍아웃에 대한 summary - 직관: 특정노드를 랜덤으로 off시키면 학습이 방해되어 오히려 과적합이 방지되는 효과가 있다 (그렇지만 진짜 중요한 특징이라면 랜덤으로 off 되더라도 어느정도는 학습될 듯) - note: 드랍아웃을 쓰면 오버핏이 줄어드는건 맞지만 완전히 없어지는건 아니다. - note: 오버핏을 줄이는 유일한 방법이 드랍아웃만 있는것도 아니며, 드랍아웃이 오버핏을 줄이는 가장 효과적인 방법도 아니다 (최근에는 dropout보다 batch nomalization을 사용하는 추세임)</p>
+</section>
+<section id="train-val-test" class="level3">
+<h3 class="anchored" data-anchor-id="train-val-test">train / val / test</h3>
+<p><code>-</code> data</p>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>(x_train, y_train), (x_test, y_test) <span class="op">=</span> tf.keras.datasets.fashion_mnist.load_data()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>X<span class="op">=</span> x_train.reshape(<span class="op">-</span><span class="dv">1</span>,<span class="dv">28</span>,<span class="dv">28</span>,<span class="dv">1</span>)<span class="op">/</span><span class="dv">255</span> <span class="co">## 입력이 0~255 -&gt; 0~1로 표준화 시키는 효과 + float으로 자료형이 바뀜 </span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> tf.keras.utils.to_categorical(y_train)</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>XX <span class="op">=</span> x_test.reshape(<span class="op">-</span><span class="dv">1</span>,<span class="dv">28</span>,<span class="dv">28</span>,<span class="dv">1</span>)<span class="op">/</span><span class="dv">255</span></span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>yy <span class="op">=</span> tf.keras.utils.to_categorical(y_test)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>net <span class="op">=</span> tf.keras.Sequential()</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Flatten())</span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Dense(<span class="dv">50</span>,activation<span class="op">=</span><span class="st">'relu'</span>))</span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Dense(<span class="dv">10</span>,activation<span class="op">=</span><span class="st">'softmax'</span>))</span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a>net.<span class="bu">compile</span>(optimizer<span class="op">=</span><span class="st">'adam'</span>,loss<span class="op">=</span>tf.losses.categorical_crossentropy,metrics<span class="op">=</span><span class="st">'accuracy'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>2022-05-31 16:53:48.849962: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:939] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero</code></pre>
+</div>
+</div>
+<div class="cell" data-scrolled="true" data-tags="[]" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co">#collapse_output</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>cb1 <span class="op">=</span> tf.keras.callbacks.TensorBoard()</span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>net.fit(X,y,epochs<span class="op">=</span><span class="dv">20</span>,batch_size<span class="op">=</span><span class="dv">200</span>,validation_split<span class="op">=</span><span class="fl">0.2</span>,callbacks<span class="op">=</span>cb1,verbose<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Epoch 1/20
+240/240 [==============================] - 1s 2ms/step - loss: 0.6819 - accuracy: 0.7696 - val_loss: 0.4942 - val_accuracy: 0.8319
+Epoch 2/20
+240/240 [==============================] - 0s 2ms/step - loss: 0.4641 - accuracy: 0.8415 - val_loss: 0.4446 - val_accuracy: 0.8464
+Epoch 3/20
+240/240 [==============================] - 0s 2ms/step - loss: 0.4207 - accuracy: 0.8533 - val_loss: 0.4199 - val_accuracy: 0.8533
+Epoch 4/20
+240/240 [==============================] - 0s 2ms/step - loss: 0.3964 - accuracy: 0.8633 - val_loss: 0.4084 - val_accuracy: 0.8551
+Epoch 5/20
+240/240 [==============================] - 0s 2ms/step - loss: 0.3810 - accuracy: 0.8677 - val_loss: 0.4046 - val_accuracy: 0.8597
+Epoch 6/20
+240/240 [==============================] - 1s 2ms/step - loss: 0.3677 - accuracy: 0.8722 - val_loss: 0.4016 - val_accuracy: 0.8635
+Epoch 7/20
+240/240 [==============================] - 0s 1ms/step - loss: 0.3520 - accuracy: 0.8783 - val_loss: 0.3747 - val_accuracy: 0.8702
+Epoch 8/20
+240/240 [==============================] - 0s 1ms/step - loss: 0.3466 - accuracy: 0.8777 - val_loss: 0.3715 - val_accuracy: 0.8725
+Epoch 9/20
+240/240 [==============================] - 0s 1ms/step - loss: 0.3375 - accuracy: 0.8811 - val_loss: 0.3739 - val_accuracy: 0.8707
+Epoch 10/20
+240/240 [==============================] - 0s 1ms/step - loss: 0.3279 - accuracy: 0.8852 - val_loss: 0.3615 - val_accuracy: 0.8754
+Epoch 11/20
+240/240 [==============================] - 0s 1ms/step - loss: 0.3212 - accuracy: 0.8871 - val_loss: 0.3545 - val_accuracy: 0.8781
+Epoch 12/20
+240/240 [==============================] - 0s 1ms/step - loss: 0.3148 - accuracy: 0.8883 - val_loss: 0.3697 - val_accuracy: 0.8703
+Epoch 13/20
+240/240 [==============================] - 0s 2ms/step - loss: 0.3086 - accuracy: 0.8910 - val_loss: 0.3542 - val_accuracy: 0.8749
+Epoch 14/20
+240/240 [==============================] - 0s 1ms/step - loss: 0.3020 - accuracy: 0.8938 - val_loss: 0.3620 - val_accuracy: 0.8748
+Epoch 15/20
+240/240 [==============================] - 1s 2ms/step - loss: 0.2949 - accuracy: 0.8936 - val_loss: 0.3610 - val_accuracy: 0.8717
+Epoch 16/20
+240/240 [==============================] - 0s 2ms/step - loss: 0.2928 - accuracy: 0.8963 - val_loss: 0.3607 - val_accuracy: 0.8755
+Epoch 17/20
+240/240 [==============================] - 0s 1ms/step - loss: 0.2897 - accuracy: 0.8963 - val_loss: 0.3542 - val_accuracy: 0.8773
+Epoch 18/20
+240/240 [==============================] - 0s 2ms/step - loss: 0.2819 - accuracy: 0.8981 - val_loss: 0.3632 - val_accuracy: 0.8721
+Epoch 19/20
+240/240 [==============================] - 0s 2ms/step - loss: 0.2791 - accuracy: 0.9000 - val_loss: 0.3403 - val_accuracy: 0.8829
+Epoch 20/20
+240/240 [==============================] - 0s 2ms/step - loss: 0.2729 - accuracy: 0.9029 - val_loss: 0.3528 - val_accuracy: 0.8782</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="8">
+<pre><code>&lt;keras.callbacks.History at 0x7fc05827aec0&gt;</code></pre>
+</div>
+</div>
+<p><code>-</code> 텐서보드 여는 방법1</p>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>load_ext tensorboard</span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 주피터노트북 (혹은 주피터랩)에서 텐서보드를 임베딩하여 넣을 수 있도록 도와주는 매직펑션</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The tensorboard extension is already loaded. To reload it, use:
+  %reload_ext tensorboard</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!rm -rf logs</span></span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="co">#!kill 313799</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>tensorboard <span class="op">--</span>logdir logs <span class="op">--</span>host <span class="fl">0.0.0.0</span></span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a><span class="co"># %tensorboard --logdir logs &lt;-- 실습에서는 이렇게 하면됩니다.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+
+      <iframe id="tensorboard-frame-9f60614e7e633613" width="100%" height="800" frameborder="0">
+      </iframe>
+      <script>
+        (function() {
+          const frame = document.getElementById("tensorboard-frame-9f60614e7e633613");
+          const url = new URL("/", window.location);
+          const port = 6006;
+          if (port) {
+            url.port = port;
+          }
+          frame.src = url;
+        })();
+      </script>
+    
+</div>
+</div>
+<p>(참고사항) 파이썬 3.10의 경우 아래의 수정이 필요</p>
+<p><code>?/python3.10/site-packages/tensorboard/_vendor/html5lib/_trie/_base.py</code> 을 열고</p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> collections <span class="im">import</span> Mapping <span class="co">### 수정전</span></span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> collections.abc <span class="im">import</span> Mapping <span class="co">### 수정후 </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>와 같이 수정한다.</p>
+<ul>
+<li>왜냐하면 파이썬 3.10부터 <code>from collections import Mapping</code> 가 동작하지 않고 <code>from collections.abc import Mapping</code> 가 동작하도록 문법이 바뀜</li>
+</ul>
+<p><code>-</code> 텐서보드를 실행하는 방법2</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="co"># !tensorboard --logdir logs --host 0.0.0.0</span></span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a><span class="co"># !tensorboard --logdir logs &lt;-- 실습에서는 이렇게 하면됩니다.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="조기종료" class="level3">
+<h3 class="anchored" data-anchor-id="조기종료">조기종료</h3>
+<p><code>-</code> 텐서보드를 살펴보니 특정에폭 이후에는 오히려 과적합이 진행되는 듯 하다 (학습할수록 손해인듯 하다) <span class="math inline">\(\to\)</span> 그 특정에폭까지만 학습해보자</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>tf.random.set_seed(<span class="dv">43052</span>)</span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>net <span class="op">=</span> tf.keras.Sequential()</span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Flatten())</span>
+<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Dense(<span class="dv">5000</span>,activation<span class="op">=</span><span class="st">'relu'</span>)) <span class="co">## 과적합좀 시키려고</span></span>
+<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Dense(<span class="dv">5000</span>,activation<span class="op">=</span><span class="st">'relu'</span>)) <span class="co">## 레이어를 2장만듬 + 레이어하나당 노드수도 증가</span></span>
+<span id="cb55-6"><a href="#cb55-6" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Dense(<span class="dv">10</span>,activation<span class="op">=</span><span class="st">'softmax'</span>))</span>
+<span id="cb55-7"><a href="#cb55-7" aria-hidden="true" tabindex="-1"></a>net.<span class="bu">compile</span>(optimizer<span class="op">=</span><span class="st">'adam'</span>,loss<span class="op">=</span>tf.losses.categorical_crossentropy,metrics<span class="op">=</span><span class="st">'accuracy'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-scrolled="true" data-tags="[]">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a><span class="co">#cb1 = tf.keras.callbacks.TensorBoard()</span></span>
+<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>cb2 <span class="op">=</span> tf.keras.callbacks.EarlyStopping(patience<span class="op">=</span><span class="dv">1</span>) <span class="co"># val-loss가 1회증가하면 멈추어라 </span></span>
+<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a>net.fit(X,y,epochs<span class="op">=</span><span class="dv">200</span>,batch_size<span class="op">=</span><span class="dv">200</span>,validation_split<span class="op">=</span><span class="fl">0.2</span>,callbacks<span class="op">=</span>cb2,verbose<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a><span class="co">#cb1 = tf.keras.callbacks.TensorBoard()</span></span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>cb2 <span class="op">=</span> tf.keras.callbacks.EarlyStopping(patience<span class="op">=</span><span class="dv">1</span>) <span class="co"># val-loss가 1회증가하면 멈추어라 </span></span>
+<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a>net.fit(X,y,epochs<span class="op">=</span><span class="dv">200</span>,batch_size<span class="op">=</span><span class="dv">200</span>,validation_split<span class="op">=</span><span class="fl">0.2</span>,callbacks<span class="op">=</span>cb2,verbose<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a><span class="co">#cb1 = tf.keras.callbacks.TensorBoard()</span></span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>cb2 <span class="op">=</span> tf.keras.callbacks.EarlyStopping(patience<span class="op">=</span><span class="dv">1</span>) <span class="co"># val-loss가 1회증가하면 멈추어라 </span></span>
+<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a>net.fit(X,y,epochs<span class="op">=</span><span class="dv">200</span>,batch_size<span class="op">=</span><span class="dv">200</span>,validation_split<span class="op">=</span><span class="fl">0.2</span>,callbacks<span class="op">=</span>cb2,verbose<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a><span class="co">#cb1 = tf.keras.callbacks.TensorBoard()</span></span>
+<span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a>cb2 <span class="op">=</span> tf.keras.callbacks.EarlyStopping(patience<span class="op">=</span><span class="dv">1</span>) <span class="co"># val-loss가 1회증가하면 멈추어라 </span></span>
+<span id="cb59-4"><a href="#cb59-4" aria-hidden="true" tabindex="-1"></a>net.fit(X,y,epochs<span class="op">=</span><span class="dv">200</span>,batch_size<span class="op">=</span><span class="dv">200</span>,validation_split<span class="op">=</span><span class="fl">0.2</span>,callbacks<span class="op">=</span>cb2,verbose<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a><span class="co">#cb1 = tf.keras.callbacks.TensorBoard()</span></span>
+<span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a>cb2 <span class="op">=</span> tf.keras.callbacks.EarlyStopping(patience<span class="op">=</span><span class="dv">1</span>) <span class="co"># val-loss가 1회증가하면 멈추어라 </span></span>
+<span id="cb60-4"><a href="#cb60-4" aria-hidden="true" tabindex="-1"></a>net.fit(X,y,epochs<span class="op">=</span><span class="dv">200</span>,batch_size<span class="op">=</span><span class="dv">200</span>,validation_split<span class="op">=</span><span class="fl">0.2</span>,callbacks<span class="op">=</span>cb2,verbose<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a><span class="co">#cb1 = tf.keras.callbacks.TensorBoard()</span></span>
+<span id="cb61-3"><a href="#cb61-3" aria-hidden="true" tabindex="-1"></a>cb2 <span class="op">=</span> tf.keras.callbacks.EarlyStopping(patience<span class="op">=</span><span class="dv">1</span>) <span class="co"># val-loss가 1회증가하면 멈추어라 </span></span>
+<span id="cb61-4"><a href="#cb61-4" aria-hidden="true" tabindex="-1"></a>net.fit(X,y,epochs<span class="op">=</span><span class="dv">200</span>,batch_size<span class="op">=</span><span class="dv">200</span>,validation_split<span class="op">=</span><span class="fl">0.2</span>,callbacks<span class="op">=</span>cb2,verbose<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><code>-</code> 몇 번 좀 참았다가 멈추면 좋겠다.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>tf.random.set_seed(<span class="dv">43052</span>)</span>
+<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a>net <span class="op">=</span> tf.keras.Sequential()</span>
+<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Flatten())</span>
+<span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Dense(<span class="dv">5000</span>,activation<span class="op">=</span><span class="st">'relu'</span>)) <span class="co">## 과적합좀 시키려고 </span></span>
+<span id="cb62-5"><a href="#cb62-5" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Dense(<span class="dv">5000</span>,activation<span class="op">=</span><span class="st">'relu'</span>)) <span class="co">## 레이어를 2장만듬 + 레이어하나당 노드수도 증가 </span></span>
+<span id="cb62-6"><a href="#cb62-6" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Dense(<span class="dv">10</span>,activation<span class="op">=</span><span class="st">'softmax'</span>))</span>
+<span id="cb62-7"><a href="#cb62-7" aria-hidden="true" tabindex="-1"></a>net.<span class="bu">compile</span>(optimizer<span class="op">=</span><span class="st">'adam'</span>,loss<span class="op">=</span>tf.losses.categorical_crossentropy,metrics<span class="op">=</span><span class="st">'accuracy'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-scrolled="true" data-tags="[]">
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a><span class="co">#cb1 = tf.keras.callbacks.TensorBoard()</span></span>
+<span id="cb63-3"><a href="#cb63-3" aria-hidden="true" tabindex="-1"></a>cb2 <span class="op">=</span> tf.keras.callbacks.EarlyStopping(patience<span class="op">=</span><span class="dv">5</span>) <span class="co"># 좀더 참다가 멈추어라 </span></span>
+<span id="cb63-4"><a href="#cb63-4" aria-hidden="true" tabindex="-1"></a>net.fit(X,y,epochs<span class="op">=</span><span class="dv">200</span>,batch_size<span class="op">=</span><span class="dv">200</span>,validation_split<span class="op">=</span><span class="fl">0.2</span>,callbacks<span class="op">=</span>cb2,verbose<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><code>-</code> 텐서보드로 그려보자?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a><span class="co"># %tensorboard --logdir logs --host 0.0.0.0 </span></span>
+<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 아무것도 안나온다 -&gt; 왜? cb1을 써야 텐서보드가 나옴</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><code>-</code> 조기종료와 텐서보드를 같이 쓰려면?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>tf.random.set_seed(<span class="dv">43052</span>)</span>
+<span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a>net <span class="op">=</span> tf.keras.Sequential()</span>
+<span id="cb65-3"><a href="#cb65-3" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Flatten())</span>
+<span id="cb65-4"><a href="#cb65-4" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Dense(<span class="dv">50</span>,activation<span class="op">=</span><span class="st">'relu'</span>)) </span>
+<span id="cb65-5"><a href="#cb65-5" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Dense(<span class="dv">10</span>,activation<span class="op">=</span><span class="st">'softmax'</span>))</span>
+<span id="cb65-6"><a href="#cb65-6" aria-hidden="true" tabindex="-1"></a>net.<span class="bu">compile</span>(optimizer<span class="op">=</span><span class="st">'adam'</span>,loss<span class="op">=</span>tf.losses.categorical_crossentropy,metrics<span class="op">=</span><span class="st">'accuracy'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-scrolled="true" data-tags="[]">
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a>cb1 <span class="op">=</span> tf.keras.callbacks.TensorBoard()</span>
+<span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a>cb2 <span class="op">=</span> tf.keras.callbacks.EarlyStopping(patience<span class="op">=</span><span class="dv">7</span>) <span class="co"># 좀더 참다가 멈추어라 </span></span>
+<span id="cb66-3"><a href="#cb66-3" aria-hidden="true" tabindex="-1"></a>net.fit(X,y,epochs<span class="op">=</span><span class="dv">200</span>,batch_size<span class="op">=</span><span class="dv">200</span>,validation_split<span class="op">=</span><span class="fl">0.2</span>,callbacks<span class="op">=</span>[cb1,cb2])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 조기종료가 구현된 그림이 출력</span></span>
+<span id="cb67-3"><a href="#cb67-3" aria-hidden="true" tabindex="-1"></a><span class="co"># %tensorboard --logdir logs --host 0.0.0.0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="하이퍼파라메터-선택" class="level3">
+<h3 class="anchored" data-anchor-id="하이퍼파라메터-선택">하이퍼파라메터 선택</h3>
+<p><code>-</code> 하이퍼파라메터 설정</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tensorboard.plugins.hparams <span class="im">import</span> api <span class="im">as</span> hp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a>a<span class="op">=</span>net.evaluate(XX,yy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-scrolled="true" data-tags="[]">
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>rm <span class="op">-</span>rf logs</span>
+<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> u <span class="kw">in</span> [<span class="dv">50</span>,<span class="dv">5000</span>]: </span>
+<span id="cb70-3"><a href="#cb70-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> d <span class="kw">in</span> [<span class="fl">0.0</span>,<span class="fl">0.5</span>]: </span>
+<span id="cb70-4"><a href="#cb70-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> o <span class="kw">in</span> [<span class="st">'adam'</span>,<span class="st">'sgd'</span>]:</span>
+<span id="cb70-5"><a href="#cb70-5" aria-hidden="true" tabindex="-1"></a>            logdir <span class="op">=</span> <span class="st">'logs/hpguebin_</span><span class="sc">{}</span><span class="st">_</span><span class="sc">{}</span><span class="st">_</span><span class="sc">{}</span><span class="st">'</span>.<span class="bu">format</span>(u,d,o)</span>
+<span id="cb70-6"><a href="#cb70-6" aria-hidden="true" tabindex="-1"></a>            <span class="cf">with</span> tf.summary.create_file_writer(logdir).as_default():</span>
+<span id="cb70-7"><a href="#cb70-7" aria-hidden="true" tabindex="-1"></a>                net <span class="op">=</span> tf.keras.Sequential()</span>
+<span id="cb70-8"><a href="#cb70-8" aria-hidden="true" tabindex="-1"></a>                net.add(tf.keras.layers.Flatten())</span>
+<span id="cb70-9"><a href="#cb70-9" aria-hidden="true" tabindex="-1"></a>                net.add(tf.keras.layers.Dense(u,activation<span class="op">=</span><span class="st">'relu'</span>))</span>
+<span id="cb70-10"><a href="#cb70-10" aria-hidden="true" tabindex="-1"></a>                net.add(tf.keras.layers.Dropout(d))</span>
+<span id="cb70-11"><a href="#cb70-11" aria-hidden="true" tabindex="-1"></a>                net.add(tf.keras.layers.Dense(<span class="dv">10</span>,activation<span class="op">=</span><span class="st">'softmax'</span>))</span>
+<span id="cb70-12"><a href="#cb70-12" aria-hidden="true" tabindex="-1"></a>                net.<span class="bu">compile</span>(optimizer<span class="op">=</span>o,loss<span class="op">=</span>tf.losses.categorical_crossentropy,metrics<span class="op">=</span>[<span class="st">'accuracy'</span>,<span class="st">'Recall'</span>])</span>
+<span id="cb70-13"><a href="#cb70-13" aria-hidden="true" tabindex="-1"></a>                cb3 <span class="op">=</span> hp.KerasCallback(logdir, {<span class="st">'유닛수'</span>:u, <span class="st">'드랍아웃비율'</span>:d, <span class="st">'옵티마이저'</span>:o})</span>
+<span id="cb70-14"><a href="#cb70-14" aria-hidden="true" tabindex="-1"></a>                net.fit(X,y,epochs<span class="op">=</span><span class="dv">3</span>,callbacks<span class="op">=</span>cb3)</span>
+<span id="cb70-15"><a href="#cb70-15" aria-hidden="true" tabindex="-1"></a>                _rslt<span class="op">=</span>net.evaluate(XX,yy)</span>
+<span id="cb70-16"><a href="#cb70-16" aria-hidden="true" tabindex="-1"></a>                _mymetric<span class="op">=</span>_rslt[<span class="dv">1</span>]<span class="op">*</span><span class="fl">0.8</span> <span class="op">+</span> _rslt[<span class="dv">2</span>]<span class="op">*</span><span class="fl">0.2</span>  </span>
+<span id="cb70-17"><a href="#cb70-17" aria-hidden="true" tabindex="-1"></a>                tf.summary.scalar(<span class="st">'애큐러시와리컬의가중평균(테스트셋)'</span>, _mymetric, step<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a><span class="co">#%tensorboard --logdir logs --host 0.0.0.0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="숙제" class="level2">
+<h2 class="anchored" data-anchor-id="숙제">숙제</h2>
+<p><code>-</code> 아래의 네트워크에서 옵티마이저를 adam, sgd를 선택하여 각각 적합시켜보고 testset의 loss를 성능비교를 하라. epoch은 5정도로 설정하라.</p>
+<pre><code>net = tf.keras.Sequential()
+net.add(tf.keras.layers.Flatten())
+net.add(tf.keras.layers.Dense(50,activation='relu'))
+net.add(tf.keras.layers.Dense(50,activation='relu'))
+net.add(tf.keras.layers.Dense(10,activation='softmax'))
+net.compile(optimizer=???,loss=tf.losses.categorical_crossentropy,metrics=['accuracy','Recall'])</code></pre>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>rm <span class="op">-</span>rf logs</span>
+<span id="cb73-2"><a href="#cb73-2" aria-hidden="true" tabindex="-1"></a>tf.random.set_seed(<span class="dv">202150754</span>)</span>
+<span id="cb73-3"><a href="#cb73-3" aria-hidden="true" tabindex="-1"></a>net1 <span class="op">=</span> tf.keras.Sequential()</span>
+<span id="cb73-4"><a href="#cb73-4" aria-hidden="true" tabindex="-1"></a>net1.add(tf.keras.layers.Flatten())</span>
+<span id="cb73-5"><a href="#cb73-5" aria-hidden="true" tabindex="-1"></a>net1.add(tf.keras.layers.Dense(<span class="dv">50</span>,activation<span class="op">=</span><span class="st">'relu'</span>))</span>
+<span id="cb73-6"><a href="#cb73-6" aria-hidden="true" tabindex="-1"></a>net1.add(tf.keras.layers.Dense(<span class="dv">50</span>,activation<span class="op">=</span><span class="st">'relu'</span>))</span>
+<span id="cb73-7"><a href="#cb73-7" aria-hidden="true" tabindex="-1"></a>net1.add(tf.keras.layers.Dense(<span class="dv">10</span>,activation<span class="op">=</span><span class="st">'softmax'</span>))</span>
+<span id="cb73-8"><a href="#cb73-8" aria-hidden="true" tabindex="-1"></a>net1.<span class="bu">compile</span>(optimizer<span class="op">=</span><span class="st">'adam'</span>,loss<span class="op">=</span>tf.losses.categorical_crossentropy,metrics<span class="op">=</span>[<span class="st">'accuracy'</span>,<span class="st">'Recall'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a>cb1 <span class="op">=</span> tf.keras.callbacks.TensorBoard()</span>
+<span id="cb74-2"><a href="#cb74-2" aria-hidden="true" tabindex="-1"></a>cb2 <span class="op">=</span> tf.keras.callbacks.EarlyStopping(patience<span class="op">=</span><span class="dv">7</span>)</span>
+<span id="cb74-3"><a href="#cb74-3" aria-hidden="true" tabindex="-1"></a>net1.fit(X,y,epochs<span class="op">=</span><span class="dv">5</span>,batch_size<span class="op">=</span><span class="dv">200</span>,validation_split<span class="op">=</span><span class="fl">0.2</span>,callbacks<span class="op">=</span>[cb1,cb2])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>tensorboard <span class="op">--</span>logdir logs <span class="op">--</span>host <span class="fl">0.0.0.0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><code>-</code> sgd 적합</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>rm <span class="op">-</span>rf logs</span>
+<span id="cb76-2"><a href="#cb76-2" aria-hidden="true" tabindex="-1"></a>tf.random.set_seed(<span class="dv">202150754</span>)</span>
+<span id="cb76-3"><a href="#cb76-3" aria-hidden="true" tabindex="-1"></a>net2 <span class="op">=</span> tf.keras.Sequential()</span>
+<span id="cb76-4"><a href="#cb76-4" aria-hidden="true" tabindex="-1"></a>net2.add(tf.keras.layers.Flatten())</span>
+<span id="cb76-5"><a href="#cb76-5" aria-hidden="true" tabindex="-1"></a>net2.add(tf.keras.layers.Dense(<span class="dv">50</span>,activation<span class="op">=</span><span class="st">'relu'</span>))</span>
+<span id="cb76-6"><a href="#cb76-6" aria-hidden="true" tabindex="-1"></a>net2.add(tf.keras.layers.Dense(<span class="dv">50</span>,activation<span class="op">=</span><span class="st">'relu'</span>))</span>
+<span id="cb76-7"><a href="#cb76-7" aria-hidden="true" tabindex="-1"></a>net2.add(tf.keras.layers.Dense(<span class="dv">10</span>,activation<span class="op">=</span><span class="st">'softmax'</span>))</span>
+<span id="cb76-8"><a href="#cb76-8" aria-hidden="true" tabindex="-1"></a>net2.<span class="bu">compile</span>(optimizer<span class="op">=</span><span class="st">'sgd'</span>,loss<span class="op">=</span>tf.losses.categorical_crossentropy,metrics<span class="op">=</span>[<span class="st">'accuracy'</span>,<span class="st">'Recall'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a>net2.fit(X,y,epochs<span class="op">=</span><span class="dv">5</span>,batch_size<span class="op">=</span><span class="dv">200</span>,validation_split<span class="op">=</span><span class="fl">0.2</span>,callbacks<span class="op">=</span>[cb1,cb2]) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>tensorboard <span class="op">--</span>logdir logs <span class="op">--</span>host <span class="fl">0.0.0.0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a>net1.evaluate(XX,yy)[<span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb80"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a>net2.evaluate(XX,yy)[<span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>adam을 선택했을떄 loss는 0.41707104444503784 이고,</p>
+<p>sgd을 선택했을때 loss는 0.6277241706848145 이다.</p>
+<p>loss 값을 보면 sgd보다 adam 값이 더 낮다.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

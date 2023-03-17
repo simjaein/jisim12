@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>jisim12 – quarto-inputb1d6ec0f</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">jisim12</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com"><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="주차-5월-09일" class="level1">
+<h1>10주차-5월 09일</h1>
+<blockquote class="blockquote">
+<p>빅데이터분석특강</p>
+</blockquote>
+<ul>
+<li>toc:false</li>
+<li>branch: master</li>
+<li>badges: true</li>
+<li>comments: true</li>
+<li>author: 심재인</li>
+</ul>
+<section id="imports" class="level2">
+<h2 class="anchored" data-anchor-id="imports">imports</h2>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> tensorflow <span class="im">as</span> tf</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> tensorflow.experimental.numpy <span class="im">as</span> tnp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>tnp.experimental_enable_numpy_behavior()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>tf.config.experimental.list_physical_devices()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>2022-06-05 17:49:35.436657: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:939] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<pre><code>[PhysicalDevice(name='/physical_device:CPU:0', device_type='CPU'),
+ PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')]</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> graphviz</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> gv(s): <span class="cf">return</span> graphviz.Source(<span class="st">'digraph G{ rankdir="LR"'</span><span class="op">+</span> s <span class="op">+</span> <span class="st">';}'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="softmax-function" class="level2">
+<h2 class="anchored" data-anchor-id="softmax-function">softmax function</h2>
+<section id="로지스틱-모형-1-활성화함수로-sigmoid-선택" class="level3">
+<h3 class="anchored" data-anchor-id="로지스틱-모형-1-활성화함수로-sigmoid-선택">로지스틱 모형 (1): 활성화함수로 sigmoid 선택</h3>
+<p><code>-</code> 기본버전은 아래와 같다 <span class="math display">\[y_i \approx \text{sigmoid}(b + w_1 x_{1,i} + \dots + w_{784}x_{784,i})= \frac{\exp(b + w_1 x_{1,i} + \dots + w_{784}x_{784,i})}{1+\exp(b + w_1 x_{1,i} + \dots + w_{784}x_{784,i})}\]</span></p>
+<p><code>-</code> 벡터버전은 아래와 같다. <span class="math display">\[{\boldsymbol y} \approx \text{sigmoid}({\bf X}{\bf W} + b) = \frac{\exp({\bf XW} +b)}{1+\exp({\bf XW} +b)}\]</span></p>
+<p><code>-</code> 벡터버전에 익숙해지도록 하자. 벡터버전에 사용된 차원 및 연산을 정리하면 아래와 같다.</p>
+<ul>
+<li><p><span class="math inline">\({\bf X}\)</span>: (n,784) matrix</p></li>
+<li><p><span class="math inline">\({\boldsymbol y}\)</span>: (n,1) matrix</p></li>
+<li><p><span class="math inline">\({\bf W}\)</span>: (784,1) matrix</p></li>
+<li><p><span class="math inline">\(b\)</span>: (1,1) matrix</p></li>
+<li><p><code>+</code>, <code>exp</code> 는 브로드캐스팅</p></li>
+</ul>
+</section>
+<section id="로지스틱-모형-2-활성화함수로-softmax-선택" class="level3">
+<h3 class="anchored" data-anchor-id="로지스틱-모형-2-활성화함수로-softmax-선택">로지스틱 모형 (2): 활성화함수로 softmax 선택</h3>
+<p><code>-</code> <span class="math inline">\(y_i=0 \text{ or } 1\)</span> 대신에 <span class="math inline">\(\boldsymbol{y}_i=[y_{i1},y_{i2}]= [1,0] \text { or } [0,1]\)</span>와 같이 코딩하면 어떠할까? (즉 원핫인코딩을 한다면?)</p>
+<p><code>-</code> 활성화 함수를 취하기 전의 버전은 아래와 같이 볼 수 있다.</p>
+<p><span class="math display">\[[{\boldsymbol y}_1 ~ {\boldsymbol y}_2] \propto  [ {\bf X}{\bf W}_1  ~ {\bf X}{\bf W}_2] + [b_1 ~ b_2]= {\bf X} [{\bf W}_1 {\bf W}_2] + [b_1 ~ b_2]= {\bf X}{\bf W} + {\boldsymbol b}\]</span></p>
+<p>여기에서 매트릭스 및 연산의 차원을 정리하면 아래와 같다.</p>
+<ul>
+<li><p><span class="math inline">\({\bf X}\)</span>: (n,784) matrix</p></li>
+<li><p><span class="math inline">\({\boldsymbol y}_1,{\boldsymbol y}_2\)</span>: (n,1) matrix</p></li>
+<li><p><span class="math inline">\({\boldsymbol y}:=[{\boldsymbol y}_1~ {\boldsymbol y}_2]\)</span>: (n,2) matrix</p></li>
+<li><p><span class="math inline">\({\bf W}_1\)</span>, <span class="math inline">\({\bf W}_2\)</span>: (784,1) matrix</p></li>
+<li><p><span class="math inline">\({\bf W}:=[{\bf W}_1~ {\bf W}_2]\)</span>: (784,2) matrix</p></li>
+<li><p><span class="math inline">\(b_1,b_2\)</span>: (1,1) matrix</p></li>
+<li><p>$:= [b_1 ~b_2] $: (1,2) matrix</p></li>
+<li><p><code>+</code> 는 브로드캐스팅</p></li>
+</ul>
+<p><code>-</code> 즉 로지스틱 모형 (1)의 형태를 겹쳐놓은 형태로 해석할 수 있음. 따라서 <span class="math inline">\({\bf X} {\bf W}_1 + b_1\)</span>와 <span class="math inline">\({\bf X} {\bf W}_2 + b_2\)</span>의 row값이 클수록 <span class="math inline">\({\boldsymbol y}_1\)</span>와 <span class="math inline">\({\boldsymbol y}_2\)</span>의 row값이 1이어야 함</p>
+<ul>
+<li><span class="math inline">\({\boldsymbol y}_1 \propto {\bf X} {\bf W}_1 + b_1\)</span> <span class="math inline">\(\to\)</span> <span class="math inline">\({\bf X} {\bf W}_1 + b_1\)</span>의 row값이 클수록 <span class="math inline">\(\boldsymbol{y}_1\)</span>의 row 값이 1이라면 모형계수를 잘 추정한것</li>
+<li><span class="math inline">\({\boldsymbol y}_2 \propto {\bf X} {\bf W}_2 + b_2\)</span> <span class="math inline">\(\to\)</span> <span class="math inline">\({\bf X} {\bf W}_2 + b_2\)</span>의 row값이 클수록 <span class="math inline">\(\boldsymbol{y}_2\)</span>의 row 값을 1이라면 모형계수를 잘 추정한것</li>
+</ul>
+<p><code>-</code> (문제) <span class="math inline">\({\bf X}{\bf W}_1 +b_1\)</span>의 값이 500, <span class="math inline">\({\bf X}{\bf W}_2 +b_2\)</span>의 값이 200 인 row가 있다고 하자. 대응하는 <span class="math inline">\(\boldsymbol{y}_1, \boldsymbol{y}_2\)</span>의 row값은 얼마로 적합되어야 하는가?</p>
+<ol type="1">
+<li><p><span class="math inline">\([0,0]\)</span></p></li>
+<li><p><span class="math inline">\([0,1]\)</span></p></li>
+<li><p><span class="math inline">\([1,0]\)</span> &lt;– 이게 답이다!</p></li>
+<li><p><span class="math inline">\([1,1]\)</span></p></li>
+</ol>
+<blockquote class="blockquote">
+<p>note: 둘다 0 혹은 둘다 1로 적합할수는 없으니까 (1), (4)는 제외한다. <span class="math inline">\({\bf X}{\bf W}_1 +b_1\)</span>의 값이 <span class="math inline">\({\bf X}{\bf W}_2 +b_2\)</span>의 값보다 크므로 (3)번이 합리적임</p>
+</blockquote>
+<p><code>-</code> <strong>목표:</strong> 위와 같은 문제의 답을 유도해주는 활성화함수를 설계하자. 즉 합리적인 <span class="math inline">\(\hat{\boldsymbol{y}}_1,\hat{\boldsymbol{y}}_2\)</span>를 구해주는 활성화 함수를 설계해보자. 이를 위해서는 아래의 사항들이 충족되어야 한다.</p>
+<ol type="1">
+<li><p><span class="math inline">\(\hat{\boldsymbol{y}}_1\)</span>, <span class="math inline">\(\hat{\boldsymbol{y}}_2\)</span>의 각 원소는 0보다 크고 1보다 작아야 한다. (확률을 의미해야 하니까)</p></li>
+<li><p><span class="math inline">\(\hat{\boldsymbol{y}}_1+\hat{\boldsymbol{y}}_2={\bf 1}\)</span> 이어야 한다. (확률의 총합은 1이니까!)</p></li>
+<li><p><span class="math inline">\(\hat{\boldsymbol{y}}_1\)</span>와 <span class="math inline">\(\hat{\boldsymbol{y}}_2\)</span>를 각각 따로해석하면 로지스틱처럼 되면 좋겠다.</p></li>
+</ol>
+<p><code>-</code> 아래와 같은 활성화 함수를 도입하면 어떨까?</p>
+<p><span class="math display">\[\hat{\boldsymbol{y}}=[\hat{\boldsymbol y}_1 ~ \hat{\boldsymbol y}_2] =  \big[ \frac{\exp({\bf X}\hat{\bf W}_1+\hat{b}_1)}{\exp({\bf X}\hat{\bf W}_1+\hat{b}_1)+\exp({\bf X}\hat{\bf W}_2+\hat{b}_2)}  ~~ \frac{\exp({\bf X}\hat{\bf W}_2+\hat{b}_2)}{\exp({\bf X}\hat{\bf W}_1+\hat{b}_1)+\exp({\bf X}\hat{\bf W}_2+\hat{b}_2)}  \big]\]</span></p>
+<p><code>-</code> (1),(2)는 만족하는 듯 하다. (3)은 바로 이해되지는 않는다</p>
+<ol type="1">
+<li><p><span class="math inline">\(\hat{\boldsymbol{y}}_1\)</span>, <span class="math inline">\(\hat{\boldsymbol{y}}_2\)</span>의 각 원소는 0보다 크고 1보다 작아야 한다. –&gt; OK!</p></li>
+<li><p><span class="math inline">\(\hat{\boldsymbol{y}}_1+\hat{\boldsymbol{y}}_2={\bf 1}\)</span> 이어야 한다. –&gt; OK!</p></li>
+<li><p><span class="math inline">\(\hat{\boldsymbol{y}}_1\)</span>와 <span class="math inline">\(\hat{\boldsymbol{y}}_2\)</span>를 각각 따로해석하면 로지스틱처럼 되면 좋겠다. –&gt; ???</p></li>
+</ol>
+<p><code>-</code> 그런데 조금 따져보면 (3)도 만족된다는 것을 알 수 있다. (sigmoid, softmax Section 참고)</p>
+<p><code>-</code> 위와 같은 함수를 softmax라고 하자. 즉 아래와 같이 정의하자. <span class="math display">\[
+\hat{\boldsymbol y} = \text{softmax}({\bf X}\hat{\bf W} + {\boldsymbol b})
+= \big[ \frac{\exp({\bf X}\hat{\bf W}_1+\hat{b}_1)}{\exp({\bf X}\hat{\bf W}_1+\hat{b}_1)+\exp({\bf X}\hat{\bf W}_2+\hat{b}_2)}  ~~ \frac{\exp({\bf X}\hat{\bf W}_2+\hat{b}_2)}{\exp({\bf X}\hat{\bf W}_1+\hat{b}_1)+\exp({\bf X}\hat{\bf W}_2+\hat{b}_2)}  \big]
+\]</span></p>
+</section>
+<section id="sigmoid-softmax" class="level3">
+<h3 class="anchored" data-anchor-id="sigmoid-softmax">sigmoid, softmax</h3>
+<section id="softmax는-sigmoid의-확장형" class="level4">
+<h4 class="anchored" data-anchor-id="softmax는-sigmoid의-확장형"><strong>softmax는 sigmoid의 확장형</strong></h4>
+<p><code>-</code> 아래의 수식을 관찰하자. <span class="math display">\[\frac{\exp(\beta_0+\beta_1 x_i)}{1+\exp(\beta_0+\beta_1x_i)}=\frac{\exp(\beta_0+\beta_1 x_i)}{e^0+\exp(\beta_0+\beta_1x_i)}\]</span></p>
+<p><code>-</code> 1을 <span class="math inline">\(e^0\)</span>로 해석하면 모형2의 해석을 아래와 같이 모형1의 해석으로 적용할수 있다. - 모형2: <span class="math inline">\({\bf X}\hat{\bf W}_1 +\hat{b}_1\)</span> 와 <span class="math inline">\({\bf X}\hat{\bf W}_2 +\hat{b}_2\)</span> 의 크기를 비교하고 확률 결정 - 모형1: <span class="math inline">\({\bf X}\hat{\bf W} +\hat{b}\)</span> 와 <span class="math inline">\(0\)</span>의 크기를 비교하고 확률 결정 = <span class="math inline">\({\bf X}\hat{\bf W} +\hat{b}\)</span>의 row값이 양수이면 1로 예측하고 음수이면 0으로 예측</p>
+<p><code>-</code> 이항분포를 차원이 2인 다항분포로 해석가능한 것처럼 sigmoid는 차원이 2인 softmax로 해석가능하다. 즉 다항분포가 이항분포의 확장형으로 해석가능한 것처럼 softmax도 sigmoid의 확장형으로 해석가능하다.</p>
+</section>
+<section id="클래스의-수가-2인-경우-softmax-vs-sigmoid" class="level4">
+<h4 class="anchored" data-anchor-id="클래스의-수가-2인-경우-softmax-vs-sigmoid"><strong>클래스의 수가 2인 경우 softmax vs sigmoid</strong></h4>
+<p><code>-</code> 언뜻 생각하면 클래스가 2인 경우에도 sigmoid 대신 softmax로 활성화함수를 이용해도 될 듯 하다. 즉 <span class="math inline">\(y=0 \text{ or } 1\)</span>와 같이 정리하지 않고 <span class="math inline">\(y=[0,1] \text{ or } [1,0]\)</span> 와 같이 정리해도 무방할 듯 하다.</p>
+<p><code>-</code> 하지만 sigmoid가 좀 더 좋은 선택이다. 즉 <span class="math inline">\(y= 0 \text{ or } 1\)</span>로 데이터를 정리하는 것이 더 좋은 선택이다. 왜냐하면 sigmoid는 softmax와 비교하여 파라메터의 수가 적지만 표현력은 동등하기 때문이다.</p>
+<p><code>-</code> 표현력이 동등한 이유? 아래 수식을 관찰하자. <span class="math display">\[\big(\frac{e^{300}}{e^{300}+e^{500}},\frac{e^{500}}{e^{300}+e^{500}}\big) =\big( \frac{e^{0}}{e^{0}+e^{200}}, \frac{e^{200}}{e^{0}+e^{200}}\big)\]</span></p>
+<ul>
+<li><span class="math inline">\(\big(\frac{e^{300}}{e^{300}+e^{500}},\frac{e^{500}}{e^{300}+e^{500}}\big)\)</span>를 표현하기 위해서 300, 500 이라는 2개의 숫자가 필요한것이 아니고 따지고보면 200이라는 하나의 숫자만 필요하다.</li>
+<li><span class="math inline">\((\hat{\boldsymbol{y}}_1,\hat{\boldsymbol{y}}_2)\)</span>의 표현에서도 <span class="math inline">\({\bf X}\hat{\bf W}_1 +\hat{b}_1\)</span> 와 <span class="math inline">\({\bf X}\hat{\bf W}_2 +\hat{b}_2\)</span> 라는 숫자 각각이 필요한 것이 아니고 <span class="math inline">\(({\bf X}\hat{\bf W}_1 +\hat{b}_1)-({\bf X}\hat{\bf W}_2 +\hat{b}_2)\)</span>의 값만 알면 된다.</li>
+</ul>
+<p><code>-</code> 클래스의 수가 2개일 경우는 softmax가 sigmoid에 비하여 장점이 없다. 하지만 softmax는 클래스의 수가 3개 이상일 경우로 쉽게 확장할 수 있다는 점에서 매력적인 활성화 함수이다.</p>
+</section>
+</section>
+<section id="분류할-클래스가-3개-이상일-경우-신경망-모형의-설계" class="level3">
+<h3 class="anchored" data-anchor-id="분류할-클래스가-3개-이상일-경우-신경망-모형의-설계">분류할 클래스가 3개 이상일 경우 신경망 모형의 설계</h3>
+<p><code>-</code> y의 모양: [0 1 0 0 0 0 0 0 0 0]</p>
+<p><code>-</code> 활성화함수의 선택: softmax</p>
+<p><code>-</code> 손실함수의 선택: cross entropy</p>
+</section>
+<section id="fashion_mnist-여러클래스의-분류-softmax의-실습" class="level3">
+<h3 class="anchored" data-anchor-id="fashion_mnist-여러클래스의-분류-softmax의-실습">Fashion_MNIST 여러클래스의 분류 (softmax의 실습)</h3>
+<p><code>-</code> 데이터정리</p>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>(x_train, y_train), (x_test, y_test) <span class="op">=</span> tf.keras.datasets.fashion_mnist.load_data()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>X<span class="op">=</span> x_train.reshape(<span class="op">-</span><span class="dv">1</span>,<span class="dv">784</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>y<span class="op">=</span> tf.keras.utils.to_categorical(y_train)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>XX <span class="op">=</span> x_test.reshape(<span class="op">-</span><span class="dv">1</span>,<span class="dv">784</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>yy <span class="op">=</span> tf.keras.utils.to_categorical(y_test)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><code>-</code> 시도1: 간단한 신경망</p>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#collapse</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>gv(<span class="st">'''</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="st">splines=line</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="st">subgraph cluster_1{</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="st">    style=filled;</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="st">    color=lightgrey;</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="st">    "x1"</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="st">    "x2"</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="st">    ".."</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="st">    "x784"</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="st">    label = "Layer 0"</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="st">}</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="st">subgraph cluster_2{</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="st">    style=filled;</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="st">    color=lightgrey;</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="st">    "x1" -&gt; "node1"</span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a><span class="st">    "x2" -&gt; "node1"</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="st">    ".." -&gt; "node1"</span></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a><span class="st">    </span></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="st">    "x784" -&gt; "node1"</span></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a><span class="st">    "x1" -&gt; "node2"</span></span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a><span class="st">    "x2" -&gt; "node2"</span></span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a><span class="st">    ".." -&gt; "node2"</span></span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a><span class="st">    "x784" -&gt; "node2"</span></span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a><span class="st">    </span></span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a><span class="st">    "x1" -&gt; "..."</span></span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a><span class="st">    "x2" -&gt; "..."</span></span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a><span class="st">    ".." -&gt; "..."</span></span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a><span class="st">    "x784" -&gt; "..."</span></span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a><span class="st">    "x1" -&gt; "node30"</span></span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a><span class="st">    "x2" -&gt; "node30"</span></span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a><span class="st">    ".." -&gt; "node30"</span></span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a><span class="st">    "x784" -&gt; "node30"</span></span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a><span class="st">    label = "Layer 1: relu"</span></span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a><span class="st">}</span></span>
+<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a><span class="st">subgraph cluster_3{</span></span>
+<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a><span class="st">    style=filled;</span></span>
+<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a><span class="st">    color=lightgrey;</span></span>
+<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a><span class="st">    "node1" -&gt; "y10"</span></span>
+<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a><span class="st">    "node2" -&gt; "y10"</span></span>
+<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a><span class="st">    "..." -&gt; "y10"</span></span>
+<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a><span class="st">    "node30" -&gt; "y10"</span></span>
+<span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a><span class="st">    </span></span>
+<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a><span class="st">    "node1" -&gt; "y1"</span></span>
+<span id="cb9-49"><a href="#cb9-49" aria-hidden="true" tabindex="-1"></a><span class="st">    "node2" -&gt; "y1"</span></span>
+<span id="cb9-50"><a href="#cb9-50" aria-hidden="true" tabindex="-1"></a><span class="st">    "..." -&gt; "y1"</span></span>
+<span id="cb9-51"><a href="#cb9-51" aria-hidden="true" tabindex="-1"></a><span class="st">    "node30" -&gt; "y1"</span></span>
+<span id="cb9-52"><a href="#cb9-52" aria-hidden="true" tabindex="-1"></a><span class="st">    </span></span>
+<span id="cb9-53"><a href="#cb9-53" aria-hidden="true" tabindex="-1"></a><span class="st">    "node1" -&gt; "."</span></span>
+<span id="cb9-54"><a href="#cb9-54" aria-hidden="true" tabindex="-1"></a><span class="st">    "node2" -&gt; "."</span></span>
+<span id="cb9-55"><a href="#cb9-55" aria-hidden="true" tabindex="-1"></a><span class="st">    "..." -&gt; "."</span></span>
+<span id="cb9-56"><a href="#cb9-56" aria-hidden="true" tabindex="-1"></a><span class="st">    "node30" -&gt; "."</span></span>
+<span id="cb9-57"><a href="#cb9-57" aria-hidden="true" tabindex="-1"></a><span class="st">    </span></span>
+<span id="cb9-58"><a href="#cb9-58" aria-hidden="true" tabindex="-1"></a><span class="st">    label = "Layer 2: softmax"</span></span>
+<span id="cb9-59"><a href="#cb9-59" aria-hidden="true" tabindex="-1"></a><span class="st">}</span></span>
+<span id="cb9-60"><a href="#cb9-60" aria-hidden="true" tabindex="-1"></a><span class="st">'''</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="7">
+<p><img src="2022-05-09-10주차_빅데이터분석특강_files/figure-html/cell-8-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>net <span class="op">=</span> tf.keras.Sequential()</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Dense(<span class="dv">30</span>,activation <span class="op">=</span> <span class="st">'relu'</span>))</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Dense(<span class="dv">10</span>,activation <span class="op">=</span> <span class="st">'softmax'</span>))</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>net.<span class="bu">compile</span>(loss<span class="op">=</span>tf.losses.categorical_crossentropy, optimizer<span class="op">=</span><span class="st">'adam'</span>,metrics<span class="op">=</span>[<span class="st">'accuracy'</span>])</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>net.fit(X,y,epochs<span class="op">=</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Epoch 1/5
+1875/1875 [==============================] - 2s 964us/step - loss: 2.5465 - accuracy: 0.3079
+Epoch 2/5
+1875/1875 [==============================] - 3s 1ms/step - loss: 1.4875 - accuracy: 0.4092
+Epoch 3/5
+1875/1875 [==============================] - 2s 979us/step - loss: 1.2439 - accuracy: 0.4880
+Epoch 4/5
+1875/1875 [==============================] - 2s 890us/step - loss: 1.0470 - accuracy: 0.5763
+Epoch 5/5
+1875/1875 [==============================] - 2s 890us/step - loss: 0.9293 - accuracy: 0.6183</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="8">
+<pre><code>&lt;keras.callbacks.History at 0x7fb9bc0c0c40&gt;</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>net.evaluate(XX,yy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>313/313 [==============================] - 1s 2ms/step - loss: 0.9433 - accuracy: 0.6067</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="9">
+<pre><code>[0.9433093070983887, 0.6067000031471252]</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>net.summary()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ dense (Dense)               (None, 30)                23550     
+                                                                 
+ dense_1 (Dense)             (None, 10)                310       
+                                                                 
+=================================================================
+Total params: 23,860
+Trainable params: 23,860
+Non-trainable params: 0
+_________________________________________________________________</code></pre>
+</div>
+</div>
+<p><code>-</code> 시도2: 더 깊은 신경망</p>
+<div class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">#collapse</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>gv(<span class="st">'''</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="st">splines=line</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="st">subgraph cluster_1{</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="st">    style=filled;</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="st">    color=lightgrey;</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="st">    "x1"</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="st">    "x2"</span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a><span class="st">    ".."</span></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="st">    "x784"</span></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="st">    label = "Layer 0"</span></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="st">}</span></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a><span class="st">subgraph cluster_2{</span></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a><span class="st">    style=filled;</span></span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a><span class="st">    color=lightgrey;</span></span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a><span class="st">    "x1" -&gt; "node1"</span></span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a><span class="st">    "x2" -&gt; "node1"</span></span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a><span class="st">    ".." -&gt; "node1"</span></span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a><span class="st">    </span></span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a><span class="st">    "x784" -&gt; "node1"</span></span>
+<span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a><span class="st">    "x1" -&gt; "node2"</span></span>
+<span id="cb18-22"><a href="#cb18-22" aria-hidden="true" tabindex="-1"></a><span class="st">    "x2" -&gt; "node2"</span></span>
+<span id="cb18-23"><a href="#cb18-23" aria-hidden="true" tabindex="-1"></a><span class="st">    ".." -&gt; "node2"</span></span>
+<span id="cb18-24"><a href="#cb18-24" aria-hidden="true" tabindex="-1"></a><span class="st">    "x784" -&gt; "node2"</span></span>
+<span id="cb18-25"><a href="#cb18-25" aria-hidden="true" tabindex="-1"></a><span class="st">    </span></span>
+<span id="cb18-26"><a href="#cb18-26" aria-hidden="true" tabindex="-1"></a><span class="st">    "x1" -&gt; "..."</span></span>
+<span id="cb18-27"><a href="#cb18-27" aria-hidden="true" tabindex="-1"></a><span class="st">    "x2" -&gt; "..."</span></span>
+<span id="cb18-28"><a href="#cb18-28" aria-hidden="true" tabindex="-1"></a><span class="st">    ".." -&gt; "..."</span></span>
+<span id="cb18-29"><a href="#cb18-29" aria-hidden="true" tabindex="-1"></a><span class="st">    "x784" -&gt; "..."</span></span>
+<span id="cb18-30"><a href="#cb18-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-31"><a href="#cb18-31" aria-hidden="true" tabindex="-1"></a><span class="st">    "x1" -&gt; "node500"</span></span>
+<span id="cb18-32"><a href="#cb18-32" aria-hidden="true" tabindex="-1"></a><span class="st">    "x2" -&gt; "node500"</span></span>
+<span id="cb18-33"><a href="#cb18-33" aria-hidden="true" tabindex="-1"></a><span class="st">    ".." -&gt; "node500"</span></span>
+<span id="cb18-34"><a href="#cb18-34" aria-hidden="true" tabindex="-1"></a><span class="st">    "x784" -&gt; "node500"</span></span>
+<span id="cb18-35"><a href="#cb18-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-36"><a href="#cb18-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-37"><a href="#cb18-37" aria-hidden="true" tabindex="-1"></a><span class="st">    label = "Layer 1: relu"</span></span>
+<span id="cb18-38"><a href="#cb18-38" aria-hidden="true" tabindex="-1"></a><span class="st">}</span></span>
+<span id="cb18-39"><a href="#cb18-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-40"><a href="#cb18-40" aria-hidden="true" tabindex="-1"></a><span class="st">subgraph cluster_3{</span></span>
+<span id="cb18-41"><a href="#cb18-41" aria-hidden="true" tabindex="-1"></a><span class="st">    style=filled;</span></span>
+<span id="cb18-42"><a href="#cb18-42" aria-hidden="true" tabindex="-1"></a><span class="st">    color=lightgrey;</span></span>
+<span id="cb18-43"><a href="#cb18-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-44"><a href="#cb18-44" aria-hidden="true" tabindex="-1"></a><span class="st">    "node1" -&gt; "node1(2)"</span></span>
+<span id="cb18-45"><a href="#cb18-45" aria-hidden="true" tabindex="-1"></a><span class="st">    "node2" -&gt; "node1(2)"</span></span>
+<span id="cb18-46"><a href="#cb18-46" aria-hidden="true" tabindex="-1"></a><span class="st">    "..." -&gt; "node1(2)"</span></span>
+<span id="cb18-47"><a href="#cb18-47" aria-hidden="true" tabindex="-1"></a><span class="st">    "node500" -&gt; "node1(2)"</span></span>
+<span id="cb18-48"><a href="#cb18-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-49"><a href="#cb18-49" aria-hidden="true" tabindex="-1"></a><span class="st">    "node1" -&gt; "node2(2)"</span></span>
+<span id="cb18-50"><a href="#cb18-50" aria-hidden="true" tabindex="-1"></a><span class="st">    "node2" -&gt; "node2(2)"</span></span>
+<span id="cb18-51"><a href="#cb18-51" aria-hidden="true" tabindex="-1"></a><span class="st">    "..." -&gt; "node2(2)"</span></span>
+<span id="cb18-52"><a href="#cb18-52" aria-hidden="true" tabindex="-1"></a><span class="st">    "node500" -&gt; "node2(2)"</span></span>
+<span id="cb18-53"><a href="#cb18-53" aria-hidden="true" tabindex="-1"></a><span class="st">    </span></span>
+<span id="cb18-54"><a href="#cb18-54" aria-hidden="true" tabindex="-1"></a><span class="st">    "node1" -&gt; "...."</span></span>
+<span id="cb18-55"><a href="#cb18-55" aria-hidden="true" tabindex="-1"></a><span class="st">    "node2" -&gt; "...."</span></span>
+<span id="cb18-56"><a href="#cb18-56" aria-hidden="true" tabindex="-1"></a><span class="st">    "..." -&gt; "...."</span></span>
+<span id="cb18-57"><a href="#cb18-57" aria-hidden="true" tabindex="-1"></a><span class="st">    "node500" -&gt; "...."</span></span>
+<span id="cb18-58"><a href="#cb18-58" aria-hidden="true" tabindex="-1"></a><span class="st">    </span></span>
+<span id="cb18-59"><a href="#cb18-59" aria-hidden="true" tabindex="-1"></a><span class="st">    "node1" -&gt; "node500(2)"</span></span>
+<span id="cb18-60"><a href="#cb18-60" aria-hidden="true" tabindex="-1"></a><span class="st">    "node2" -&gt; "node500(2)"</span></span>
+<span id="cb18-61"><a href="#cb18-61" aria-hidden="true" tabindex="-1"></a><span class="st">    "..." -&gt; "node500(2)"</span></span>
+<span id="cb18-62"><a href="#cb18-62" aria-hidden="true" tabindex="-1"></a><span class="st">    "node500" -&gt; "node500(2)"</span></span>
+<span id="cb18-63"><a href="#cb18-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-64"><a href="#cb18-64" aria-hidden="true" tabindex="-1"></a><span class="st">    </span></span>
+<span id="cb18-65"><a href="#cb18-65" aria-hidden="true" tabindex="-1"></a><span class="st">    label = "Layer 2: relu"</span></span>
+<span id="cb18-66"><a href="#cb18-66" aria-hidden="true" tabindex="-1"></a><span class="st">}</span></span>
+<span id="cb18-67"><a href="#cb18-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-68"><a href="#cb18-68" aria-hidden="true" tabindex="-1"></a><span class="st">subgraph cluster_4{</span></span>
+<span id="cb18-69"><a href="#cb18-69" aria-hidden="true" tabindex="-1"></a><span class="st">    style=filled;</span></span>
+<span id="cb18-70"><a href="#cb18-70" aria-hidden="true" tabindex="-1"></a><span class="st">    color=lightgrey;</span></span>
+<span id="cb18-71"><a href="#cb18-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-72"><a href="#cb18-72" aria-hidden="true" tabindex="-1"></a><span class="st">    "node1(2)" -&gt; "y10"</span></span>
+<span id="cb18-73"><a href="#cb18-73" aria-hidden="true" tabindex="-1"></a><span class="st">    "node2(2)" -&gt; "y10"</span></span>
+<span id="cb18-74"><a href="#cb18-74" aria-hidden="true" tabindex="-1"></a><span class="st">    "...." -&gt; "y10"</span></span>
+<span id="cb18-75"><a href="#cb18-75" aria-hidden="true" tabindex="-1"></a><span class="st">    "node500(2)" -&gt; "y10"</span></span>
+<span id="cb18-76"><a href="#cb18-76" aria-hidden="true" tabindex="-1"></a><span class="st">    </span></span>
+<span id="cb18-77"><a href="#cb18-77" aria-hidden="true" tabindex="-1"></a><span class="st">    "node1(2)" -&gt; "y1"</span></span>
+<span id="cb18-78"><a href="#cb18-78" aria-hidden="true" tabindex="-1"></a><span class="st">    "node2(2)" -&gt; "y1"</span></span>
+<span id="cb18-79"><a href="#cb18-79" aria-hidden="true" tabindex="-1"></a><span class="st">    "...." -&gt; "y1"</span></span>
+<span id="cb18-80"><a href="#cb18-80" aria-hidden="true" tabindex="-1"></a><span class="st">    "node500(2)" -&gt; "y1"</span></span>
+<span id="cb18-81"><a href="#cb18-81" aria-hidden="true" tabindex="-1"></a><span class="st">    </span></span>
+<span id="cb18-82"><a href="#cb18-82" aria-hidden="true" tabindex="-1"></a><span class="st">    "node1(2)" -&gt; "."</span></span>
+<span id="cb18-83"><a href="#cb18-83" aria-hidden="true" tabindex="-1"></a><span class="st">    "node2(2)" -&gt; "."</span></span>
+<span id="cb18-84"><a href="#cb18-84" aria-hidden="true" tabindex="-1"></a><span class="st">    "...." -&gt; "."</span></span>
+<span id="cb18-85"><a href="#cb18-85" aria-hidden="true" tabindex="-1"></a><span class="st">    "node500(2)" -&gt; "."</span></span>
+<span id="cb18-86"><a href="#cb18-86" aria-hidden="true" tabindex="-1"></a><span class="st">    </span></span>
+<span id="cb18-87"><a href="#cb18-87" aria-hidden="true" tabindex="-1"></a><span class="st">    label = "Layer 3: softmax"</span></span>
+<span id="cb18-88"><a href="#cb18-88" aria-hidden="true" tabindex="-1"></a><span class="st">}</span></span>
+<span id="cb18-89"><a href="#cb18-89" aria-hidden="true" tabindex="-1"></a><span class="st">'''</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="11">
+<p><img src="2022-05-09-10주차_빅데이터분석특강_files/figure-html/cell-12-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>net <span class="op">=</span> tf.keras.Sequential()</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Dense(<span class="dv">500</span>,activation <span class="op">=</span> <span class="st">'relu'</span>))</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Dense(<span class="dv">500</span>,activation <span class="op">=</span> <span class="st">'relu'</span>))</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Dense(<span class="dv">10</span>,activation <span class="op">=</span> <span class="st">'softmax'</span>))</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>net.<span class="bu">compile</span>(loss<span class="op">=</span>tf.losses.categorical_crossentropy, optimizer<span class="op">=</span><span class="st">'adam'</span>,metrics<span class="op">=</span>[<span class="st">'accuracy'</span>])</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>net.fit(X,y,epochs<span class="op">=</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Epoch 1/5
+1875/1875 [==============================] - 2s 1ms/step - loss: 2.1316 - accuracy: 0.7357
+Epoch 2/5
+1875/1875 [==============================] - 2s 1ms/step - loss: 0.6888 - accuracy: 0.7796
+Epoch 3/5
+1875/1875 [==============================] - 2s 1ms/step - loss: 0.5565 - accuracy: 0.8109
+Epoch 4/5
+1875/1875 [==============================] - 2s 1ms/step - loss: 0.4906 - accuracy: 0.8257
+Epoch 5/5
+1875/1875 [==============================] - 3s 1ms/step - loss: 0.4652 - accuracy: 0.8347</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="12">
+<pre><code>&lt;keras.callbacks.History at 0x7fb9647ee500&gt;</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>net.evaluate(XX,yy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>313/313 [==============================] - 1s 2ms/step - loss: 0.4968 - accuracy: 0.8343</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="13">
+<pre><code>[0.4968084394931793, 0.8342999815940857]</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>net.summary()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Model: "sequential_1"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ dense_2 (Dense)             (None, 500)               392500    
+                                                                 
+ dense_3 (Dense)             (None, 500)               250500    
+                                                                 
+ dense_4 (Dense)             (None, 10)                5010      
+                                                                 
+=================================================================
+Total params: 648,010
+Trainable params: 648,010
+Non-trainable params: 0
+_________________________________________________________________</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="평가지표" class="level2">
+<h2 class="anchored" data-anchor-id="평가지표">평가지표</h2>
+<section id="다양한-평가지표들" class="level3">
+<h3 class="anchored" data-anchor-id="다양한-평가지표들">다양한 평가지표들</h3>
+<p><code>-</code> 의문: 왜 다양한 평가지표가 필요한가? (accuray면 끝나는거 아닌가? 더 이상 뭐가 필요해?)</p>
+<p><code>-</code> 여러가지 평가지표들: https://en.wikipedia.org/wiki/Positive_and_negative_predictive_values - 이걸 다 암기하는건 불가능함. - 몇 개만 뽑아서 암기하고 왜 쓰는지만 생각해보고 넘어가자!</p>
+</section>
+<section id="confusion-matrix의-이해" class="level3">
+<h3 class="anchored" data-anchor-id="confusion-matrix의-이해">confusion matrix의 이해</h3>
+<p><code>-</code> 표1</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;">퇴사(예측)</th>
+<th style="text-align: center;">안나감(예측)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">퇴사(실제)</td>
+<td style="text-align: center;">TP</td>
+<td style="text-align: center;">FN</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">안나감(실제)</td>
+<td style="text-align: center;">FP</td>
+<td style="text-align: center;">TN</td>
+</tr>
+</tbody>
+</table>
+<p><code>-</code> 표2 (책에없음)</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;">퇴사(예측)</th>
+<th style="text-align: center;">안나감(예측)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">퇴사(실제)</td>
+<td style="text-align: center;">$(y,)= $ (O,O)</td>
+<td style="text-align: center;">$(y,)= $(O,X)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">안나감(실제)</td>
+<td style="text-align: center;">$(y,)= $(X,O)</td>
+<td style="text-align: center;">$(y,)= $(X,X)</td>
+</tr>
+</tbody>
+</table>
+<p><code>-</code> 표3 (책에없음)</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;">퇴사(예측)</th>
+<th style="text-align: center;">안나감(예측)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">퇴사(실제)</td>
+<td style="text-align: center;">TP, <span class="math inline">\(\# O/O\)</span></td>
+<td style="text-align: center;">FN, <span class="math inline">\(\#O/X\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">안나감(실제)</td>
+<td style="text-align: center;">FP, <span class="math inline">\(\#X/O\)</span></td>
+<td style="text-align: center;">TN, <span class="math inline">\(\#X/X\)</span></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>암기법, (1) 두번째 글자를 그대로 쓴다 (2) 첫글자가 T이면 분류를 제대로한것, 첫글자가 F이면 분류를 잘못한것</li>
+</ul>
+<p><code>-</code> 표4 (위키등에 있음)</p>
+<table class="table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;">퇴사(예측)</th>
+<th style="text-align: center;">안나감(예측)</th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">퇴사(실제)</td>
+<td style="text-align: center;">TP, <span class="math inline">\(\# O/O\)</span></td>
+<td style="text-align: center;">FN, <span class="math inline">\(\# O/X\)</span></td>
+<td style="text-align: center;">Sensitivity(민감도)=Recall(재현율)=<span class="math inline">\(\frac{TP}{TP+FN}\)</span>=<span class="math inline">\(\frac{\#O/O}{\# O/O+ \#O/X}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">안나감(실제)</td>
+<td style="text-align: center;">FP, <span class="math inline">\(\# X/O\)</span></td>
+<td style="text-align: center;">TN, <span class="math inline">\(\# X/X\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Precision(프리시즌)=<span class="math inline">\(\frac{TP}{TP+FP}\)</span>=<span class="math inline">\(\frac{\# O/O}{\# O/O+\# X/O}\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Accuracy(애큐러시)=<span class="math inline">\(\frac{TP+TN}{total}\)</span>=<span class="math inline">\(\frac{\#O/O+\# X/X}{total}\)</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="상황극" class="level3">
+<h3 class="anchored" data-anchor-id="상황극">상황극</h3>
+<p><code>-</code> 최규빈은 입사하여 “퇴사자 예측시스템”의 개발에 들어갔다.</p>
+<p><code>-</code> 자료의 특성상 대부분의 사람이 퇴사하지 않고 회사에 잘 다닌다. 즉 1000명이 있으면 10명정도 퇴사한다.</p>
+</section>
+<section id="accuracy" class="level3">
+<h3 class="anchored" data-anchor-id="accuracy">Accuracy</h3>
+<p><code>-</code> 정의: Accuracy(애큐러시)=<span class="math inline">\(\frac{TP+TN}{total}\)</span>=<span class="math inline">\(\frac{\#O/O+ \#X/X}{total}\)</span> - 한국말로는 정확도, 정분류율이라고 한다. - 한국말이 헷갈리므로 그냥 영어를 외우는게 좋다. (어차피 Keras에서 옵션도 영어로 넣음)</p>
+<p><code>-</code> (상확극 시점1) 왜 애큐러시는 불충분한가? - 회사: 퇴사자예측프로그램 개발해 - 최규빈: 귀찮은데 다 안나간다고 하자! -&gt; 99퍼의 accuracy</p>
+<blockquote class="blockquote">
+<p>모델에 사용한 파라메터 = 0. 그런데 애큐러시 = 99! 이거 엄청 좋은 모형이다?</p>
+</blockquote>
+</section>
+<section id="sensitivity민감도-recall재현율-true-positive-ratetpr" class="level3">
+<h3 class="anchored" data-anchor-id="sensitivity민감도-recall재현율-true-positive-ratetpr">Sensitivity(민감도), Recall(재현율), True Positive Rate(TPR)</h3>
+<p><code>-</code> 정의: Sensitivity(민감도)=Recall(재현율)=<span class="math inline">\(\frac{TP}{TP+FN}\)</span>=<span class="math inline">\(\frac{\# O/O}{\# O/O+\# O/X}\)</span> - 분모: 실제 O인 관측치 수 - 분자: 실제 O를 O라고 예측한 관측치 수 - 뜻: 실제 O를 O라고 예측한 비율</p>
+<p><code>-</code> (상황극 시점2) recall을 봐야하는 이유 - 인사팀: 실제 퇴사자를 퇴사자로 예측해야 의미가 있음! 우리는 퇴사할것 같은 10명을 찍어달란 의미였어요! (그래야 면담을 하든 할거아냐!) - 최규빈: 가볍고(=파라메터 적고) 잘 맞추는 모형 만들어 달라면서요?</p>
+<ul>
+<li>인사팀: (고민중..) 사실 생각해보니까 이 경우는 애큐러시는 의미가 없네. 실제 나간 사람 중 최규빈이 나간다고 한 사람이 몇인지 카운트 하는게 더 의미가 있겠다. 우리는 앞으로 리컬(혹은 민감도)를 보겠다!</li>
+</ul>
+<blockquote class="blockquote">
+<p>예시1: 실제로 퇴사한 10명중 최규빈이 나간다고 찍은 사람이 5명이면 리컬이 50%</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>예시2: 최규빈이 아무도 나가지 않는다고 예측해버린다? 실제 10명중에서 최규빈이 나간다고 적중시킨사람은 0명이므로 이 경우 리컬은 0%</p>
+</blockquote>
+<ul>
+<li>결론: 우리가 필요한건 recall이니까 앞으로 recall을 가져와! accuracy는 큰 의미없어. (그래도 명색이 모델인데 accuracy가 90은 되면 좋겠다)</li>
+</ul>
+</section>
+<section id="precision" class="level3">
+<h3 class="anchored" data-anchor-id="precision">Precision</h3>
+<p><code>-</code> 정의: Precision(프리시즌)=<span class="math inline">\(\frac{TP}{TP+FP}\)</span>=<span class="math inline">\(\frac{\# O/O}{\# O/O+\# X/O}\)</span> - 분모: O라고 예측한 관측치 - 분자: O라고 예측한 관측치중 진짜 O인 관측치 - 뜻: O라고 예측한 관측치중 진짜 O인 비율</p>
+<p><code>-</code> (상황극 시점3) recall 만으로 불충분한 이유</p>
+<ul>
+<li>최규빈: 에휴.. 귀찮은데 그냥 좀만 수틀리면 다 나갈것 같다고 해야겠다. -&gt; 한 100명 나간다고 했음 -&gt; 실제로 최규빈이 찍은 100명중에 10명이 다 나감!</li>
+</ul>
+<blockquote class="blockquote">
+<p>이 경우 애큐러시는 91%, 리컬은 100% (퇴사자 10명을 일단은 다 맞췄으므로).</p>
+</blockquote>
+<ul>
+<li><p>인사팀: (화가 많이 남) 멀쩡한 사람까지 다 퇴사할 것 같다고 하면 어떡해요? 최규빈 연구원이 나간다고 한 100명중에 실제로 10명만 나갔어요.</p></li>
+<li><p>인사팀: 마치 총으로 과녁중앙에 맞춰 달라고 했더니 기관총을 가져와서 한번 긁은것이랑 뭐가 달라요? 맞추는게 문제가 아니고 precision이 너무 낮아요.</p></li>
+<li><p>최규빈: accuracy 90% 이상, recall은 높을수록 좋다는게 주문 아니었나요?</p></li>
+<li><p>인사팀: (고민중..) 앞으로는 recall과 함께 precision도 같이 제출하세요. precision은 당신이 나간다고 한 사람중에 실제 나간사람의 비율을 의미해요. 이 경우는 <span class="math inline">\(\frac{10}{100}\)</span>이니까 precision이 10%입니다. (속마음: recall 올리겠다고 무작정 너무 많이 예측하지 말란 말이야!)</p></li>
+</ul>
+</section>
+<section id="f1-score" class="level3">
+<h3 class="anchored" data-anchor-id="f1-score">F1 score</h3>
+<p><code>-</code> 정의: recall과 precision의 조화평균</p>
+<p><code>-</code> (상황극 시점4) recall, precision을 모두 고려</p>
+<ul>
+<li><p>최규빈: recall/precision을 같이 내는건 좋은데요, 둘은 trade off의 관계에 있습니다. 물론 둘다 올리는 모형이 있다면 좋지만 그게 쉽지는 않아요. 보통은 precision을 올리려면 recall이 희생되는 면이 있고요, recall을 올리려고 하면 precision이 다소 떨어집니다.</p></li>
+<li><p>최규빈: 평가기준이 애매하다는 의미입니다. 모형1,2가 있는데 모형1은 모형2보다 precision이 약간 좋고 대신 recall이 떨어진다면 모형1이 좋은것입니까? 아니면 모형2가 좋은것입니까?</p></li>
+<li><p>인사팀: 그렇다면 둘을 평균내서 F1score를 계산해서 제출해주세요.</p></li>
+</ul>
+</section>
+<section id="specificity특이도-false-positive-ratefpr" class="level3">
+<h3 class="anchored" data-anchor-id="specificity특이도-false-positive-ratefpr">Specificity(특이도), False Positive Rate(FPR)</h3>
+<p><code>-</code> 정의:</p>
+<ol type="1">
+<li><p>Specificity(특이도)=<span class="math inline">\(\frac{TN}{FP+TN}\)</span>=<span class="math inline">\(\frac{\# X/X}{\# X/O+\# X/X}\)</span></p></li>
+<li><p>False Positive Rate (FPR) = 1-Specificity(특이도) = <span class="math inline">\(\frac{FP}{FP+TN}\)</span>=<span class="math inline">\(\frac{\# X/O}{\# X/O+\# X/X}\)</span></p></li>
+</ol>
+<p><code>-</code> 의미: <strong>FPR = 오해해서 미안해, recall(=TPR)을 올리려고 보니 어쩔 수 없었어 ㅠㅠ</strong> - specificity는 안나간 사람을 안나갔다고 찾아낸 비율인데 별로 안중요하다. - FPR은 recall을 올리기 위해서 “실제로는 회사 잘 다니고 있는 사람 중 최규빈이 나갈것 같다고 찍은 사람들” 의 비율이다.</p>
+<blockquote class="blockquote">
+<p>즉 생사람잡은 비율.. 오해해서 미안한 사람의 비율..</p>
+</blockquote>
+</section>
+<section id="roc-curve" class="level3">
+<h3 class="anchored" data-anchor-id="roc-curve">ROC curve</h3>
+<p><code>-</code> 정의: <span class="math inline">\(x\)</span>축=FPR, <span class="math inline">\(y\)</span>축=TPR 을 그린 커브</p>
+<p><code>-</code> 의미: - 결국 “오해해서 미안해 vs recall”을 그린 곡선이 ROC커브이다. - 생각해보면 오해하는 사람이 많을수록 당연히 recall은 올라간다. 따라서 우상향하는 곡선이다. - 오해한 사람이 매우 적은데 recall이 우수하면 매우 좋은 모형이다. 그래서 초반부터 ROC값이 급격하게 올라가면 좋은 모형이다.</p>
+</section>
+<section id="fashion-mnist-다양한-평가지표활용" class="level3">
+<h3 class="anchored" data-anchor-id="fashion-mnist-다양한-평가지표활용">Fashion MNIST 다양한 평가지표활용</h3>
+<p><code>-</code> data</p>
+<div class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>(x_train, y_train), (x_test, y_test) <span class="op">=</span> tf.keras.datasets.fashion_mnist.load_data()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>X<span class="op">=</span> x_train.reshape(<span class="op">-</span><span class="dv">1</span>,<span class="dv">784</span>)</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>y<span class="op">=</span> tf.keras.utils.to_categorical(y_train)</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>XX <span class="op">=</span> x_test.reshape(<span class="op">-</span><span class="dv">1</span>,<span class="dv">784</span>)</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>yy <span class="op">=</span> tf.keras.utils.to_categorical(y_test)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><code>-</code> 다양한 평가지표를 넣는 방법 (1)</p>
+<div class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>net <span class="op">=</span> tf.keras.Sequential()</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Dense(<span class="dv">500</span>,activation <span class="op">=</span> <span class="st">'relu'</span>))</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Dense(<span class="dv">500</span>,activation <span class="op">=</span> <span class="st">'relu'</span>))</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Dense(<span class="dv">10</span>,activation <span class="op">=</span> <span class="st">'softmax'</span>))</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>net.<span class="bu">compile</span>(loss<span class="op">=</span>tf.losses.categorical_crossentropy, optimizer<span class="op">=</span><span class="st">'adam'</span>,metrics<span class="op">=</span>[<span class="st">'accuracy'</span>,<span class="st">'Recall'</span>])</span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>net.fit(X,y,epochs<span class="op">=</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Epoch 1/5
+1875/1875 [==============================] - 5s 3ms/step - loss: 2.0415 - accuracy: 0.7486 - recall: 0.7143
+Epoch 2/5
+1875/1875 [==============================] - 4s 2ms/step - loss: 0.6277 - accuracy: 0.7989 - recall: 0.7492
+Epoch 3/5
+1875/1875 [==============================] - 3s 2ms/step - loss: 0.5331 - accuracy: 0.8233 - recall: 0.7836
+Epoch 4/5
+1875/1875 [==============================] - 5s 3ms/step - loss: 0.4895 - accuracy: 0.8345 - recall: 0.7950
+Epoch 5/5
+1875/1875 [==============================] - 5s 3ms/step - loss: 0.4537 - accuracy: 0.8410 - recall: 0.8020</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="17">
+<pre><code>&lt;keras.callbacks.History at 0x7fb96454ceb0&gt;</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>net.evaluate(XX,yy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>313/313 [==============================] - 1s 1ms/step - loss: 0.4773 - accuracy: 0.8266 - recall: 0.7869</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="18">
+<pre><code>[0.4773379862308502, 0.8266000151634216, 0.786899983882904]</code></pre>
+</div>
+</div>
+<p><code>-</code> 다양한 평가지표를 넣는 방법 (2)</p>
+<div class="cell" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>net <span class="op">=</span> tf.keras.Sequential()</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Dense(<span class="dv">500</span>,activation <span class="op">=</span> <span class="st">'relu'</span>))</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Dense(<span class="dv">500</span>,activation <span class="op">=</span> <span class="st">'relu'</span>))</span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Dense(<span class="dv">10</span>,activation <span class="op">=</span> <span class="st">'softmax'</span>))</span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>net.<span class="bu">compile</span>(loss<span class="op">=</span>tf.losses.categorical_crossentropy, optimizer<span class="op">=</span><span class="st">'adam'</span>,metrics<span class="op">=</span>[tf.metrics.CategoricalAccuracy(),tf.metrics.Recall()])</span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>net.fit(X,y,epochs<span class="op">=</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Epoch 1/5
+1875/1875 [==============================] - 4s 2ms/step - loss: 2.2118 - categorical_accuracy: 0.7407 - recall: 0.6980
+Epoch 2/5
+1875/1875 [==============================] - 4s 2ms/step - loss: 0.6113 - categorical_accuracy: 0.8028 - recall: 0.7539
+Epoch 3/5
+1875/1875 [==============================] - 4s 2ms/step - loss: 0.5309 - categorical_accuracy: 0.8209 - recall: 0.7738
+Epoch 4/5
+1875/1875 [==============================] - 5s 2ms/step - loss: 0.4541 - categorical_accuracy: 0.8401 - recall: 0.7995
+Epoch 5/5
+1875/1875 [==============================] - 5s 3ms/step - loss: 0.4321 - categorical_accuracy: 0.8472 - recall: 0.8112</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="19">
+<pre><code>&lt;keras.callbacks.History at 0x7fb9bc8bd180&gt;</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>net.evaluate(XX,yy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>313/313 [==============================] - 1s 2ms/step - loss: 0.4524 - categorical_accuracy: 0.8434 - recall: 0.7866</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="20">
+<pre><code>[0.4523784816265106, 0.8434000015258789, 0.7865999937057495]</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="flatten-layer" class="level2">
+<h2 class="anchored" data-anchor-id="flatten-layer">flatten layer</h2>
+<p><code>-</code> 이미지 데이터를 분류하기 좋은 형태로 자료를 재정리하자.</p>
+<div class="cell" data-execution_count="21">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> tf.constant(x_train.reshape(<span class="op">-</span><span class="dv">1</span>,<span class="dv">28</span>,<span class="dv">28</span>,<span class="dv">1</span>),dtype<span class="op">=</span>tf.float64)</span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> tf.keras.utils.to_categorical(y_train)</span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>XX <span class="op">=</span> tf.constant(x_test.reshape(<span class="op">-</span><span class="dv">1</span>,<span class="dv">28</span>,<span class="dv">28</span>,<span class="dv">1</span>),dtype<span class="op">=</span>tf.float64)</span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>yy <span class="op">=</span> tf.keras.utils.to_categorical(y_test)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="22">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>X.shape,XX.shape,y.shape,yy.shape</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="22">
+<pre><code>(TensorShape([60000, 28, 28, 1]),
+ TensorShape([10000, 28, 28, 1]),
+ (60000, 10),
+ (10000, 10))</code></pre>
+</div>
+</div>
+<p><code>-</code> 일반적인 이미지 분석 모형을 적용하기 용이한 데이터 형태로 정리했다. -&gt; 그런데 모형에 넣고 돌릴려면 다시 차원을 펼쳐야 하지 않을까?</p>
+<p><code>-</code> 안펼치고 하고싶다.</p>
+<div class="cell" data-execution_count="23">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>flttn <span class="op">=</span> tf.keras.layers.Flatten()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="24">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span>(<span class="bu">dir</span>(flttn)) <span class="op">&amp;</span> {<span class="st">'__call__'</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="24">
+<pre><code>{'__call__'}</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="25">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>X.shape,flttn(X).shape, X.reshape(<span class="op">-</span><span class="dv">1</span>,<span class="dv">784</span>).shape</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="25">
+<pre><code>(TensorShape([60000, 28, 28, 1]),
+ TensorShape([60000, 784]),
+ TensorShape([60000, 784]))</code></pre>
+</div>
+</div>
+<p><code>-</code> flttn</p>
+<div class="cell" data-execution_count="26">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>net <span class="op">=</span> tf.keras.Sequential()</span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Flatten())</span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Dense(<span class="dv">500</span>,activation <span class="op">=</span> <span class="st">'relu'</span>))</span>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Dense(<span class="dv">500</span>,activation <span class="op">=</span> <span class="st">'relu'</span>))</span>
+<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Dense(<span class="dv">10</span>,activation <span class="op">=</span> <span class="st">'softmax'</span>))</span>
+<span id="cb49-6"><a href="#cb49-6" aria-hidden="true" tabindex="-1"></a>net.<span class="bu">compile</span>(loss<span class="op">=</span>tf.losses.categorical_crossentropy, optimizer<span class="op">=</span><span class="st">'adam'</span>,metrics<span class="op">=</span>[tf.metrics.CategoricalAccuracy(),tf.metrics.Recall()])</span>
+<span id="cb49-7"><a href="#cb49-7" aria-hidden="true" tabindex="-1"></a>net.fit(X,y,epochs<span class="op">=</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Epoch 1/5
+1875/1875 [==============================] - 4s 2ms/step - loss: 2.3353 - categorical_accuracy: 0.7503 - recall_1: 0.7104
+Epoch 2/5
+1875/1875 [==============================] - 4s 2ms/step - loss: 0.6345 - categorical_accuracy: 0.7938 - recall_1: 0.7381
+Epoch 3/5
+1875/1875 [==============================] - 4s 2ms/step - loss: 0.5553 - categorical_accuracy: 0.8139 - recall_1: 0.7731
+Epoch 4/5
+1875/1875 [==============================] - 4s 2ms/step - loss: 0.4954 - categorical_accuracy: 0.8336 - recall_1: 0.7936
+Epoch 5/5
+1875/1875 [==============================] - 5s 3ms/step - loss: 0.4516 - categorical_accuracy: 0.8423 - recall_1: 0.8015</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="26">
+<pre><code>&lt;keras.callbacks.History at 0x7fb9bc62d3c0&gt;</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="27">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>net.layers</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="27">
+<pre><code>[&lt;keras.layers.core.flatten.Flatten at 0x7fb9bc68feb0&gt;,
+ &lt;keras.layers.core.dense.Dense at 0x7fb9bc68e950&gt;,
+ &lt;keras.layers.core.dense.Dense at 0x7fb9bc68fc40&gt;,
+ &lt;keras.layers.core.dense.Dense at 0x7fb9bc68d6f0&gt;]</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="28">
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(X.shape)</span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(net.layers[<span class="dv">0</span>](X).shape)</span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(net.layers[<span class="dv">1</span>](net.layers[<span class="dv">0</span>](X)).shape)</span>
+<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(net.layers[<span class="dv">2</span>](net.layers[<span class="dv">1</span>](net.layers[<span class="dv">0</span>](X))).shape)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>(60000, 28, 28, 1)
+(60000, 784)
+(60000, 500)
+(60000, 500)</code></pre>
+</div>
+</div>
+<p><code>-</code> 좀 더 복잡한 네트워크 -&gt; 하지만 한계가 보인다 -&gt; 좀 더 나은 아키텍처는 없을까</p>
+<div class="cell" data-execution_count="29">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>tf.random.set_seed(<span class="dv">43052</span>)</span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>net <span class="op">=</span> tf.keras.Sequential() </span>
+<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Flatten())</span>
+<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Dense(<span class="dv">500</span>,activation<span class="op">=</span><span class="st">'relu'</span>))</span>
+<span id="cb56-5"><a href="#cb56-5" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Dense(<span class="dv">500</span>,activation<span class="op">=</span><span class="st">'relu'</span>))</span>
+<span id="cb56-6"><a href="#cb56-6" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Dense(<span class="dv">500</span>,activation<span class="op">=</span><span class="st">'relu'</span>))</span>
+<span id="cb56-7"><a href="#cb56-7" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Dense(<span class="dv">500</span>,activation<span class="op">=</span><span class="st">'relu'</span>))</span>
+<span id="cb56-8"><a href="#cb56-8" aria-hidden="true" tabindex="-1"></a>net.add(tf.keras.layers.Dense(<span class="dv">10</span>,activation<span class="op">=</span><span class="st">'softmax'</span>))</span>
+<span id="cb56-9"><a href="#cb56-9" aria-hidden="true" tabindex="-1"></a>net.<span class="bu">compile</span>(loss<span class="op">=</span>tf.losses.categorical_crossentropy, optimizer<span class="op">=</span><span class="st">'adam'</span>,metrics<span class="op">=</span><span class="st">'accuracy'</span>) </span>
+<span id="cb56-10"><a href="#cb56-10" aria-hidden="true" tabindex="-1"></a>net.fit(X,y,epochs<span class="op">=</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Epoch 1/10
+1875/1875 [==============================] - 4s 2ms/step - loss: 1.1090 - accuracy: 0.7885
+Epoch 2/10
+1875/1875 [==============================] - 5s 2ms/step - loss: 0.4591 - accuracy: 0.8367
+Epoch 3/10
+1875/1875 [==============================] - 4s 2ms/step - loss: 0.4148 - accuracy: 0.8536
+Epoch 4/10
+1875/1875 [==============================] - 3s 2ms/step - loss: 0.3907 - accuracy: 0.8612
+Epoch 5/10
+1875/1875 [==============================] - 4s 2ms/step - loss: 0.3775 - accuracy: 0.8665
+Epoch 6/10
+1875/1875 [==============================] - 4s 2ms/step - loss: 0.3597 - accuracy: 0.8739
+Epoch 7/10
+1875/1875 [==============================] - 2s 1ms/step - loss: 0.3463 - accuracy: 0.8769
+Epoch 8/10
+1875/1875 [==============================] - 3s 2ms/step - loss: 0.3381 - accuracy: 0.8796
+Epoch 9/10
+1875/1875 [==============================] - 3s 1ms/step - loss: 0.3282 - accuracy: 0.8832
+Epoch 10/10
+1875/1875 [==============================] - 3s 1ms/step - loss: 0.3181 - accuracy: 0.8862</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="29">
+<pre><code>&lt;keras.callbacks.History at 0x7fb9bc40dc60&gt;</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="30">
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>net.evaluate(XX,yy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>313/313 [==============================] - 1s 2ms/step - loss: 0.3905 - accuracy: 0.8646</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="30">
+<pre><code>[0.3904523551464081, 0.8646000027656555]</code></pre>
+</div>
+</div>
+<p><code>-</code> layer중에 우리는 끽해야 Dense정도 쓰고있었음. <span class="math inline">\(\to\)</span> flatten과 같은 다른 layer도 많음. <span class="math inline">\(\to\)</span> 이런것도 써보자</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
