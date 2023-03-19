@@ -4291,6 +4291,175 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb41-14"><a href="#cb41-14" aria-hidden="true" tabindex="-1"></a><span class="co"># fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})</span></span>
 <span id="cb41-15"><a href="#cb41-15" aria-hidden="true" tabindex="-1"></a><span class="co"># HTML(fig.to_html(include_mathjax=False, config=dict({'scrollZoom':False})))</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>git add .</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>git commit <span class="op">-</span>m .</span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>git push</span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>quarto publish gh<span class="op">-</span>pages <span class="op">--</span>no<span class="op">-</span>prompt <span class="op">--</span>no<span class="op">-</span>browser</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[main 73b90fb] .
+ 2 files changed, 34 insertions(+), 24 deletions(-)
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 651 bytes | 651.00 KiB/s, done.
+Total 5 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To https://github.com/simjaein/jisim12.git
+   0013a8e..73b90fb  main -&gt; main
+From https://github.com/simjaein/jisim12
+ * branch            gh-pages   -&gt; FETCH_HEAD
+Rendering for publish:
+
+[ 1/30] about.qmd
+[ 2/30] posts/2022-03-28-4주차_빅데이터분석특강.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-input38750eef' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[ 3/30] posts/2022-04-04-5주차_빅데이터분석특강.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-input2275bd33' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[ 4/30] posts/Untitled1.ipynb
+[ 5/30] posts/2022-03-14-2주차_빅데이터분석특강.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-inputb42fb935' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[ 6/30] posts/2021-12-31-선형대수_고유값_고유벡터.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-input844c5ef8' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[ 7/30] posts/2022-01-14-회귀분석-귀진단.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-inputcec2d5fd' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[ 8/30] posts/2022-05-03-9주차(2)_빅데이터분석특강.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-input296a57fc' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[ 9/30] posts/2022-01-12-회귀분석_단순선형회귀분석.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-input62928a39' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[10/30] posts/2022.09.02_발표자료.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-input7ecc3f59' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[11/30] posts/2022-03-21-3주차_빅데이터분석특강.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-input4c682c1c' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[12/30] posts/2022-01-14-회귀분석-변수선택.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-input0b959f75' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[13/30] posts/2022-04-30-중간고사해설.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-inputfc521d85' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[14/30] posts/2021-12-20-데이터시각화_기말고사풀이.ipynb
+[15/30] posts/2022-06-30-기말고사예상문제_빅데이터분석특강.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-input43c415c4' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[16/30] posts/2022-01-13-회귀분석_중회귀모형.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-input90139ab6' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[17/30] posts/2022-04-11-6주차_빅데이터분석특강.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-input7886ff32' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[18/30] posts/2022-05-09-10주차_빅데이터분석특강.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-input103b5b2c' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[19/30] posts/Untitled2.ipynb
+[20/30] posts/2022-04-18-7주차_빅데이터분석특강.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-input3ee2fa03' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[21/30] posts/2022-04-28-중간고사예상문제_빅데이터분석특강.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-input95e8c108' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[22/30] posts/2022-04-29-심재인_빅데이터분석특강_중간고사.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-inputd10ac5ef' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[23/30] posts/2022-05-23-12주차_빅데이터분석특강.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-inputf8231d61' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[24/30] posts/Untitled.ipynb
+[25/30] posts/2022-05-02-9주차(1)_빅데이터분석특강.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-input88103da6' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[26/30] posts/2022-03-07-1주차_빅데이터분석특강.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-input1b979962' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[27/30] posts/2022-05-16-11주차_빅데이터분석특강.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-input79641d45' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[28/30] posts/2022-06-13-기말고사_빅데이터분석특강.ipynb
+[WARNING] This document format requires a nonempty &lt;title&gt; element.
+  Defaulting to 'quarto-input8e53438f' as the title.
+  To specify a title, use 'title' in metadata or --metadata title="...".
+[29/30] posts/2021-12-31-python을 이용한 고유값과 고유벡터 구하기.ipynb
+[30/30] index.qmd
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-03-28-4주차_빅데이터분석특강.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-04-04-5주차_빅데이터분석특강.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/Untitled1.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-03-14-2주차_빅데이터분석특강.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2021-12-31-선형대수_고유값_고유벡터.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-01-14-회귀분석-귀진단.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-05-03-9주차(2)_빅데이터분석특강.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-01-12-회귀분석_단순선형회귀분석.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022.09.02_발표자료.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-03-21-3주차_빅데이터분석특강.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-01-14-회귀분석-변수선택.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-04-30-중간고사해설.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2021-12-20-데이터시각화_기말고사풀이.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-06-30-기말고사예상문제_빅데이터분석특강.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-01-13-회귀분석_중회귀모형.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-04-11-6주차_빅데이터분석특강.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-05-09-10주차_빅데이터분석특강.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/Untitled2.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-04-18-7주차_빅데이터분석특강.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-04-28-중간고사예상문제_빅데이터분석특강.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-04-29-심재인_빅데이터분석특강_중간고사.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-05-23-12주차_빅데이터분석특강.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/Untitled.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-05-02-9주차(1)_빅데이터분석특강.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-03-07-1주차_빅데이터분석특강.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-05-16-11주차_빅데이터분석특강.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2022-06-13-기말고사_빅데이터분석특강.ipynb in the listing 'listing' contains no metadata.
+WARNING: File /home/jaein/Dropbox/jisim12/posts/2021-12-31-python을 이용한 고유값과 고유벡터 구하기.ipynb in the listing 'listing' contains no metadata.
+
+Preparing worktree (resetting branch 'gh-pages'; was at ee402d4)
+Branch 'gh-pages' set up to track remote branch 'gh-pages' from 'origin'.
+HEAD is now at ee402d4 Built site for gh-pages
+[gh-pages 6a7e7b3] Built site for gh-pages
+ 29 files changed, 129 insertions(+), 97 deletions(-)
+origin  https://github.com/simjaein/jisim12.git (fetch)
+origin  https://github.com/simjaein/jisim12.git (push)
+To https://github.com/simjaein/jisim12.git
+   ee402d4..6a7e7b3  HEAD -&gt; gh-pages
+
+NOTE: GitHub Pages sites use caching so you might need to click the refresh
+button within your web browser to see changes after deployment.
+
+[✓] Published to https://simjaein.github.io/jisim12/
+
+NOTE: GitHub Pages deployments normally take a few minutes (your site updates
+will be visible once the deploy completes)
+</code></pre>
+</div>
+</div>
 
 
 </section>
